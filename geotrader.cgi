@@ -8,7 +8,7 @@ use lib '/mnt/shared/projects/cardsapp/lib';
 use GeoTrader;
 
 sub dispatch_request {
-    my $gt = GeoTrader->new();
+    my $gt = GeoTrader->new(base_uri => '/cgi-bin/geotrader.cgi');
 
     sub (GET + /) {
         my ($self) = @_;

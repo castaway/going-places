@@ -8,6 +8,7 @@ use GeoTrader::Schema;
 use Moo;
 
 has 'schema' => (is => 'ro', lazy => 1, builder => '_build_schema');
+has 'base_uri' => (is => 'ro', required => 1);
 
 sub _build_schema {
     my ($self) = @_;
@@ -24,7 +25,10 @@ sub get_places {
         location_lat => { '<=' => $north },
         location_lon => { '>=' => $west  },
         location_lon => { '<=' => $east  },
-                                                             },
+      },
+      {
+          prefetch => 'tags',
+      }
         );
 
     return $self->write_openlayers_text($places_rs);
@@ -35,20 +39,39 @@ sub write_openlayers_text {
     my ($self, $card_rs) = @_;
 
     $card_rs->result_class('DBIx::Class::ResultClass::HashRefInflator');
-    my $ol_text = "lat\tlon\ttitle\tdescription\n";
+    my $ol_text = "lat\tlon\tid\ttitle\tdescription\n";
 
     while (my $card = $card_rs->next) {
-        print STDERR Dumper($card);
+#        print STDERR Dumper($card);
 
         $ol_text .= $card->{location_lat}. "\t".
-               $card->{location_lon}. "\t".
-               $card->{name}. "\t".
+               $card->{location_lon}. "\t" .
+               $card->{id} . "\t" .
+               $card->{name}. "\t" .
+               '<span id="card-' . $card->{id} .
+               '" class="card-link" style="display:none">' . 
+               $self->get_card_link($card) . '</span><br>' .
+               join('<br>', map { $_->{key} . ":" . $_->{value} } (@{ $card->{tags} })).
                ($card->{photo} ? '<img src="' . $card->{photo} . '">' : '');
+        
         $ol_text .= "\n";
     }
 
     return $ol_text;
 }
+
+sub get_card_link {
+    my ($self, $card) = @_;
+
+    return '<a href="' 
+        . $self->base_uri 
+        . '/card/' 
+        . $card->{id} 
+    . '">' 
+        . $card->{name}. '</a>'
+        ;
+}
+
 sub get_user_card_places {
 }
 

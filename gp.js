@@ -82,16 +82,36 @@ GP.highlight_close_features = function(my_loc) {
           // See StyleMap nearby below
           GP.places_layer.features[i].renderIntent = "nearby";
 //          GP.places_layer.drawFeature(features[i], {renderIntent:"nearby" });
+
+          // Need to hide all the other ones we showed previously?
+          GP.show_card(features[i]);
           is_changed = true;
         }
     }
 
     if(is_changed) {
         GP.places_layer.redraw();
+//        GP.store_location(my_loc);
     }
 
 };
 
+GP.show_card = function(card_feature) {
+    GP.on_feature_select({ feature: card_feature });
+    jQuery('#card-'+card_feature.attributes.id).show();
+}
+
+GP.store_location = function(point) {
+    var latlon = new OpenLayers.LonLat(point.x, point.y).transform(
+        GP.map.getProjectionObject(),
+        new OpenLayers.Projection("EPSG:4326")
+    );
+
+    jQuery.post(
+        '/cgi-bin/geotrader.cgi/set_user_location',
+        { lat: latlon.latitude, lon: latlon.longitude }
+    );
+}
 
 if(!GP.latlon_to_map) {
     GP.latlon_to_map = function(latlon) {
@@ -110,12 +130,13 @@ GP.on_popup_close = function(event) {
 
 GP.on_feature_select = function (event) {
     var feature = event.feature;
-    GP.popup = new OpenLayers.Popup.FramedCloud("featurePopup",
-                                                 feature.geometry.getBounds().getCenterLonLat(),
-                                                 new OpenLayers.Size(100,100),
-                                                 "<h2>"+feature.attributes.title + "</h2>"
-//                                                 + feature.attributes.description,
-                                                ,null, true, GP.on_popup_close);
+    GP.popup = new OpenLayers.Popup.FramedCloud(
+        "featurePopup",
+        feature.geometry.getBounds().getCenterLonLat(),
+        new OpenLayers.Size(100,100),
+        "<h2>"+feature.attributes.title + "</h2>"
+            + feature.attributes.description
+        ,null, true, GP.on_popup_close);
     feature.popup = GP.popup;
     GP.popup.feature = feature;
     GP.map.addPopup(GP.popup);
