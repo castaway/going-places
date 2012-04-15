@@ -11,6 +11,8 @@ GP.default_loc = {
     longitude: -1.78
 };
 
+GP.MAX_DIST = 50; // metres
+
 GP.log = function(message) {
     if(0) {
         var log = jQuery('#log');
@@ -22,9 +24,7 @@ if(!GP.update_location) {
     GP.update_location = function(event) {
         // Do/can we show other users later on this layer?
 
-        GP.log('<p>Opened log</p>');
         GP.user_layer.removeAllFeatures();
-        GP.log('<p>removed existing features</p>');
 
         var circle = new OpenLayers.Feature.Vector(
             OpenLayers.Geometry.Polygon.createRegularPolygon(
@@ -38,8 +38,6 @@ if(!GP.update_location) {
             GP.circle_style
         );
 //        jQuery('#stats').innerHTML("Accuracy: " + event.position.coords.accuracy);
-        GP.log('<p>Created circle</p>');
-        GP.log('<p>units: '+GP.map.getUnits()+'</p>');
         GP.log('<p>accuracy: ' + event.position.coords.accuracy + '</p>');
 
         try {
@@ -60,11 +58,40 @@ if(!GP.update_location) {
         } catch (error) {
           GP.log('<p>error doing addFeature: '+error+'</p>');
         }
-        GP.log('<p>added vector and circle to user_layer</p>');
 //        GP.map.zoomToExtent(GP.user_layer.getDataExtent());
+
+        GP.highlight_close_features(event.point);
+
         this.bind = true;
     };
 }
+
+GP.highlight_close_features = function(my_loc) {
+//    GP.log("<p>Looking near: " + my_loc + '</p>');
+
+    var my_point = new OpenLayers.Geometry.Point(my_loc.x, my_loc.y);
+    // my_point.distanceTo(otherpoint);
+//    GP.log("<p>Looking near: " + my_point + '</p>');
+    var features = GP.places_layer.features; 
+//    GP.log("<p>Got features</p>");
+    var is_changed = false;
+    for (i=0; i<features.length; i++) {
+      //  GP.log("Dist: " + my_point.distanceTo(features[i].geometry) + '<br/>');
+      if(my_point.distanceTo(features[i].geometry) <= GP.MAX_DIST) {
+          GP.log("<p>Found " + features[i].geometry + '</p>');
+          // See StyleMap nearby below
+          GP.places_layer.features[i].renderIntent = "nearby";
+//          GP.places_layer.drawFeature(features[i], {renderIntent:"nearby" });
+          is_changed = true;
+        }
+    }
+
+    if(is_changed) {
+        GP.places_layer.redraw();
+    }
+
+};
+
 
 if(!GP.latlon_to_map) {
     GP.latlon_to_map = function(latlon) {
@@ -132,6 +159,9 @@ jQuery(document).ready(function() {
           fillColor: "#66ccff",
           strokeColor: "#3399ff",
           graphicZIndex: 2
+      }),
+      "nearby": new OpenLayers.Style({
+          fillColor: "#00FF00"
       })
   });
     
