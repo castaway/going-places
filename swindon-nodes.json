@@ -1,0 +1,8829 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API",
+  "osm3s": {
+    "timestamp_osm_base": "2012-04-09T21:28:03Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. It has there been collected by a large group of contributors. For individual attribution of each item please refer to http://www.openstreetmap.org/api/0.6/[node|way|relation]/#id/history"
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 18408177,
+  "lat": 51.5625878,
+  "lon": -1.7731415,
+  "tags": {
+    "amenity": "fuel",
+    "created_by": "Potlatch 0.4a"
+  }
+},
+{
+  "type": "node",
+  "id": 65069876,
+  "lat": 51.5914874,
+  "lon": -1.7832429,
+  "tags": {
+    "amenity": "pub",
+    "created_by": "JOSM",
+    "name": "Deers Leap"
+  }
+},
+{
+  "type": "node",
+  "id": 94670913,
+  "lat": 51.5993175,
+  "lon": -1.8080745,
+  "tags": {
+    "amenity": "fuel",
+    "name": "Asda"
+  }
+},
+{
+  "type": "node",
+  "id": 94672364,
+  "lat": 51.5985031,
+  "lon": -1.8055453,
+  "tags": {
+    "amenity": "parking",
+    "created_by": "Potlatch 0.5"
+  }
+},
+{
+  "type": "node",
+  "id": 94672542,
+  "lat": 51.5984925,
+  "lon": -1.8081717,
+  "tags": {
+    "amenity": "parking",
+    "created_by": "Potlatch 0.5"
+  }
+},
+{
+  "type": "node",
+  "id": 98737412,
+  "lat": 51.5717333,
+  "lon": -1.7565280,
+  "tags": {
+    "amenity": "cinema",
+    "created_by": "Potlatch 0.8a",
+    "name": "Empire"
+  }
+},
+{
+  "type": "node",
+  "id": 98737985,
+  "lat": 51.5598115,
+  "lon": -1.7810747,
+  "tags": {
+    "amenity": "theatre",
+    "name": "Wyvern Theatre"
+  }
+},
+{
+  "type": "node",
+  "id": 98745383,
+  "lat": 51.5633059,
+  "lon": -1.7817651,
+  "tags": {
+    "amenity": "pharmacy",
+    "dispensing": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 98973084,
+  "lat": 51.5771370,
+  "lon": -1.8346784,
+  "tags": {
+    "amenity": "pub",
+    "created_by": "Potlatch 0.4c",
+    "name": "Woodlands Edge"
+  }
+},
+{
+  "type": "node",
+  "id": 99911039,
+  "lat": 51.5643398,
+  "lon": -1.7732088,
+  "tags": {
+    "amenity": "pub",
+    "name": "The County Ground Hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 101040183,
+  "lat": 51.5625608,
+  "lon": -1.7705682,
+  "tags": {
+    "amenity": "post_office"
+  }
+},
+{
+  "type": "node",
+  "id": 117085561,
+  "lat": 51.5728308,
+  "lon": -1.7888487,
+  "tags": {
+    "amenity": "pub",
+    "name": "Southbrook Inn"
+  }
+},
+{
+  "type": "node",
+  "id": 127886743,
+  "lat": 51.5997477,
+  "lon": -1.7541728,
+  "tags": {
+    "amenity": "crematorium",
+    "created_by": "JOSM",
+    "name": "Kingsdown Crematorium"
+  }
+},
+{
+  "type": "node",
+  "id": 127886747,
+  "lat": 51.5708976,
+  "lon": -1.7807582,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "Florence Street Mission Hall",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 246192332,
+  "lat": 51.5772590,
+  "lon": -1.7303165,
+  "tags": {
+    "amenity": "fuel",
+    "created_by": "JOSM",
+    "name": "Sainsbury's"
+  }
+},
+{
+  "type": "node",
+  "id": 246194269,
+  "lat": 51.5723063,
+  "lon": -1.7556018,
+  "tags": {
+    "amenity": "parking",
+    "created_by": "JOSM"
+  }
+},
+{
+  "type": "node",
+  "id": 246194271,
+  "lat": 51.5709234,
+  "lon": -1.7567209,
+  "tags": {
+    "amenity": "parking",
+    "created_by": "JOSM"
+  }
+},
+{
+  "type": "node",
+  "id": 246194272,
+  "lat": 51.5694605,
+  "lon": -1.7554419,
+  "tags": {
+    "amenity": "parking",
+    "created_by": "JOSM"
+  }
+},
+{
+  "type": "node",
+  "id": 246194274,
+  "lat": 51.5707315,
+  "lon": -1.7529319,
+  "tags": {
+    "amenity": "parking",
+    "created_by": "JOSM"
+  }
+},
+{
+  "type": "node",
+  "id": 252957122,
+  "lat": 51.5481638,
+  "lon": -1.7616803,
+  "tags": {
+    "amenity": "pharmacy",
+    "created_by": "JOSM"
+  }
+},
+{
+  "type": "node",
+  "id": 254009561,
+  "lat": 51.5381564,
+  "lon": -1.7872158,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Check Inn"
+  }
+},
+{
+  "type": "node",
+  "id": 255398205,
+  "lat": 51.6048468,
+  "lon": -1.7942049,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Jovial Monk"
+  }
+},
+{
+  "type": "node",
+  "id": 255398872,
+  "lat": 51.5704639,
+  "lon": -1.7382556,
+  "tags": {
+    "amenity": "school",
+    "name": "Colebrook Junior School"
+  }
+},
+{
+  "type": "node",
+  "id": 256269680,
+  "lat": 51.5607515,
+  "lon": -1.8315846,
+  "tags": {
+    "amenity": "cinema",
+    "name": "Cineworld"
+  }
+},
+{
+  "type": "node",
+  "id": 260385593,
+  "lat": 51.5544964,
+  "lon": -1.7366526,
+  "tags": {
+    "amenity": "school",
+    "created_by": "Potlatch 0.8b",
+    "name": "Eldene Primary School"
+  }
+},
+{
+  "type": "node",
+  "id": 260399743,
+  "lat": 51.5541554,
+  "lon": -1.7356189,
+  "tags": {
+    "amenity": "pub",
+    "created_by": "Potlatch 0.8b",
+    "name": "Crumpled Horn"
+  }
+},
+{
+  "type": "node",
+  "id": 261672568,
+  "lat": 51.5424947,
+  "lon": -1.8391062,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3318B"
+  }
+},
+{
+  "type": "node",
+  "id": 261672569,
+  "lat": 51.5421900,
+  "lon": -1.8392540,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3318A"
+  }
+},
+{
+  "type": "node",
+  "id": 261672656,
+  "lat": 51.5397343,
+  "lon": -1.8226730,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3306A"
+  }
+},
+{
+  "type": "node",
+  "id": 261672657,
+  "lat": 51.5400945,
+  "lon": -1.8226141,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3306B"
+  }
+},
+{
+  "type": "node",
+  "id": 261672658,
+  "lat": 51.5408825,
+  "lon": -1.8325555,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3313A"
+  }
+},
+{
+  "type": "node",
+  "id": 261672659,
+  "lat": 51.5412506,
+  "lon": -1.8323081,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3313B"
+  }
+},
+{
+  "type": "node",
+  "id": 261676110,
+  "lat": 51.5266900,
+  "lon": -1.7247761,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3235A"
+  }
+},
+{
+  "type": "node",
+  "id": 261676111,
+  "lat": 51.5270024,
+  "lon": -1.7246417,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3235B"
+  }
+},
+{
+  "type": "node",
+  "id": 261676115,
+  "lat": 51.5285676,
+  "lon": -1.7385694,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3245A"
+  }
+},
+{
+  "type": "node",
+  "id": 261676116,
+  "lat": 51.5289204,
+  "lon": -1.7384062,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3245B"
+  }
+},
+{
+  "type": "node",
+  "id": 261676497,
+  "lat": 51.5302380,
+  "lon": -1.7561734,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3258A"
+  }
+},
+{
+  "type": "node",
+  "id": 261676498,
+  "lat": 51.5306067,
+  "lon": -1.7560473,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3258B"
+  }
+},
+{
+  "type": "node",
+  "id": 261676501,
+  "lat": 51.5338372,
+  "lon": -1.7728562,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3270A"
+  }
+},
+{
+  "type": "node",
+  "id": 261676502,
+  "lat": 51.5341033,
+  "lon": -1.7725773,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3270B"
+  }
+},
+{
+  "type": "node",
+  "id": 261677767,
+  "lat": 51.5387736,
+  "lon": -1.7883516,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3282A"
+  }
+},
+{
+  "type": "node",
+  "id": 261677768,
+  "lat": 51.5391238,
+  "lon": -1.7881690,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3282B"
+  }
+},
+{
+  "type": "node",
+  "id": 261677769,
+  "lat": 51.5398799,
+  "lon": -1.7956170,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3287A"
+  }
+},
+{
+  "type": "node",
+  "id": 261677770,
+  "lat": 51.5401741,
+  "lon": -1.7955363,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3287B"
+  }
+},
+{
+  "type": "node",
+  "id": 261677771,
+  "lat": 51.5402968,
+  "lon": -1.8057398,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3294A"
+  }
+},
+{
+  "type": "node",
+  "id": 261677772,
+  "lat": 51.5405878,
+  "lon": -1.8057313,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone",
+    "ref": "3294B"
+  }
+},
+{
+  "type": "node",
+  "id": 278397933,
+  "lat": 51.5684392,
+  "lon": -1.7438094,
+  "tags": {
+    "amenity": "fuel",
+    "name": "Esso",
+    "operator": "Esso"
+  }
+},
+{
+  "type": "node",
+  "id": 281293996,
+  "lat": 51.5427404,
+  "lon": -1.7472965,
+  "tags": {
+    "amenity": "toilets"
+  }
+},
+{
+  "type": "node",
+  "id": 281293998,
+  "lat": 51.5425315,
+  "lon": -1.7473644,
+  "tags": {
+    "amenity": "paddling pool",
+    "name": "Coate Water Paddling Pool"
+  }
+},
+{
+  "type": "node",
+  "id": 313123252,
+  "lat": 51.5476500,
+  "lon": -1.7719608,
+  "tags": {
+    "amenity": "toilets"
+  }
+},
+{
+  "type": "node",
+  "id": 321305301,
+  "lat": 51.5515293,
+  "lon": -1.7737900,
+  "tags": {
+    "amenity": "post_box"
+  }
+},
+{
+  "type": "node",
+  "id": 323747019,
+  "lat": 51.5905981,
+  "lon": -1.8130288,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 11:45",
+    "ref": "SN25 383"
+  }
+},
+{
+  "type": "node",
+  "id": 324700540,
+  "lat": 51.5607490,
+  "lon": -1.7493046,
+  "tags": {
+    "amenity": "post_box",
+    "created_by": "JOSM"
+  }
+},
+{
+  "type": "node",
+  "id": 324700567,
+  "lat": 51.5566909,
+  "lon": -1.7539248,
+  "tags": {
+    "amenity": "post_box",
+    "created_by": "JOSM"
+  }
+},
+{
+  "type": "node",
+  "id": 332699927,
+  "lat": 51.5240381,
+  "lon": -1.7925203,
+  "tags": {
+    "amenity": "recycling",
+    "recycling:clothes": "yes",
+    "recycling:glass": "yes",
+    "recycling:paper": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 332701564,
+  "lat": 51.5243494,
+  "lon": -1.7943551,
+  "tags": {
+    "amenity": "post_box",
+    "postal_code": "SN4",
+    "ref": "SN4 138"
+  }
+},
+{
+  "type": "node",
+  "id": 332701565,
+  "lat": 51.5275598,
+  "lon": -1.7939189,
+  "tags": {
+    "amenity": "post_box",
+    "postal_code": "SN4",
+    "ref": "SN4 337"
+  }
+},
+{
+  "type": "node",
+  "id": 334496943,
+  "lat": 51.5643663,
+  "lon": -1.8042618,
+  "tags": {
+    "amenity": "post_box",
+    "postal_code": "SN2",
+    "ref": "SN2 249"
+  }
+},
+{
+  "type": "node",
+  "id": 336075184,
+  "lat": 51.5273371,
+  "lon": -1.7945165,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Iron Horse"
+  }
+},
+{
+  "type": "node",
+  "id": 336077091,
+  "lat": 51.5819574,
+  "lon": -1.7677304,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:45; Sa 12:00",
+    "postal_code": "SN2",
+    "ref": "SN2 302"
+  }
+},
+{
+  "type": "node",
+  "id": 339867521,
+  "lat": 51.5252052,
+  "lon": -1.7980176,
+  "tags": {
+    "amenity": "post_box",
+    "postal_code": "SN4",
+    "ref": "SN4 323"
+  }
+},
+{
+  "type": "node",
+  "id": 339867864,
+  "lat": 51.5227475,
+  "lon": -1.7189961,
+  "tags": {
+    "amenity": "post_box",
+    "postal_code": "SN4",
+    "ref": "SN4 9"
+  }
+},
+{
+  "type": "node",
+  "id": 344448000,
+  "lat": 51.5625976,
+  "lon": -1.7491625,
+  "tags": {
+    "amenity": "post_box",
+    "postal_code": "SN3",
+    "ref": "SN3 403"
+  }
+},
+{
+  "type": "node",
+  "id": 344448002,
+  "lat": 51.5818454,
+  "lon": -1.7825570,
+  "tags": {
+    "amenity": "post_box",
+    "postal_code": "SN2",
+    "ref": "SN2 55"
+  }
+},
+{
+  "type": "node",
+  "id": 344448004,
+  "lat": 51.5605327,
+  "lon": -1.7901411,
+  "tags": {
+    "amenity": "post_box",
+    "ref": "SN1 88"
+  }
+},
+{
+  "type": "node",
+  "id": 347585179,
+  "lat": 51.5951466,
+  "lon": -1.8056457,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Manor Farm"
+  }
+},
+{
+  "type": "node",
+  "id": 353203696,
+  "lat": 51.5717887,
+  "lon": -1.7817181,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:00",
+    "postal_code": "SN2",
+    "ref": "SN2 238"
+  }
+},
+{
+  "type": "node",
+  "id": 360909798,
+  "lat": 51.5283731,
+  "lon": -1.7873319,
+  "tags": {
+    "amenity": "post_box",
+    "postal_code": "SN4",
+    "ref": "SN4 194"
+  }
+},
+{
+  "type": "node",
+  "id": 360909799,
+  "lat": 51.5539844,
+  "lon": -1.7505707,
+  "tags": {
+    "amenity": "post_box"
+  }
+},
+{
+  "type": "node",
+  "id": 364811587,
+  "lat": 51.5749713,
+  "lon": -1.7518728,
+  "tags": {
+    "amenity": "post_box",
+    "postal_code": "SN3",
+    "ref": "SN3 287"
+  }
+},
+{
+  "type": "node",
+  "id": 364811588,
+  "lat": 51.5760116,
+  "lon": -1.7476397,
+  "tags": {
+    "amenity": "post_box",
+    "postal_code": "SN3",
+    "ref": "SN3 329"
+  }
+},
+{
+  "type": "node",
+  "id": 365286207,
+  "lat": 51.5990841,
+  "lon": -1.8083903,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "burger",
+    "name": "McDonald's"
+  }
+},
+{
+  "type": "node",
+  "id": 365286215,
+  "lat": 51.5977357,
+  "lon": -1.8067138,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Pizza Hut"
+  }
+},
+{
+  "type": "node",
+  "id": 365953028,
+  "lat": 51.5616816,
+  "lon": -1.7904516,
+  "tags": {
+    "amenity": "post_box",
+    "created_by": "Potlatch 0.10f",
+    "ref": "SN1 2"
+  }
+},
+{
+  "type": "node",
+  "id": 366695323,
+  "lat": 51.5308320,
+  "lon": -1.8013490,
+  "tags": {
+    "amenity": "post_box",
+    "ref": "SN4 353"
+  }
+},
+{
+  "type": "node",
+  "id": 374275667,
+  "lat": 51.5919509,
+  "lon": -1.8079837,
+  "tags": {
+    "amenity": "post_box",
+    "created_by": "Potlatch 0.10f"
+  }
+},
+{
+  "type": "node",
+  "id": 378434514,
+  "lat": 51.5461957,
+  "lon": -1.7257793,
+  "tags": {
+    "amenity": "post_box"
+  }
+},
+{
+  "type": "node",
+  "id": 385602979,
+  "lat": 51.5467968,
+  "lon": -1.7345164,
+  "tags": {
+    "amenity": "post_box"
+  }
+},
+{
+  "type": "node",
+  "id": 385603710,
+  "lat": 51.5467682,
+  "lon": -1.7310525,
+  "tags": {
+    "amenity": "school",
+    "name": "Liden Primary"
+  }
+},
+{
+  "type": "node",
+  "id": 385736802,
+  "lat": 51.5585208,
+  "lon": -1.7779999,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "catholic",
+    "name": "Holy Rood",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 385768105,
+  "lat": 51.5612318,
+  "lon": -1.7946775,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "St Mark's, Swindon",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 387008321,
+  "lat": 51.5537587,
+  "lon": -1.7745121,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "Christ Church Swindon",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 389040798,
+  "lat": 51.5224383,
+  "lon": -1.7861287,
+  "tags": {
+    "amenity": "post_box",
+    "ref": "SN4 66"
+  }
+},
+{
+  "type": "node",
+  "id": 389041419,
+  "lat": 51.5710094,
+  "lon": -1.7951467,
+  "tags": {
+    "amenity": "post_box",
+    "ref": "SN2 99"
+  }
+},
+{
+  "type": "node",
+  "id": 393437920,
+  "lat": 51.5227972,
+  "lon": -1.7944216,
+  "tags": {
+    "amenity": "post_box",
+    "post_box:design": "Type K",
+    "post_box:type": "pillar",
+    "ref": "SN4 144",
+    "royal_cypher": "EIIR",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 403909420,
+  "lat": 51.5886984,
+  "lon": -1.7588512,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:45; Sa 12:00",
+    "ref": "SN2 327"
+  }
+},
+{
+  "type": "node",
+  "id": 403916169,
+  "lat": 51.5880335,
+  "lon": -1.7749051,
+  "tags": {
+    "amenity": "post_box",
+    "ref": "SN2 331"
+  }
+},
+{
+  "type": "node",
+  "id": 408157485,
+  "lat": 51.5720488,
+  "lon": -1.7358565,
+  "tags": {
+    "amenity": "post_box",
+    "ref": "SN3 367"
+  }
+},
+{
+  "type": "node",
+  "id": 408158064,
+  "lat": 51.5734024,
+  "lon": -1.7482224,
+  "tags": {
+    "amenity": "post_box"
+  }
+},
+{
+  "type": "node",
+  "id": 410212082,
+  "lat": 51.5360570,
+  "lon": -1.7850215,
+  "tags": {
+    "amenity": "post_box",
+    "ref": "SN4 21"
+  }
+},
+{
+  "type": "node",
+  "id": 411284496,
+  "lat": 51.6155093,
+  "lon": -1.7803958,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "anglican",
+    "name": "St. Leonard",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 418439976,
+  "lat": 51.5540066,
+  "lon": -1.8257078,
+  "tags": {
+    "amenity": "post_box",
+    "ref": "SN5 379"
+  }
+},
+{
+  "type": "node",
+  "id": 429334004,
+  "lat": 51.5963071,
+  "lon": -1.7539578,
+  "tags": {
+    "amenity": "post_box",
+    "ref": "SN25 368"
+  }
+},
+{
+  "type": "node",
+  "id": 431334032,
+  "lat": 51.5517765,
+  "lon": -1.7916419,
+  "tags": {
+    "amenity": "post_box",
+    "designation": "Mon-Fri 6:30pm, Sat 11:30am",
+    "operator": "Royal Mail",
+    "ref": "SN1 621"
+  }
+},
+{
+  "type": "node",
+  "id": 440350523,
+  "lat": 51.5264321,
+  "lon": -1.7851578,
+  "tags": {
+    "amenity": "hospital",
+    "emergency": "no",
+    "name": "Prospect Hospice"
+  }
+},
+{
+  "type": "node",
+  "id": 440350524,
+  "lat": 51.5253631,
+  "lon": -1.7860411,
+  "tags": {
+    "amenity": "hospital",
+    "emergency": "no",
+    "name": "Ridgeway Hospital"
+  }
+},
+{
+  "type": "node",
+  "id": 440350534,
+  "lat": 51.5235740,
+  "lon": -1.7901748,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "catholic",
+    "name": "Saint Josephs Church",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 442390609,
+  "lat": 51.5616830,
+  "lon": -1.7751090,
+  "tags": {
+    "amenity": "fast_food"
+  }
+},
+{
+  "type": "node",
+  "id": 442390745,
+  "lat": 51.5579094,
+  "lon": -1.7649779,
+  "tags": {
+    "amenity": "school",
+    "name": "Lainesmead"
+  }
+},
+{
+  "type": "node",
+  "id": 442390885,
+  "lat": 51.5645152,
+  "lon": -1.7635617,
+  "tags": {
+    "amenity": "school",
+    "name": "St Josephs"
+  }
+},
+{
+  "type": "node",
+  "id": 442391250,
+  "lat": 51.5711855,
+  "lon": -1.7528232,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "burger",
+    "name": "McDonald's"
+  }
+},
+{
+  "type": "node",
+  "id": 442391252,
+  "lat": 51.5705760,
+  "lon": -1.7573905,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "KFC"
+  }
+},
+{
+  "type": "node",
+  "id": 442391253,
+  "lat": 51.5710935,
+  "lon": -1.7576222,
+  "tags": {
+    "amenity": "restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 442391295,
+  "lat": 51.5712802,
+  "lon": -1.7572532,
+  "tags": {
+    "amenity": "restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 442391306,
+  "lat": 51.5749582,
+  "lon": -1.7538411,
+  "tags": {
+    "amenity": "pub",
+    "name": "The New Inn",
+    "operator": "Arkell's"
+  }
+},
+{
+  "type": "node",
+  "id": 442391307,
+  "lat": 51.5746770,
+  "lon": -1.7543300,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Dockle Farmhouse",
+    "operator": "J D Wetherspoon"
+  }
+},
+{
+  "type": "node",
+  "id": 442391505,
+  "lat": 51.5539657,
+  "lon": -1.7770114,
+  "tags": {
+    "amenity": "pub"
+  }
+},
+{
+  "type": "node",
+  "id": 442391557,
+  "lat": 51.5536455,
+  "lon": -1.7770114,
+  "tags": {
+    "amenity": "pub"
+  }
+},
+{
+  "type": "node",
+  "id": 442391664,
+  "lat": 51.5780613,
+  "lon": -1.7737549,
+  "tags": {
+    "amenity": "pub"
+  }
+},
+{
+  "type": "node",
+  "id": 442391825,
+  "lat": 51.5843372,
+  "lon": -1.7733048,
+  "tags": {
+    "amenity": "school",
+    "name": "Headlands"
+  }
+},
+{
+  "type": "node",
+  "id": 442391826,
+  "lat": 51.5854216,
+  "lon": -1.7758374,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Moonrakers"
+  }
+},
+{
+  "type": "node",
+  "id": 442391827,
+  "lat": 51.5844070,
+  "lon": -1.7689008,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Wheatsheaf"
+  }
+},
+{
+  "type": "node",
+  "id": 442391947,
+  "lat": 51.5923767,
+  "lon": -1.7616860,
+  "tags": {
+    "amenity": "pub",
+    "name": "Kingsdown",
+    "operator": "Arkell's"
+  }
+},
+{
+  "type": "node",
+  "id": 442391951,
+  "lat": 51.5848280,
+  "lon": -1.7497985,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Crown",
+    "operator": "Arkell's"
+  }
+},
+{
+  "type": "node",
+  "id": 442392111,
+  "lat": 51.6090121,
+  "lon": -1.7872298,
+  "tags": {
+    "amenity": "pub"
+  }
+},
+{
+  "type": "node",
+  "id": 442392442,
+  "lat": 51.5987001,
+  "lon": -1.8017797,
+  "tags": {
+    "amenity": "pub",
+    "name": "Toby Carvery"
+  }
+},
+{
+  "type": "node",
+  "id": 442392637,
+  "lat": 51.6001877,
+  "lon": -1.8018092,
+  "tags": {
+    "amenity": "pub",
+    "name": "Blunsdon Arms"
+  }
+},
+{
+  "type": "node",
+  "id": 450163240,
+  "lat": 51.5541003,
+  "lon": -1.8133237,
+  "tags": {
+    "amenity": "parking",
+    "parking": "surface"
+  }
+},
+{
+  "type": "node",
+  "id": 466243550,
+  "lat": 51.5532309,
+  "lon": -1.8066565,
+  "tags": {
+    "amenity": "post_box"
+  }
+},
+{
+  "type": "node",
+  "id": 483797785,
+  "lat": 51.5965416,
+  "lon": -1.8058032,
+  "tags": {
+    "amenity": "police",
+    "name": "North Swindon Police Point"
+  }
+},
+{
+  "type": "node",
+  "id": 483797789,
+  "lat": 51.5973098,
+  "lon": -1.8064518,
+  "tags": {
+    "amenity": "library",
+    "name": "North Swindon Library"
+  }
+},
+{
+  "type": "node",
+  "id": 484724726,
+  "lat": 51.5970484,
+  "lon": -1.8159528,
+  "tags": {
+    "amenity": "school",
+    "name": "Orchid Vale Primary School"
+  }
+},
+{
+  "type": "node",
+  "id": 484735114,
+  "lat": 51.5994207,
+  "lon": -1.7930489,
+  "tags": {
+    "amenity": "school",
+    "name": "Abbey Meads Community Primary School"
+  }
+},
+{
+  "type": "node",
+  "id": 484780859,
+  "lat": 51.5901213,
+  "lon": -1.8186911,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:00",
+    "ref": "SN2 399"
+  }
+},
+{
+  "type": "node",
+  "id": 484780870,
+  "lat": 51.5900840,
+  "lon": -1.8187598,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 485268663,
+  "lat": 51.5232115,
+  "lon": -1.7950313,
+  "tags": {
+    "amenity": "toilets",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 485268665,
+  "lat": 51.5240476,
+  "lon": -1.7979049,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "jehovahs_witness",
+    "name": "Gospel Hall",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 486605045,
+  "lat": 51.5887453,
+  "lon": -1.7484681,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Rattrap"
+  }
+},
+{
+  "type": "node",
+  "id": 486605054,
+  "lat": 51.5882440,
+  "lon": -1.7484509,
+  "tags": {
+    "amenity": "fire_station"
+  }
+},
+{
+  "type": "node",
+  "id": 486614225,
+  "lat": 51.5824149,
+  "lon": -1.7425801,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "anglican",
+    "name": "Saint Margaret",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 486618076,
+  "lat": 51.5822283,
+  "lon": -1.7460477,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Wheatsheaf",
+    "operator": "Arkell's"
+  }
+},
+{
+  "type": "node",
+  "id": 486641329,
+  "lat": 51.5921118,
+  "lon": -1.7611462,
+  "tags": {
+    "amenity": "parking"
+  }
+},
+{
+  "type": "node",
+  "id": 486641370,
+  "lat": 51.5885723,
+  "lon": -1.7557593,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "fish_and_chips",
+    "name": "Kingsdown Fish and Burger Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 486645462,
+  "lat": 51.5758170,
+  "lon": -1.7358853,
+  "tags": {
+    "amenity": "pub",
+    "name": "White Hart Inn",
+    "operator": "Arkell's"
+  }
+},
+{
+  "type": "node",
+  "id": 486647139,
+  "lat": 51.5749955,
+  "lon": -1.7422111,
+  "tags": {
+    "amenity": "pub",
+    "name": "Sandgate"
+  }
+},
+{
+  "type": "node",
+  "id": 486649396,
+  "lat": 51.5716348,
+  "lon": -1.7411639,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Stratton Tandoori"
+  }
+},
+{
+  "type": "node",
+  "id": 486666777,
+  "lat": 51.5719731,
+  "lon": -1.7772647,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "chinese",
+    "name": "Zen Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 486708423,
+  "lat": 51.5636535,
+  "lon": -1.7825517,
+  "tags": {
+    "amenity": "parking",
+    "name": "Carlton  Carpark"
+  }
+},
+{
+  "type": "node",
+  "id": 504564442,
+  "lat": 51.5922141,
+  "lon": -1.8082781,
+  "tags": {
+    "amenity": "pharmacy",
+    "name": "Home Ground Pharmacy"
+  }
+},
+{
+  "type": "node",
+  "id": 511039566,
+  "lat": 51.5757569,
+  "lon": -1.7774168,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:00",
+    "ref": "SN2 80"
+  }
+},
+{
+  "type": "node",
+  "id": 516260019,
+  "lat": 51.5596589,
+  "lon": -1.7823681,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Savoy"
+  }
+},
+{
+  "type": "node",
+  "id": 516260067,
+  "lat": 51.5562796,
+  "lon": -1.7833788,
+  "tags": {
+    "amenity": "pub",
+    "name": "The George"
+  }
+},
+{
+  "type": "node",
+  "id": 516260074,
+  "lat": 51.5560878,
+  "lon": -1.7834137,
+  "tags": {
+    "amenity": "pub",
+    "name": "Wellington Arms"
+  }
+},
+{
+  "type": "node",
+  "id": 516260130,
+  "lat": 51.5575055,
+  "lon": -1.7915919,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:00",
+    "operator": "Royal Mail"
+  }
+},
+{
+  "type": "node",
+  "id": 516260138,
+  "lat": 51.5576709,
+  "lon": -1.7918150,
+  "tags": {
+    "amenity": "shop",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 516260166,
+  "lat": 51.5592420,
+  "lon": -1.7881725,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Rolleston"
+  }
+},
+{
+  "type": "node",
+  "id": 534456956,
+  "lat": 51.5425010,
+  "lon": -1.7813883,
+  "tags": {
+    "amenity": "post_box",
+    "ref": "SN1 406"
+  }
+},
+{
+  "type": "node",
+  "id": 543670367,
+  "lat": 51.5579857,
+  "lon": -1.8010551,
+  "tags": {
+    "amenity": "post_box",
+    "ref": "SN1 94"
+  }
+},
+{
+  "type": "node",
+  "id": 543671561,
+  "lat": 51.5451900,
+  "lon": -1.7789422,
+  "tags": {
+    "amenity": "post_box",
+    "ref": "SN1 233"
+  }
+},
+{
+  "type": "node",
+  "id": 553031654,
+  "lat": 51.5476096,
+  "lon": -1.8416756,
+  "tags": {
+    "amenity": "fuel",
+    "operator": "BP"
+  }
+},
+{
+  "type": "node",
+  "id": 582120210,
+  "lat": 51.5225906,
+  "lon": -1.7977488,
+  "tags": {
+    "amenity": "pub",
+    "name": "Carters Rest"
+  }
+},
+{
+  "type": "node",
+  "id": 582121551,
+  "lat": 51.5295164,
+  "lon": -1.7941073,
+  "tags": {
+    "amenity": "telephone",
+    "operator": "BT"
+  }
+},
+{
+  "type": "node",
+  "id": 597470115,
+  "lat": 51.5468906,
+  "lon": -1.7719855,
+  "tags": {
+    "amenity": "post_box",
+    "ref": "SN3 125"
+  }
+},
+{
+  "type": "node",
+  "id": 603110407,
+  "lat": 51.5727937,
+  "lon": -1.8281475,
+  "tags": {
+    "amenity": "parking",
+    "parking": "surface"
+  }
+},
+{
+  "type": "node",
+  "id": 603285129,
+  "lat": 51.5777329,
+  "lon": -1.7317501,
+  "tags": {
+    "amenity": "parking"
+  }
+},
+{
+  "type": "node",
+  "id": 614480887,
+  "lat": 51.5963629,
+  "lon": -1.8072183,
+  "tags": {
+    "amenity": "parking"
+  }
+},
+{
+  "type": "node",
+  "id": 621869409,
+  "lat": 51.5550172,
+  "lon": -1.7804332,
+  "tags": {
+    "amenity": "post_box",
+    "ref": "SN1 79"
+  }
+},
+{
+  "type": "node",
+  "id": 623645548,
+  "lat": 51.5805918,
+  "lon": -1.7782173,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:00",
+    "ref": "SN2 304"
+  }
+},
+{
+  "type": "node",
+  "id": 631872162,
+  "lat": 51.5638746,
+  "lon": -1.8304164,
+  "tags": {
+    "amenity": "school",
+    "name": "Shaw Ridge Primary School"
+  }
+},
+{
+  "type": "node",
+  "id": 631877872,
+  "lat": 51.5516875,
+  "lon": -1.8345773,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 678396539,
+  "lat": 51.5586525,
+  "lon": -1.7829381,
+  "tags": {
+    "amenity": "pharmacy"
+  }
+},
+{
+  "type": "node",
+  "id": 718856942,
+  "lat": 51.5780501,
+  "lon": -1.7756009,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "Shri Guru Nanak Gurdwara",
+    "religion": "sikh"
+  }
+},
+{
+  "type": "node",
+  "id": 720048920,
+  "lat": 51.5653270,
+  "lon": -1.7846251,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 18:30; Sa 12:15",
+    "operator": "Royal Mail",
+    "ref": "SN1 373"
+  }
+},
+{
+  "type": "node",
+  "id": 730540625,
+  "lat": 51.5736992,
+  "lon": -1.8019130,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Manor"
+  }
+},
+{
+  "type": "node",
+  "id": 731901249,
+  "lat": 51.5842702,
+  "lon": -1.8128080,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Boundary House"
+  }
+},
+{
+  "type": "node",
+  "id": 731902318,
+  "lat": 51.5891403,
+  "lon": -1.8265353,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Tawny Owl"
+  }
+},
+{
+  "type": "node",
+  "id": 732080955,
+  "lat": 51.5869200,
+  "lon": -1.8209056,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:00",
+    "ref": "SN2 400"
+  }
+},
+{
+  "type": "node",
+  "id": 732084603,
+  "lat": 51.5833259,
+  "lon": -1.8116016,
+  "tags": {
+    "amenity": "pharmacy",
+    "name": "Lloyds Pharmacy",
+    "opening_hours": "Mo-Fr 08:00-18:30"
+  }
+},
+{
+  "type": "node",
+  "id": 732084686,
+  "lat": 51.5836236,
+  "lon": -1.8110163,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "fish_and_chips",
+    "name": "Moredon Fish Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 747882626,
+  "lat": 51.5556785,
+  "lon": -1.7900981,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "anglican",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 748878137,
+  "lat": 51.5600748,
+  "lon": -1.8179639,
+  "tags": {
+    "amenity": "bank",
+    "operator": "HSBC"
+  }
+},
+{
+  "type": "node",
+  "id": 756960040,
+  "lat": 51.5625760,
+  "lon": -1.7869842,
+  "tags": {
+    "amenity": "bar",
+    "name": "TP's Sports Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 756960057,
+  "lat": 51.5624872,
+  "lon": -1.7872108,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Subway"
+  }
+},
+{
+  "type": "node",
+  "id": 756960065,
+  "lat": 51.5599857,
+  "lon": -1.7868071,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Greggs"
+  }
+},
+{
+  "type": "node",
+  "id": 756960075,
+  "lat": 51.5603470,
+  "lon": -1.7846884,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Greggs"
+  }
+},
+{
+  "type": "node",
+  "id": 756960151,
+  "lat": 51.5604342,
+  "lon": -1.7869902,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "burger",
+    "name": "McDonald's"
+  }
+},
+{
+  "type": "node",
+  "id": 756960203,
+  "lat": 51.5623363,
+  "lon": -1.7877246,
+  "tags": {
+    "amenity": "pub",
+    "name": "Sir Daniel Arms"
+  }
+},
+{
+  "type": "node",
+  "id": 756960213,
+  "lat": 51.5624964,
+  "lon": -1.7879285,
+  "tags": {
+    "amenity": "bar",
+    "name": "Bushwhackers"
+  }
+},
+{
+  "type": "node",
+  "id": 759716106,
+  "lat": 51.5491900,
+  "lon": -1.7819951,
+  "tags": {
+    "amenity": "cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 761126611,
+  "lat": 51.5570115,
+  "lon": -1.7879083,
+  "tags": {
+    "amenity": "place_of_worship",
+    "religion": "sikh"
+  }
+},
+{
+  "type": "node",
+  "id": 767401206,
+  "lat": 51.5877198,
+  "lon": -1.7971250,
+  "tags": {
+    "amenity": "pub",
+    "name": "Shield and Dagger"
+  }
+},
+{
+  "type": "node",
+  "id": 767401207,
+  "lat": 51.5900662,
+  "lon": -1.8074890,
+  "tags": {
+    "amenity": "pub",
+    "name": "Fox and Hounds"
+  }
+},
+{
+  "type": "node",
+  "id": 767401208,
+  "lat": 51.5831709,
+  "lon": -1.7976974,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:00",
+    "ref": "SN25 165"
+  }
+},
+{
+  "type": "node",
+  "id": 767401215,
+  "lat": 51.5878031,
+  "lon": -1.7968217,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "fish_and_chips",
+    "name": "Mandarin Fish Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 772987190,
+  "lat": 51.6057784,
+  "lon": -1.8416844,
+  "tags": {
+    "amenity": "parking"
+  }
+},
+{
+  "type": "node",
+  "id": 772993247,
+  "lat": 51.6060636,
+  "lon": -1.8488784,
+  "tags": {
+    "amenity": "post_box"
+  }
+},
+{
+  "type": "node",
+  "id": 773211811,
+  "lat": 51.5650554,
+  "lon": -1.7846794,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Queens Tap"
+  }
+},
+{
+  "type": "node",
+  "id": 775227188,
+  "lat": 51.5531313,
+  "lon": -1.7774957,
+  "tags": {
+    "amenity": "post_office",
+    "source": "OS OpenData StreetView"
+  }
+},
+{
+  "type": "node",
+  "id": 775235243,
+  "lat": 51.5652153,
+  "lon": -1.8005511,
+  "tags": {
+    "amenity": "post_office",
+    "source": "OS OpenData StreetView"
+  }
+},
+{
+  "type": "node",
+  "id": 775236263,
+  "lat": 51.5897079,
+  "lon": -1.7649245,
+  "tags": {
+    "amenity": "post_office",
+    "source": "OS OpenData StreetView"
+  }
+},
+{
+  "type": "node",
+  "id": 775236633,
+  "lat": 51.5717017,
+  "lon": -1.7768624,
+  "tags": {
+    "amenity": "post_office",
+    "source": "OS OpenData StreetView"
+  }
+},
+{
+  "type": "node",
+  "id": 775237469,
+  "lat": 51.5603504,
+  "lon": -1.7627571,
+  "tags": {
+    "amenity": "post_office",
+    "source": "OS OpenData StreetView"
+  }
+},
+{
+  "type": "node",
+  "id": 775238824,
+  "lat": 51.5674969,
+  "lon": -1.7386441,
+  "tags": {
+    "amenity": "post_office",
+    "source": "OS OpenData StreetView"
+  }
+},
+{
+  "type": "node",
+  "id": 775239308,
+  "lat": 51.5478614,
+  "lon": -1.7302392,
+  "tags": {
+    "amenity": "post_office",
+    "source": "OS OpenData StreetView"
+  }
+},
+{
+  "type": "node",
+  "id": 841910601,
+  "lat": 51.5947101,
+  "lon": -1.7963341,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:00",
+    "ref": "SN25 109"
+  }
+},
+{
+  "type": "node",
+  "id": 841911075,
+  "lat": 51.5875733,
+  "lon": -1.8012501,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:45; Sa 12:30",
+    "ref": "SN25 371"
+  }
+},
+{
+  "type": "node",
+  "id": 867335924,
+  "lat": 51.5969570,
+  "lon": -1.7983153,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 867336364,
+  "lat": 51.5984046,
+  "lon": -1.7800971,
+  "tags": {
+    "amenity": "post_box"
+  }
+},
+{
+  "type": "node",
+  "id": 869283649,
+  "lat": 51.5888968,
+  "lon": -1.8081041,
+  "tags": {
+    "amenity": "school",
+    "name": "Haydon Wick Primary School"
+  }
+},
+{
+  "type": "node",
+  "id": 869283756,
+  "lat": 51.5958326,
+  "lon": -1.8025530,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:00",
+    "ref": "SN25 25"
+  }
+},
+{
+  "type": "node",
+  "id": 869284042,
+  "lat": 51.5885872,
+  "lon": -1.8101157,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 869284324,
+  "lat": 51.5899949,
+  "lon": -1.8071419,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:45; Sa 12:15",
+    "ref": "SN25 152"
+  }
+},
+{
+  "type": "node",
+  "id": 869317407,
+  "lat": 51.5979770,
+  "lon": -1.7929047,
+  "tags": {
+    "amenity": "pharmacy",
+    "dispensing": "yes",
+    "name": "Lloyds Pharmacy"
+  }
+},
+{
+  "type": "node",
+  "id": 869317468,
+  "lat": 51.5986628,
+  "lon": -1.7938208,
+  "tags": {
+    "amenity": "atm"
+  }
+},
+{
+  "type": "node",
+  "id": 869317475,
+  "lat": 51.5986490,
+  "lon": -1.7937434,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "chinese",
+    "name": "Abbey Meads Rendezvous"
+  }
+},
+{
+  "type": "node",
+  "id": 869317507,
+  "lat": 51.5986028,
+  "lon": -1.7932032,
+  "tags": {
+    "amenity": "post_box"
+  }
+},
+{
+  "type": "node",
+  "id": 869317718,
+  "lat": 51.5980464,
+  "lon": -1.7928731,
+  "tags": {
+    "amenity": "doctors",
+    "name": "Abbey Meads Medical Practice"
+  }
+},
+{
+  "type": "node",
+  "id": 869317760,
+  "lat": 51.5985718,
+  "lon": -1.7933123,
+  "tags": {
+    "amenity": "veterinary",
+    "name": "Abbey Meads Veterinary Surgery"
+  }
+},
+{
+  "type": "node",
+  "id": 869317774,
+  "lat": 51.5978949,
+  "lon": -1.7929573,
+  "tags": {
+    "amenity": "dentist",
+    "name": "Abbey Meads Dental Practice"
+  }
+},
+{
+  "type": "node",
+  "id": 869317843,
+  "lat": 51.5951224,
+  "lon": -1.8006975,
+  "tags": {
+    "amenity": "school",
+    "name": "Catherine Wayte Primary School"
+  }
+},
+{
+  "type": "node",
+  "id": 869387773,
+  "lat": 51.5897113,
+  "lon": -1.8031567,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "Emanual United Reform Church"
+  }
+},
+{
+  "type": "node",
+  "id": 870108817,
+  "lat": 51.5836180,
+  "lon": -1.8008625,
+  "tags": {
+    "amenity": "library",
+    "name": "Cheney Library",
+    "opening_hours": "Mo 10:00-20:00; Tu 10:00-17:00; Th 10:00-20:00; Fr 10:00-17:00; Sa 10:00-13:00"
+  }
+},
+{
+  "type": "node",
+  "id": 870109079,
+  "lat": 51.5829901,
+  "lon": -1.8011737,
+  "tags": {
+    "amenity": "telephone",
+    "operator": "BT",
+    "payment:coins": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "payment:telephone_cards": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 870109215,
+  "lat": 51.5830719,
+  "lon": -1.8003706,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "kebab",
+    "name": "Moredon Charcoal Grill",
+    "phone": "01793613600"
+  }
+},
+{
+  "type": "node",
+  "id": 870109594,
+  "lat": 51.5937951,
+  "lon": -1.7963323,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 870109702,
+  "lat": 51.5830549,
+  "lon": -1.8006331,
+  "tags": {
+    "amenity": "atm"
+  }
+},
+{
+  "type": "node",
+  "id": 870109835,
+  "lat": 51.5905924,
+  "lon": -1.7967292,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 870109953,
+  "lat": 51.5830573,
+  "lon": -1.7977296,
+  "tags": {
+    "amenity": "post_office",
+    "opening_hours": "Mo-Fr 09:00-17:00; Sa 09:00-13:00"
+  }
+},
+{
+  "type": "node",
+  "id": 870109998,
+  "lat": 51.5830309,
+  "lon": -1.8000183,
+  "tags": {
+    "amenity": "cafe",
+    "name": "The Cake Hole",
+    "phone": "523979"
+  }
+},
+{
+  "type": "node",
+  "id": 870110134,
+  "lat": 51.5830755,
+  "lon": -1.7997002,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "fish_and_chips; chinese",
+    "name": "Golden Star",
+    "opening_hours": "Mo-Th 17:15-23:00; Fr-Sa 17:15-23:30",
+    "phone": "01793692101"
+  }
+},
+{
+  "type": "node",
+  "id": 870110285,
+  "lat": 51.5830714,
+  "lon": -1.8001363,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "indian",
+    "name": "Fahed's",
+    "opening_hours": "Mo-Th 16:30-23:30; Fr-Su 16:30-24:00",
+    "phone": "01793432983"
+  }
+},
+{
+  "type": "node",
+  "id": 870110308,
+  "lat": 51.5856447,
+  "lon": -1.7743480,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "fish_and_chips",
+    "name": "New Shanghai Fish Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 870110416,
+  "lat": 51.5835131,
+  "lon": -1.7924873,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:45; Sa 11:30",
+    "ref": "SN25 348"
+  }
+},
+{
+  "type": "node",
+  "id": 870110583,
+  "lat": 51.5830595,
+  "lon": -1.7977554,
+  "tags": {
+    "amenity": "atm"
+  }
+},
+{
+  "type": "node",
+  "id": 872783215,
+  "lat": 51.5875787,
+  "lon": -1.7986117,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 872783271,
+  "lat": 51.5914134,
+  "lon": -1.8052644,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 872784318,
+  "lat": 51.5999955,
+  "lon": -1.7824669,
+  "tags": {
+    "amenity": "dentist",
+    "name": "Seven Fields Dental Centre"
+  }
+},
+{
+  "type": "node",
+  "id": 872784752,
+  "lat": 51.5926091,
+  "lon": -1.8033121,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 872784992,
+  "lat": 51.6009339,
+  "lon": -1.7891581,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 873862891,
+  "lat": 51.5987354,
+  "lon": -1.7940453,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Abbey Mead"
+  }
+},
+{
+  "type": "node",
+  "id": 873863061,
+  "lat": 51.5993110,
+  "lon": -1.7977008,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 873863349,
+  "lat": 51.5971113,
+  "lon": -1.7983308,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:00",
+    "ref": "SN25 57"
+  }
+},
+{
+  "type": "node",
+  "id": 873863368,
+  "lat": 51.5938237,
+  "lon": -1.8051989,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 873863562,
+  "lat": 51.5836635,
+  "lon": -1.7994561,
+  "tags": {
+    "amenity": "school",
+    "name": "Rodbourne Cheney Primary School"
+  }
+},
+{
+  "type": "node",
+  "id": 873864401,
+  "lat": 51.5926542,
+  "lon": -1.7923854,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 873864564,
+  "lat": 51.5997560,
+  "lon": -1.7934513,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 873900152,
+  "lat": 51.5949738,
+  "lon": -1.8018229,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 894655479,
+  "lat": 51.5779239,
+  "lon": -1.8077423,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 894655509,
+  "lat": 51.5789454,
+  "lon": -1.7987848,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 894655733,
+  "lat": 51.5806629,
+  "lon": -1.7986575,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:30",
+    "ref": "SN2 56"
+  }
+},
+{
+  "type": "node",
+  "id": 894655847,
+  "lat": 51.5797136,
+  "lon": -1.8053765,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 11:30",
+    "ref": "SN2 161"
+  }
+},
+{
+  "type": "node",
+  "id": 912717063,
+  "lat": 51.5835478,
+  "lon": -1.8108490,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "chinese",
+    "name": "Emporer's Kitchen"
+  }
+},
+{
+  "type": "node",
+  "id": 912717235,
+  "lat": 51.5838111,
+  "lon": -1.8126218,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 11:45",
+    "operator": "Royal Mail"
+  }
+},
+{
+  "type": "node",
+  "id": 912717373,
+  "lat": 51.5826149,
+  "lon": -1.8099716,
+  "tags": {
+    "amenity": "school",
+    "name": "Moredon Primary School"
+  }
+},
+{
+  "type": "node",
+  "id": 912717471,
+  "lat": 51.5798978,
+  "lon": -1.8083325,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 912717594,
+  "lat": 51.5857855,
+  "lon": -1.8079182,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 11:30",
+    "operator": "Royal Mail",
+    "ref": "SN25 343"
+  }
+},
+{
+  "type": "node",
+  "id": 912717628,
+  "lat": 51.5874501,
+  "lon": -1.7967208,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 912717711,
+  "lat": 51.5825888,
+  "lon": -1.8023128,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "methodist",
+    "name": "St Andrew's Methodist Church",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 912717890,
+  "lat": 51.5811364,
+  "lon": -1.8086794,
+  "tags": {
+    "amenity": "kindergarten",
+    "name": "Moredon Children's Centre",
+    "phone": "01793 615479"
+  }
+},
+{
+  "type": "node",
+  "id": 912717901,
+  "lat": 51.5874310,
+  "lon": -1.7966613,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:45; Sa 12:30",
+    "operator": "Royal Mail",
+    "ref": "SN25 342"
+  }
+},
+{
+  "type": "node",
+  "id": 912717948,
+  "lat": 51.5824567,
+  "lon": -1.8052388,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 11:45",
+    "operator": "Royal Mail",
+    "ref": "SN25 284"
+  }
+},
+{
+  "type": "node",
+  "id": 954275696,
+  "lat": 51.5876193,
+  "lon": -1.8149053,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 954275795,
+  "lat": 51.5930411,
+  "lon": -1.8126593,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 954275840,
+  "lat": 51.5888683,
+  "lon": -1.8174617,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 954275863,
+  "lat": 51.5866538,
+  "lon": -1.8186485,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 954275870,
+  "lat": 51.5912051,
+  "lon": -1.8146636,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 954275886,
+  "lat": 51.5862608,
+  "lon": -1.8164437,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 954276005,
+  "lat": 51.5907669,
+  "lon": -1.8173390,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 954276131,
+  "lat": 51.5870134,
+  "lon": -1.8209128,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 954276152,
+  "lat": 51.5848310,
+  "lon": -1.8190546,
+  "tags": {
+    "amenity": "veterinary",
+    "name": "Thameswood Veterinary Clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 954276184,
+  "lat": 51.5862235,
+  "lon": -1.8151801,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 965940292,
+  "lat": 51.5600359,
+  "lon": -1.7863860,
+  "tags": {
+    "amenity": "pharmacy",
+    "name": "Boots"
+  }
+},
+{
+  "type": "node",
+  "id": 965940306,
+  "lat": 51.5611375,
+  "lon": -1.7852454,
+  "tags": {
+    "amenity": "bank",
+    "operator": "Lloyds"
+  }
+},
+{
+  "type": "node",
+  "id": 994704170,
+  "lat": 51.5505643,
+  "lon": -1.7996972,
+  "tags": {
+    "amenity": "post_box",
+    "designation": "Mon-Fri 5:30pm, Sat 11am",
+    "operator": "Royal Mail",
+    "ref": "SN1 3"
+  }
+},
+{
+  "type": "node",
+  "id": 998149820,
+  "lat": 51.5654224,
+  "lon": -1.7847445,
+  "tags": {
+    "amenity": "telephone",
+    "fixme": "not precisely located",
+    "operator": "BT plc",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 998149826,
+  "lat": 51.5654324,
+  "lon": -1.7847150,
+  "tags": {
+    "amenity": "telephone",
+    "fixme": "not precisely located",
+    "operator": "BT plc",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 998149836,
+  "lat": 51.5654424,
+  "lon": -1.7846881,
+  "tags": {
+    "amenity": "telephone",
+    "fixme": "not precisely located",
+    "operator": "BT plc",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 998149840,
+  "lat": 51.5654491,
+  "lon": -1.7846586,
+  "tags": {
+    "amenity": "telephone",
+    "fixme": "not precisely located",
+    "operator": "BT plc",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1005812731,
+  "lat": 51.5962649,
+  "lon": -1.8107251,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1005812894,
+  "lat": 51.5937149,
+  "lon": -1.8158957,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1005812941,
+  "lat": 51.5947303,
+  "lon": -1.8080241,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1005812964,
+  "lat": 51.5934403,
+  "lon": -1.8109128,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1005813008,
+  "lat": 51.5883370,
+  "lon": -1.8260848,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1005813654,
+  "lat": 51.5910654,
+  "lon": -1.8172579,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1005813770,
+  "lat": 51.5883767,
+  "lon": -1.8246710,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1005813854,
+  "lat": 51.5877733,
+  "lon": -1.8234510,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1005814001,
+  "lat": 51.5937135,
+  "lon": -1.8158437,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1077505160,
+  "lat": 51.5962907,
+  "lon": -1.8108441,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1077505260,
+  "lat": 51.5935552,
+  "lon": -1.8270958,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1077505312,
+  "lat": 51.5963390,
+  "lon": -1.8192552,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1077505560,
+  "lat": 51.5973031,
+  "lon": -1.8164118,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1077505674,
+  "lat": 51.5911261,
+  "lon": -1.8245477,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1077505715,
+  "lat": 51.5958425,
+  "lon": -1.8208502,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1077505892,
+  "lat": 51.5940607,
+  "lon": -1.8244999,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:15; Sa 12:00",
+    "ref": "SN25 467"
+  }
+},
+{
+  "type": "node",
+  "id": 1077505955,
+  "lat": 51.5973727,
+  "lon": -1.8124057,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1077505984,
+  "lat": 51.5967865,
+  "lon": -1.8182259,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1077506134,
+  "lat": 51.5938657,
+  "lon": -1.8240051,
+  "tags": {
+    "amenity": "kindergarten",
+    "name": "St Francis Nursery"
+  }
+},
+{
+  "type": "node",
+  "id": 1077506145,
+  "lat": 51.5904734,
+  "lon": -1.8263071,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1077506196,
+  "lat": 51.5916395,
+  "lon": -1.8211182,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1077506418,
+  "lat": 51.5934173,
+  "lon": -1.8181272,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1077506524,
+  "lat": 51.5891594,
+  "lon": -1.8255461,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:00",
+    "ref": "SN25 96"
+  }
+},
+{
+  "type": "node",
+  "id": 1077506532,
+  "lat": 51.5967197,
+  "lon": -1.8180311,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1077506634,
+  "lat": 51.5974634,
+  "lon": -1.8184731,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1077506749,
+  "lat": 51.5907041,
+  "lon": -1.8257739,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1077506787,
+  "lat": 51.5949138,
+  "lon": -1.8172685,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1077507310,
+  "lat": 51.5974933,
+  "lon": -1.8165439,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1082820587,
+  "lat": 51.5987044,
+  "lon": -1.8149691,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1082821177,
+  "lat": 51.5991490,
+  "lon": -1.8132079,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1082821352,
+  "lat": 51.5955315,
+  "lon": -1.8063657,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1082821810,
+  "lat": 51.5963898,
+  "lon": -1.8092544,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1082821859,
+  "lat": 51.5955549,
+  "lon": -1.8065050,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1083494738,
+  "lat": 51.5942819,
+  "lon": -1.8246640,
+  "tags": {
+    "addr:housenumber": "17",
+    "addr:postcode": "SN25 1UH",
+    "addr:street": "Aiken Road",
+    "amenity": "fast_food",
+    "cuisine": "pizza",
+    "name": "Dominos Pizza",
+    "website": "http://www.dominos.co.uk/ourstores/Swindon_-_Taw_Hill.aspx"
+  }
+},
+{
+  "type": "node",
+  "id": 1096981138,
+  "lat": 51.5973260,
+  "lon": -1.8153025,
+  "tags": {
+    "amenity": "kindergarten",
+    "name": "Orchid Vale Nursery School"
+  }
+},
+{
+  "type": "node",
+  "id": 1096982004,
+  "lat": 51.5836459,
+  "lon": -1.7938779,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1096982086,
+  "lat": 51.5937941,
+  "lon": -1.8051949,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1101591896,
+  "lat": 51.5620279,
+  "lon": -1.7875284,
+  "tags": {
+    "amenity": "toilets",
+    "fee": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1104882676,
+  "lat": 51.5663278,
+  "lon": -1.8016541,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "St. Augustine's",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 1134611788,
+  "lat": 51.6042442,
+  "lon": -1.8318335,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1134611791,
+  "lat": 51.6000707,
+  "lon": -1.8227132,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1134612028,
+  "lat": 51.6050097,
+  "lon": -1.8314166,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1134612136,
+  "lat": 51.5955884,
+  "lon": -1.8233329,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1134612358,
+  "lat": 51.6002390,
+  "lon": -1.8215901,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1134612470,
+  "lat": 51.6015430,
+  "lon": -1.8253634,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:15",
+    "ref": "SN25 73"
+  }
+},
+{
+  "type": "node",
+  "id": 1134612519,
+  "lat": 51.5987251,
+  "lon": -1.8189462,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1134612538,
+  "lat": 51.6041830,
+  "lon": -1.8316811,
+  "tags": {
+    "amenity": "bicycle_parking"
+  }
+},
+{
+  "type": "node",
+  "id": 1134612607,
+  "lat": 51.5957020,
+  "lon": -1.8241578,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1134612648,
+  "lat": 51.6042060,
+  "lon": -1.8318674,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1134612700,
+  "lat": 51.6021971,
+  "lon": -1.8300297,
+  "tags": {
+    "amenity": "school",
+    "name": "Oakhurst Community Primary School"
+  }
+},
+{
+  "type": "node",
+  "id": 1134612805,
+  "lat": 51.6008752,
+  "lon": -1.8195874,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1134612808,
+  "lat": 51.6051569,
+  "lon": -1.8306808,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1134613073,
+  "lat": 51.6001542,
+  "lon": -1.8237358,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1134613127,
+  "lat": 51.6002362,
+  "lon": -1.8207637,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1134613273,
+  "lat": 51.5946397,
+  "lon": -1.8231805,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1134613340,
+  "lat": 51.6042805,
+  "lon": -1.8318043,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1134613392,
+  "lat": 51.6003868,
+  "lon": -1.8307452,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1134613419,
+  "lat": 51.5956482,
+  "lon": -1.8233594,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1134613506,
+  "lat": 51.6020704,
+  "lon": -1.8324835,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1134613740,
+  "lat": 51.6016756,
+  "lon": -1.8254846,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1134613832,
+  "lat": 51.6009491,
+  "lon": -1.8306475,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "4"
+  }
+},
+{
+  "type": "node",
+  "id": 1135481715,
+  "lat": 51.5732710,
+  "lon": -1.7589790,
+  "tags": {
+    "amenity": "car_rental",
+    "name": "National Car Rental"
+  }
+},
+{
+  "type": "node",
+  "id": 1144188387,
+  "lat": 51.5770286,
+  "lon": -1.8336062,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Oriental Buffet"
+  }
+},
+{
+  "type": "node",
+  "id": 1148157285,
+  "lat": 51.5646203,
+  "lon": -1.7770333,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "St. Luke's Church"
+  }
+},
+{
+  "type": "node",
+  "id": 1148163784,
+  "lat": 51.5629393,
+  "lon": -1.7813737,
+  "tags": {
+    "amenity": "parking",
+    "name": "Queenstown carpark"
+  }
+},
+{
+  "type": "node",
+  "id": 1149616272,
+  "lat": 51.5646559,
+  "lon": -1.7767699,
+  "tags": {
+    "amenity": "post_box",
+    "name": "Broad Street"
+  }
+},
+{
+  "type": "node",
+  "id": 1149617909,
+  "lat": 51.5645302,
+  "lon": -1.7773997,
+  "tags": {
+    "amenity": "telephone",
+    "name": "Broad St"
+  }
+},
+{
+  "type": "node",
+  "id": 1149619246,
+  "lat": 51.5650760,
+  "lon": -1.7802246,
+  "tags": {
+    "amenity": "post_box",
+    "name": "Alfred Street"
+  }
+},
+{
+  "type": "node",
+  "id": 1200205431,
+  "lat": 51.6024604,
+  "lon": -1.8161443,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Redhouse Plaice"
+  }
+},
+{
+  "type": "node",
+  "id": 1200207288,
+  "lat": 51.6034198,
+  "lon": -1.8185786,
+  "tags": {
+    "amenity": "school",
+    "name": "Isambard Community School"
+  }
+},
+{
+  "type": "node",
+  "id": 1204063643,
+  "lat": 51.6021948,
+  "lon": -1.8184277,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1204063983,
+  "lat": 51.6021413,
+  "lon": -1.8183519,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1204065131,
+  "lat": 51.6020643,
+  "lon": -1.8184002,
+  "tags": {
+    "amenity": "bicycle_parking"
+  }
+},
+{
+  "type": "node",
+  "id": 1204065437,
+  "lat": 51.6023313,
+  "lon": -1.8160885,
+  "tags": {
+    "amenity": "bicycle_parking"
+  }
+},
+{
+  "type": "node",
+  "id": 1211318299,
+  "lat": 51.5573868,
+  "lon": -1.7192719,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone"
+  }
+},
+{
+  "type": "node",
+  "id": 1211318312,
+  "lat": 51.5979707,
+  "lon": -1.7671259,
+  "tags": {
+    "amenity": "emergency_phone",
+    "emergency": "phone"
+  }
+},
+{
+  "type": "node",
+  "id": 1218309477,
+  "lat": 51.6030425,
+  "lon": -1.8045177,
+  "tags": {
+    "amenity": "parking"
+  }
+},
+{
+  "type": "node",
+  "id": 1218309524,
+  "lat": 51.6023697,
+  "lon": -1.8043205,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1218309538,
+  "lat": 51.6013388,
+  "lon": -1.8118756,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1218309566,
+  "lat": 51.6022960,
+  "lon": -1.8130043,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1218309658,
+  "lat": 51.5999780,
+  "lon": -1.8047056,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1218309677,
+  "lat": 51.6028942,
+  "lon": -1.8171035,
+  "tags": {
+    "amenity": "bicycle_parking"
+  }
+},
+{
+  "type": "node",
+  "id": 1218309755,
+  "lat": 51.6023344,
+  "lon": -1.8155831,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "16"
+  }
+},
+{
+  "type": "node",
+  "id": 1218309758,
+  "lat": 51.5914351,
+  "lon": -1.8053226,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1218309800,
+  "lat": 51.6038076,
+  "lon": -1.8168089,
+  "tags": {
+    "amenity": "bicycle_parking"
+  }
+},
+{
+  "type": "node",
+  "id": 1218309887,
+  "lat": 51.6011574,
+  "lon": -1.8123445,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1218309896,
+  "lat": 51.6036540,
+  "lon": -1.8142414,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1218310056,
+  "lat": 51.6040192,
+  "lon": -1.8023596,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1218310074,
+  "lat": 51.6026900,
+  "lon": -1.8159962,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1218310330,
+  "lat": 51.6009851,
+  "lon": -1.8064671,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1218310333,
+  "lat": 51.6013587,
+  "lon": -1.8118040,
+  "tags": {
+    "amenity": "bicycle_parking"
+  }
+},
+{
+  "type": "node",
+  "id": 1218310401,
+  "lat": 51.6000047,
+  "lon": -1.8055130,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1218310558,
+  "lat": 51.5999797,
+  "lon": -1.8046050,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1218310601,
+  "lat": 51.6032982,
+  "lon": -1.8167173,
+  "tags": {
+    "amenity": "bicycle_parking"
+  }
+},
+{
+  "type": "node",
+  "id": 1218310725,
+  "lat": 51.5914693,
+  "lon": -1.8054076,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1218310793,
+  "lat": 51.6040648,
+  "lon": -1.8023802,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1218310841,
+  "lat": 51.6028180,
+  "lon": -1.8120437,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1218310884,
+  "lat": 51.6010580,
+  "lon": -1.8129829,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1218310920,
+  "lat": 51.6001404,
+  "lon": -1.8030101,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1218310990,
+  "lat": 51.6013540,
+  "lon": -1.8118464,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1218311058,
+  "lat": 51.6022917,
+  "lon": -1.8128480,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1218311119,
+  "lat": 51.6030939,
+  "lon": -1.8083387,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1218311195,
+  "lat": 51.6017001,
+  "lon": -1.8121142,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1218311218,
+  "lat": 51.6025250,
+  "lon": -1.8044882,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1218311271,
+  "lat": 51.6000601,
+  "lon": -1.8063779,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1218311342,
+  "lat": 51.6042271,
+  "lon": -1.8039234,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1218311418,
+  "lat": 51.6028880,
+  "lon": -1.8036454,
+  "tags": {
+    "amenity": "school",
+    "name": "Bridle Primary School"
+  }
+},
+{
+  "type": "node",
+  "id": 1218311605,
+  "lat": 51.6015597,
+  "lon": -1.8123524,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1218311727,
+  "lat": 51.6023984,
+  "lon": -1.8041552,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1218311768,
+  "lat": 51.6010353,
+  "lon": -1.8053540,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1218311889,
+  "lat": 51.6012108,
+  "lon": -1.8045097,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1221377490,
+  "lat": 51.6043721,
+  "lon": -1.7947605,
+  "tags": {
+    "amenity": "kindergarten",
+    "name": "Leapfrog Day Nursery"
+  }
+},
+{
+  "type": "node",
+  "id": 1221377499,
+  "lat": 51.6019574,
+  "lon": -1.7904216,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1221377605,
+  "lat": 51.6038823,
+  "lon": -1.7921936,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1221377608,
+  "lat": 51.6069587,
+  "lon": -1.7972638,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1221377662,
+  "lat": 51.6016201,
+  "lon": -1.7926019,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1221377818,
+  "lat": 51.6026292,
+  "lon": -1.7957363,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1221377820,
+  "lat": 51.6013795,
+  "lon": -1.7942613,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1221377845,
+  "lat": 51.6057796,
+  "lon": -1.7987434,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1221377856,
+  "lat": 51.6038265,
+  "lon": -1.7920452,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1221377860,
+  "lat": 51.6010317,
+  "lon": -1.8006452,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:00",
+    "ref": "SN25 106"
+  }
+},
+{
+  "type": "node",
+  "id": 1221378023,
+  "lat": 51.6053385,
+  "lon": -1.7946757,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1221378028,
+  "lat": 51.6038459,
+  "lon": -1.7921194,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1221378046,
+  "lat": 51.6056085,
+  "lon": -1.7976346,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1221378087,
+  "lat": 51.6015226,
+  "lon": -1.7916779,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1221378096,
+  "lat": 51.6048865,
+  "lon": -1.7945711,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "indian",
+    "name": "Abbey Meads Indian Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 1221378116,
+  "lat": 51.5991844,
+  "lon": -1.8148828,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1221378138,
+  "lat": 51.6055901,
+  "lon": -1.7981550,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1221378146,
+  "lat": 51.6068127,
+  "lon": -1.7990707,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:00",
+    "ref": "SN25 110"
+  }
+},
+{
+  "type": "node",
+  "id": 1221378169,
+  "lat": 51.6018014,
+  "lon": -1.7937021,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1221378261,
+  "lat": 51.6015855,
+  "lon": -1.7917205,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1221378277,
+  "lat": 51.6050356,
+  "lon": -1.7942869,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1221378460,
+  "lat": 51.6034464,
+  "lon": -1.7994055,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1221378491,
+  "lat": 51.6038815,
+  "lon": -1.7946050,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1221378513,
+  "lat": 51.6047118,
+  "lon": -1.7946492,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "chicken",
+    "name": "Chick A Dee"
+  }
+},
+{
+  "type": "node",
+  "id": 1238552411,
+  "lat": 51.5617591,
+  "lon": -1.8514067,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "church_of_england",
+    "name": "St Mary's Church",
+    "religion": "christian",
+    "source": "Local knowledge"
+  }
+},
+{
+  "type": "node",
+  "id": 1238552414,
+  "lat": 51.5592730,
+  "lon": -1.8499065,
+  "tags": {
+    "amenity": "fountain"
+  }
+},
+{
+  "type": "node",
+  "id": 1297043315,
+  "lat": 51.5945471,
+  "lon": -1.7780283,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1297043328,
+  "lat": 51.6041435,
+  "lon": -1.7914666,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1297043422,
+  "lat": 51.5958707,
+  "lon": -1.7857745,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1297043456,
+  "lat": 51.5962991,
+  "lon": -1.7863352,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 1297043580,
+  "lat": 51.5956826,
+  "lon": -1.7886220,
+  "tags": {
+    "amenity": "post_box"
+  }
+},
+{
+  "type": "node",
+  "id": 1297043651,
+  "lat": 51.5950553,
+  "lon": -1.7843775,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 1297043654,
+  "lat": 51.6065237,
+  "lon": -1.8092495,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1297043899,
+  "lat": 51.6015184,
+  "lon": -1.7916542,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1297044002,
+  "lat": 51.5993782,
+  "lon": -1.8076425,
+  "tags": {
+    "amenity": "car_wash"
+  }
+},
+{
+  "type": "node",
+  "id": 1297044045,
+  "lat": 51.5956664,
+  "lon": -1.7865933,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1297044118,
+  "lat": 51.6040658,
+  "lon": -1.7915420,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1297044135,
+  "lat": 51.5964005,
+  "lon": -1.7859660,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "fish_and_chips",
+    "name": "Monica's Fish Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 1297044163,
+  "lat": 51.5915963,
+  "lon": -1.7826011,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Maria's Fish Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 1297044164,
+  "lat": 51.5923041,
+  "lon": -1.7871149,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1297044176,
+  "lat": 51.5942477,
+  "lon": -1.7779247,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 1297044200,
+  "lat": 51.5897024,
+  "lon": -1.8057474,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 1297044240,
+  "lat": 51.6070219,
+  "lon": -1.8058527,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 16:00; Sa 08:00",
+    "ref": "SN25 27"
+  }
+},
+{
+  "type": "node",
+  "id": 1297044256,
+  "lat": 51.5997519,
+  "lon": -1.8094001,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1297044261,
+  "lat": 51.5962472,
+  "lon": -1.7858880,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1350810385,
+  "lat": 51.5930956,
+  "lon": -1.7805445,
+  "tags": {
+    "amenity": "kindergarten",
+    "name": "Bright Start Day Nursery"
+  }
+},
+{
+  "type": "node",
+  "id": 1350810405,
+  "lat": 51.5912242,
+  "lon": -1.7818223,
+  "tags": {
+    "amenity": "library",
+    "name": "Penhill Library"
+  }
+},
+{
+  "type": "node",
+  "id": 1350810407,
+  "lat": 51.5899592,
+  "lon": -1.7787722,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "St Peter's",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 1350810414,
+  "lat": 51.5937344,
+  "lon": -1.7826963,
+  "tags": {
+    "amenity": "school",
+    "name": "Swindon Academy"
+  }
+},
+{
+  "type": "node",
+  "id": 1350810510,
+  "lat": 51.5835740,
+  "lon": -1.7864894,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1350810552,
+  "lat": 51.5855187,
+  "lon": -1.7842548,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:45; Sa 11:30",
+    "ref": "SN25 354"
+  }
+},
+{
+  "type": "node",
+  "id": 1350810577,
+  "lat": 51.5863827,
+  "lon": -1.7787883,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1350810656,
+  "lat": 51.5872734,
+  "lon": -1.7784229,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1350810939,
+  "lat": 51.5902792,
+  "lon": -1.7773647,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1350811078,
+  "lat": 51.5913417,
+  "lon": -1.7769752,
+  "tags": {
+    "amenity": "post_box"
+  }
+},
+{
+  "type": "node",
+  "id": 1350811080,
+  "lat": 51.5913571,
+  "lon": -1.7769744,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1350811082,
+  "lat": 51.5913858,
+  "lon": -1.7824530,
+  "tags": {
+    "amenity": "recycling",
+    "recycling:cans": "yes",
+    "recycling:glass": "yes",
+    "recycling:paper": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1350811253,
+  "lat": 51.5933305,
+  "lon": -1.7799259,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1350811302,
+  "lat": 51.5935994,
+  "lon": -1.7801185,
+  "tags": {
+    "amenity": "recycling",
+    "recycling:cans": "yes",
+    "recycling:glass": "yes",
+    "recycling:paper": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1350811377,
+  "lat": 51.5943349,
+  "lon": -1.7801729,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1350811394,
+  "lat": 51.5946346,
+  "lon": -1.7795290,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1350811403,
+  "lat": 51.5951351,
+  "lon": -1.7819630,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 11:45",
+    "ref": "SN2 305"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726482,
+  "lat": 51.5889385,
+  "lon": -1.7673198,
+  "tags": {
+    "amenity": "pub",
+    "name": "Baker's Arms"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726495,
+  "lat": 51.5862900,
+  "lon": -1.7729969,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "Church of God of Prophesy"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726546,
+  "lat": 51.5963889,
+  "lon": -1.7757594,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Hungry Harry's Cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726560,
+  "lat": 51.5920897,
+  "lon": -1.7853801,
+  "tags": {
+    "amenity": "public_building",
+    "name": "Penhill Gospel Hall"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726562,
+  "lat": 51.5908310,
+  "lon": -1.7735307,
+  "tags": {
+    "amenity": "public_building",
+    "name": "Penhill Youth & Community Centre"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726569,
+  "lat": 51.5934722,
+  "lon": -1.7735875,
+  "tags": {
+    "amenity": "pub",
+    "name": "Queensfield"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726582,
+  "lat": 51.5880843,
+  "lon": -1.7697285,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "Saint Philip the Deacon Church",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726598,
+  "lat": 51.5896490,
+  "lon": -1.7651317,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "fish_and_chips",
+    "name": "Sims Chippy"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726602,
+  "lat": 51.5912257,
+  "lon": -1.7733130,
+  "tags": {
+    "amenity": "school",
+    "name": "St Luke's School"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726612,
+  "lat": 51.5899098,
+  "lon": -1.7648213,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "indian",
+    "name": "Stratton Sinbad Tandori"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726627,
+  "lat": 51.5895145,
+  "lon": -1.7651663,
+  "tags": {
+    "amenity": "library",
+    "name": "Upper Stratton Public Library"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726633,
+  "lat": 51.5859644,
+  "lon": -1.7895477,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726690,
+  "lat": 51.5869146,
+  "lon": -1.7898375,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726694,
+  "lat": 51.5869519,
+  "lon": -1.7899649,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726770,
+  "lat": 51.5886144,
+  "lon": -1.7900180,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726968,
+  "lat": 51.5895290,
+  "lon": -1.7693149,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726970,
+  "lat": 51.5895459,
+  "lon": -1.7693219,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726996,
+  "lat": 51.5898204,
+  "lon": -1.7651067,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 18:30; Sa 12:30",
+    "ref": "SN2 288"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727027,
+  "lat": 51.5900342,
+  "lon": -1.7649087,
+  "tags": {
+    "amenity": "recycling",
+    "recycling:cans": "yes",
+    "recycling:glass": "yes",
+    "recycling:paper": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727032,
+  "lat": 51.5900538,
+  "lon": -1.7649017,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727096,
+  "lat": 51.5905094,
+  "lon": -1.7968136,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727097,
+  "lat": 51.5905212,
+  "lon": -1.7884034,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727141,
+  "lat": 51.5907673,
+  "lon": -1.7704476,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727182,
+  "lat": 51.5910102,
+  "lon": -1.7678530,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727187,
+  "lat": 51.5910543,
+  "lon": -1.7680020,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727207,
+  "lat": 51.5910787,
+  "lon": -1.7680890,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727279,
+  "lat": 51.5913567,
+  "lon": -1.7823956,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727320,
+  "lat": 51.5915058,
+  "lon": -1.7828805,
+  "tags": {
+    "amenity": "recycling",
+    "recycling:clothes": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727431,
+  "lat": 51.5920706,
+  "lon": -1.7742136,
+  "tags": {
+    "amenity": "fuel",
+    "brand": "BP"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727477,
+  "lat": 51.5931677,
+  "lon": -1.7737333,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727487,
+  "lat": 51.5932583,
+  "lon": -1.7738869,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 11:30",
+    "ref": "SN2 340"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727514,
+  "lat": 51.5939781,
+  "lon": -1.7658701,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727555,
+  "lat": 51.5943157,
+  "lon": -1.7653437,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:30",
+    "ref": "SN2 52"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727616,
+  "lat": 51.5946366,
+  "lon": -1.7602948,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727659,
+  "lat": 51.5950466,
+  "lon": -1.7777184,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727698,
+  "lat": 51.5952363,
+  "lon": -1.7667240,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1355727868,
+  "lat": 51.5959311,
+  "lon": -1.7758407,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1363105041,
+  "lat": 51.5590610,
+  "lon": -1.7868270,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 18:30; Sa 12:00",
+    "operator": "Royal Mail"
+  }
+},
+{
+  "type": "node",
+  "id": 1363105826,
+  "lat": 51.5587440,
+  "lon": -1.7854030,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 18:30; Sa 12:00",
+    "operator": "Royal Mail"
+  }
+},
+{
+  "type": "node",
+  "id": 1364910739,
+  "lat": 51.5596110,
+  "lon": -1.7927050,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:00",
+    "operator": "Royal Mail"
+  }
+},
+{
+  "type": "node",
+  "id": 1369040455,
+  "lat": 51.5384043,
+  "lon": -1.7279976,
+  "tags": {
+    "amenity": "bicycle_parking"
+  }
+},
+{
+  "type": "node",
+  "id": 1381785836,
+  "lat": 51.5886163,
+  "lon": -1.7558711,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "pizza",
+    "name": "Papa John's Pizza"
+  }
+},
+{
+  "type": "node",
+  "id": 1381785844,
+  "lat": 51.5851374,
+  "lon": -1.7757710,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 1381785845,
+  "lat": 51.5855708,
+  "lon": -1.7749347,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1381785846,
+  "lat": 51.5855732,
+  "lon": -1.7747420,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1381785857,
+  "lat": 51.5884865,
+  "lon": -1.7555790,
+  "tags": {
+    "amenity": "atm"
+  }
+},
+{
+  "type": "node",
+  "id": 1381785861,
+  "lat": 51.5885302,
+  "lon": -1.7713711,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1381785868,
+  "lat": 51.5886440,
+  "lon": -1.7553457,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:30",
+    "ref": "SN3 405"
+  }
+},
+{
+  "type": "node",
+  "id": 1381785874,
+  "lat": 51.5887251,
+  "lon": -1.7710189,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1381785893,
+  "lat": 51.5889835,
+  "lon": -1.7705205,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1381785895,
+  "lat": 51.5889963,
+  "lon": -1.7704647,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "3"
+  }
+},
+{
+  "type": "node",
+  "id": 1381785914,
+  "lat": 51.5893429,
+  "lon": -1.7717507,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1381785986,
+  "lat": 51.5908689,
+  "lon": -1.7595752,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1381786005,
+  "lat": 51.5911077,
+  "lon": -1.7602495,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1381786040,
+  "lat": 51.5920003,
+  "lon": -1.7616987,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1386106262,
+  "lat": 51.5675005,
+  "lon": -1.8384959,
+  "tags": {
+    "addr:postcode": "SN5 5PY",
+    "amenity": "pub",
+    "name": "The Village Inn",
+    "website": "http://www.sizzlingpubs.co.uk/thevillageinnshaw/"
+  }
+},
+{
+  "type": "node",
+  "id": 1386129178,
+  "lat": 51.5611449,
+  "lon": -1.8326626,
+  "tags": {
+    "addr:postcode": "SN5 7DN",
+    "amenity": "restaurant",
+    "cuisine": "indian",
+    "name": "Tajmahal",
+    "website": "http://shawridgeleisurepark.co.uk/venue/tajmahal"
+  }
+},
+{
+  "type": "node",
+  "id": 1386132573,
+  "lat": 51.5591419,
+  "lon": -1.8309240,
+  "tags": {
+    "amenity": "swimming_pool"
+  }
+},
+{
+  "type": "node",
+  "id": 1386132575,
+  "lat": 51.5586330,
+  "lon": -1.8304485,
+  "tags": {
+    "amenity": "library",
+    "name": "West Swindon Library",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1396904790,
+  "lat": 51.5873353,
+  "lon": -1.7695197,
+  "tags": {
+    "amenity": "kindergarten",
+    "name": "Beechcroft Infants School"
+  }
+},
+{
+  "type": "node",
+  "id": 1396904813,
+  "lat": 51.5894129,
+  "lon": -1.7477936,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "The Church of Jesus Christ of Latter-Day Saints",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 1396904865,
+  "lat": 51.5866163,
+  "lon": -1.7617482,
+  "tags": {
+    "amenity": "public_building",
+    "name": "Meadowcroft Community Rooms"
+  }
+},
+{
+  "type": "node",
+  "id": 1396904896,
+  "lat": 51.5909100,
+  "lon": -1.7605427,
+  "tags": {
+    "amenity": "school",
+    "name": "St Catherine's School"
+  }
+},
+{
+  "type": "node",
+  "id": 1396904908,
+  "lat": 51.5881885,
+  "lon": -1.7671966,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "Swindon Chinese Christian Church",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 1396904912,
+  "lat": 51.5838788,
+  "lon": -1.7659903,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "baptist",
+    "name": "Upper Stratton Baptist Church",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 1396905379,
+  "lat": 51.5845263,
+  "lon": -1.7613843,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 1396905407,
+  "lat": 51.5846566,
+  "lon": -1.7688848,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1396905461,
+  "lat": 51.5849419,
+  "lon": -1.7615689,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1396905527,
+  "lat": 51.5852001,
+  "lon": -1.7622297,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1396905538,
+  "lat": 51.5852582,
+  "lon": -1.7684952,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:45; Sa 12:00",
+    "ref": "SN2 157"
+  }
+},
+{
+  "type": "node",
+  "id": 1396905576,
+  "lat": 51.5854514,
+  "lon": -1.7639280,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1396905579,
+  "lat": 51.5854887,
+  "lon": -1.7498766,
+  "tags": {
+    "amenity": "fuel"
+  }
+},
+{
+  "type": "node",
+  "id": 1396905614,
+  "lat": 51.5857803,
+  "lon": -1.7608615,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:45; Sa 12:00",
+    "ref": "SN2 303"
+  }
+},
+{
+  "type": "node",
+  "id": 1396905701,
+  "lat": 51.5861994,
+  "lon": -1.7621042,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1396905863,
+  "lat": 51.5868826,
+  "lon": -1.7686121,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1396905912,
+  "lat": 51.5870765,
+  "lon": -1.7619681,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1396905917,
+  "lat": 51.5871386,
+  "lon": -1.7620040,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "6"
+  }
+},
+{
+  "type": "node",
+  "id": 1396905986,
+  "lat": 51.5873120,
+  "lon": -1.7622754,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1396905992,
+  "lat": 51.5873288,
+  "lon": -1.7540837,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1396906027,
+  "lat": 51.5874564,
+  "lon": -1.7546203,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 1396906078,
+  "lat": 51.5876881,
+  "lon": -1.7620363,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1396906207,
+  "lat": 51.5882085,
+  "lon": -1.7632897,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1396906253,
+  "lat": 51.5884401,
+  "lon": -1.7557217,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1396906320,
+  "lat": 51.5890696,
+  "lon": -1.7661415,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1416167832,
+  "lat": 51.5972846,
+  "lon": -1.7570201,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1416167842,
+  "lat": 51.5960483,
+  "lon": -1.7550031,
+  "tags": {
+    "amenity": "parking"
+  }
+},
+{
+  "type": "node",
+  "id": 1416187025,
+  "lat": 51.6050682,
+  "lon": -1.7449341,
+  "tags": {
+    "amenity": "parking"
+  }
+},
+{
+  "type": "node",
+  "id": 1416220833,
+  "lat": 51.5430003,
+  "lon": -1.7465108,
+  "tags": {
+    "amenity": "parking",
+    "capacity": "100",
+    "name": "Coate Water Main Car Park"
+  }
+},
+{
+  "type": "node",
+  "id": 1416220869,
+  "lat": 51.5441413,
+  "lon": -1.7442792,
+  "tags": {
+    "amenity": "parking",
+    "capacity": "300",
+    "name": "Coate Water Overflow Car Park"
+  }
+},
+{
+  "type": "node",
+  "id": 1416633493,
+  "lat": 51.5899045,
+  "lon": -1.7650451,
+  "tags": {
+    "amenity": "parking"
+  }
+},
+{
+  "type": "node",
+  "id": 1416633494,
+  "lat": 51.5824932,
+  "lon": -1.7824632,
+  "tags": {
+    "amenity": "parking",
+    "capacity": "10"
+  }
+},
+{
+  "type": "node",
+  "id": 1416633495,
+  "lat": 51.5823317,
+  "lon": -1.7825518,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "fish_and_chips",
+    "name": "Pinehurst Fisheries"
+  }
+},
+{
+  "type": "node",
+  "id": 1417640182,
+  "lat": 51.5592311,
+  "lon": -1.7824225,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "6"
+  }
+},
+{
+  "type": "node",
+  "id": 1417651038,
+  "lat": 51.5600187,
+  "lon": -1.7866802,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "6"
+  }
+},
+{
+  "type": "node",
+  "id": 1422789658,
+  "lat": 51.5770136,
+  "lon": -1.8357286,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "indian",
+    "name": "Bombay Lounge",
+    "website": "http://www.bombaylounge.co.uk/"
+  }
+},
+{
+  "type": "node",
+  "id": 1422789659,
+  "lat": 51.5772070,
+  "lon": -1.8355194,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "chinese"
+  }
+},
+{
+  "type": "node",
+  "id": 1422789660,
+  "lat": 51.5771303,
+  "lon": -1.8354926,
+  "tags": {
+    "amenity": "atm",
+    "fee": "no",
+    "operator": "CoOp"
+  }
+},
+{
+  "type": "node",
+  "id": 1422789661,
+  "lat": 51.5776770,
+  "lon": -1.8347631,
+  "tags": {
+    "amenity": "pharmacy",
+    "dispensing": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1422789663,
+  "lat": 51.5772870,
+  "lon": -1.8355141,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "fish_and_chips"
+  }
+},
+{
+  "type": "node",
+  "id": 1459290309,
+  "lat": 51.5421383,
+  "lon": -1.7914896,
+  "tags": {
+    "amenity": "post_box",
+    "ref": "SN1 10"
+  }
+},
+{
+  "type": "node",
+  "id": 1465269658,
+  "lat": 51.5226103,
+  "lon": -1.7961377,
+  "tags": {
+    "amenity": "pub",
+    "name": "The White Heart"
+  }
+},
+{
+  "type": "node",
+  "id": 1465270019,
+  "lat": 51.5261230,
+  "lon": -1.7873580,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Ivy Hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 1465730398,
+  "lat": 51.5574716,
+  "lon": -1.7790329,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Best Barbecue",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1465730399,
+  "lat": 51.5582680,
+  "lon": -1.7801178,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "kebab",
+    "name": "Diamond Kebabs",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1465730423,
+  "lat": 51.5618970,
+  "lon": -1.7802165,
+  "tags": {
+    "amenity": "public_building",
+    "name": "Job Centre Plus",
+    "operator": "Department for Work and Pensions",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1465730425,
+  "lat": 51.5646037,
+  "lon": -1.7828163,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "chinese",
+    "name": "Ming Dynasty",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1465730426,
+  "lat": 51.5524202,
+  "lon": -1.7773148,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "pizza",
+    "name": "Pizza Express",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1465730440,
+  "lat": 51.5638027,
+  "lon": -1.7832134,
+  "tags": {
+    "amenity": "bus_station",
+    "name": "Swindon Bus Station",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1465730445,
+  "lat": 51.5502678,
+  "lon": -1.7767358,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "evangelical",
+    "name": "Swindon Evangelical Church",
+    "religion": "christian",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1465730452,
+  "lat": 51.5511804,
+  "lon": -1.7770635,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Pig on the Hill",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1465730454,
+  "lat": 51.5558377,
+  "lon": -1.7785840,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Regent",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1465730469,
+  "lat": 51.5498449,
+  "lon": -1.7768044,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Royal Oak Inn",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1465731049,
+  "lat": 51.5642134,
+  "lon": -1.7832495,
+  "tags": {
+    "amenity": "taxi",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1465731321,
+  "lat": 51.5651808,
+  "lon": -1.7854222,
+  "tags": {
+    "amenity": "taxi",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1502189898,
+  "lat": 51.5589108,
+  "lon": -1.8289783,
+  "tags": {
+    "amenity": "post_office",
+    "collection_times": "Mo-Fr 18:30; Sa 12:00",
+    "name": "West Swindon Centre Post Office",
+    "opening_hours": "Mo-Fr 09:00-17:30; Sa 09:00-12:30",
+    "operator": "Royal Mail"
+  }
+},
+{
+  "type": "node",
+  "id": 1530841326,
+  "lat": 51.5779469,
+  "lon": -1.7933222,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "indian; kebab; fish_and_chips",
+    "name": "Masala Express"
+  }
+},
+{
+  "type": "node",
+  "id": 1530841393,
+  "lat": 51.5776577,
+  "lon": -1.7925197,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "catholic",
+    "name": "St Mary's Catholic Church",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 1530841433,
+  "lat": 51.5770024,
+  "lon": -1.7887858,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1530841437,
+  "lat": 51.5772818,
+  "lon": -1.7935556,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1530842239,
+  "lat": 51.5788740,
+  "lon": -1.7953139,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 1530842266,
+  "lat": 51.5789134,
+  "lon": -1.7840520,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:15",
+    "ref": "SN2 301"
+  }
+},
+{
+  "type": "node",
+  "id": 1530842873,
+  "lat": 51.5800167,
+  "lon": -1.7900873,
+  "tags": {
+    "amenity": "post_box"
+  }
+},
+{
+  "type": "node",
+  "id": 1530843207,
+  "lat": 51.5807800,
+  "lon": -1.7980013,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1530843210,
+  "lat": 51.5807845,
+  "lon": -1.7861619,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 1530843472,
+  "lat": 51.5821518,
+  "lon": -1.7820236,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1547774365,
+  "lat": 51.5791700,
+  "lon": -1.7251066,
+  "tags": {
+    "amenity": "police",
+    "name": "Gablecross Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 1548218777,
+  "lat": 51.5678432,
+  "lon": -1.8375972,
+  "tags": {
+    "amenity": "recycling",
+    "recycling:batteries": "no",
+    "recycling:books": "no",
+    "recycling:cans": "yes",
+    "recycling:cardboard": "no",
+    "recycling:cartons": "no",
+    "recycling:clothes": "no",
+    "recycling:electrical_appliances": "no",
+    "recycling:glass": "no",
+    "recycling:glass_bottles": "no",
+    "recycling:green_waste": "no",
+    "recycling:magazines": "yes",
+    "recycling:newspaper": "yes",
+    "recycling:paper": "no",
+    "recycling:paper_packaging": "no",
+    "recycling:plastic": "no",
+    "recycling:plastic_bottles": "yes",
+    "recycling:plastic_packaging": "no",
+    "recycling:scrap_metal": "no",
+    "recycling:small_appliances": "no",
+    "recycling:waste": "no",
+    "recycling:wood": "no",
+    "recycling_type": "container"
+  }
+},
+{
+  "type": "node",
+  "id": 1548221941,
+  "lat": 51.5676206,
+  "lon": -1.8379204,
+  "tags": {
+    "amenity": "parking"
+  }
+},
+{
+  "type": "node",
+  "id": 1548223515,
+  "lat": 51.5672797,
+  "lon": -1.8388981,
+  "tags": {
+    "amenity": "parking"
+  }
+},
+{
+  "type": "node",
+  "id": 1548565810,
+  "lat": 51.5584372,
+  "lon": -1.8149051,
+  "tags": {
+    "amenity": "post_box",
+    "operator": "Royal Mail"
+  }
+},
+{
+  "type": "node",
+  "id": 1548566398,
+  "lat": 51.5599739,
+  "lon": -1.8180379,
+  "tags": {
+    "amenity": "kindergarten"
+  }
+},
+{
+  "type": "node",
+  "id": 1549043365,
+  "lat": 51.5675789,
+  "lon": -1.8373585,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Shaw Kebab House"
+  }
+},
+{
+  "type": "node",
+  "id": 1549043373,
+  "lat": 51.5677657,
+  "lon": -1.8373598,
+  "tags": {
+    "amenity": "pharmacy",
+    "name": "Lloyd's Pharmacy"
+  }
+},
+{
+  "type": "node",
+  "id": 1571016859,
+  "lat": 51.5579121,
+  "lon": -1.8259623,
+  "tags": {
+    "amenity": "bank",
+    "atm": "yes",
+    "drive_through": "no",
+    "name": "Barclays",
+    "operator": "Barclays"
+  }
+},
+{
+  "type": "node",
+  "id": 1571016862,
+  "lat": 51.5579300,
+  "lon": -1.8257672,
+  "tags": {
+    "amenity": "atm",
+    "currency:GBP": "yes",
+    "drive_through": "no",
+    "operator": "Barclays"
+  }
+},
+{
+  "type": "node",
+  "id": 1571016866,
+  "lat": 51.5579121,
+  "lon": -1.8258409,
+  "tags": {
+    "amenity": "atm",
+    "drive_through": "no",
+    "operator": "Barclays"
+  }
+},
+{
+  "type": "node",
+  "id": 1571198699,
+  "lat": 51.5633285,
+  "lon": -1.8214897,
+  "tags": {
+    "amenity": "fire_station"
+  }
+},
+{
+  "type": "node",
+  "id": 1572653079,
+  "lat": 51.5598991,
+  "lon": -1.7808474,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1572656141,
+  "lat": 51.5599154,
+  "lon": -1.7808119,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1572656143,
+  "lat": 51.5599316,
+  "lon": -1.7807763,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1572864191,
+  "lat": 51.5319841,
+  "lon": -1.7938083,
+  "tags": {
+    "amenity": "kindergarten",
+    "name": "Asquith Day Nurseries"
+  }
+},
+{
+  "type": "node",
+  "id": 1573322020,
+  "lat": 51.5413810,
+  "lon": -1.7981160,
+  "tags": {
+    "amenity": "life_ring",
+    "emergency": "lifebuoy"
+  }
+},
+{
+  "type": "node",
+  "id": 1580433499,
+  "lat": 51.5515952,
+  "lon": -1.7770622,
+  "tags": {
+    "amenity": "arts_centre",
+    "name": "Swindon Arts Centre"
+  }
+},
+{
+  "type": "node",
+  "id": 1582701349,
+  "lat": 51.5584045,
+  "lon": -1.7454033,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 1582707913,
+  "lat": 51.5585579,
+  "lon": -1.7462616,
+  "tags": {
+    "amenity": "school"
+  }
+},
+{
+  "type": "node",
+  "id": 1582707917,
+  "lat": 51.5646408,
+  "lon": -1.7535787,
+  "tags": {
+    "amenity": "atm"
+  }
+},
+{
+  "type": "node",
+  "id": 1582707927,
+  "lat": 51.5647342,
+  "lon": -1.7536860,
+  "tags": {
+    "amenity": "post_box"
+  }
+},
+{
+  "type": "node",
+  "id": 1582707930,
+  "lat": 51.5551293,
+  "lon": -1.7469590,
+  "tags": {
+    "amenity": "post_box"
+  }
+},
+{
+  "type": "node",
+  "id": 1582731420,
+  "lat": 51.5531147,
+  "lon": -1.7503600,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1582731432,
+  "lat": 51.5532614,
+  "lon": -1.7504888,
+  "tags": {
+    "amenity": "cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 1582731448,
+  "lat": 51.5531814,
+  "lon": -1.7500596,
+  "tags": {
+    "amenity": "library"
+  }
+},
+{
+  "type": "node",
+  "id": 1582731462,
+  "lat": 51.5533815,
+  "lon": -1.7505210,
+  "tags": {
+    "amenity": "post_office"
+  }
+},
+{
+  "type": "node",
+  "id": 1582731495,
+  "lat": 51.5529679,
+  "lon": -1.7506068,
+  "tags": {
+    "amenity": "pharmacy"
+  }
+},
+{
+  "type": "node",
+  "id": 1582731499,
+  "lat": 51.5531480,
+  "lon": -1.7506390,
+  "tags": {
+    "amenity": "recycling"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749681,
+  "lat": 51.5849497,
+  "lon": -1.7756372,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "sandwich",
+    "name": "Breadlines"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749695,
+  "lat": 51.5781419,
+  "lon": -1.7791047,
+  "tags": {
+    "amenity": "hospital",
+    "name": "Clapham Hobbs Footcare Centre"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749733,
+  "lat": 51.5842602,
+  "lon": -1.7745520,
+  "tags": {
+    "amenity": "doctors",
+    "name": "Crossroads Surgery"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749736,
+  "lat": 51.5801231,
+  "lon": -1.7727777,
+  "tags": {
+    "amenity": "school",
+    "name": "Crowdys School"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749755,
+  "lat": 51.5835254,
+  "lon": -1.7754387,
+  "tags": {
+    "amenity": "veterinary",
+    "name": "Eastcott Veterinary Surgery"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749759,
+  "lat": 51.5846350,
+  "lon": -1.7755509,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "fish_and_chips",
+    "name": "Gills Fish Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749765,
+  "lat": 51.5758066,
+  "lon": -1.7775278,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "chinese; thai",
+    "name": "Gorse Hill Chinese Takeaway"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749775,
+  "lat": 51.5765953,
+  "lon": -1.7788556,
+  "tags": {
+    "amenity": "doctors",
+    "name": "Hawthorn Medical Centre"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749788,
+  "lat": 51.5762686,
+  "lon": -1.7775868,
+  "tags": {
+    "amenity": "pharmacy",
+    "dispensing": "yes",
+    "name": "Hawthorn Pharmacy"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749810,
+  "lat": 51.5843124,
+  "lon": -1.7755155,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "chicken",
+    "name": "KFC"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749831,
+  "lat": 51.5844080,
+  "lon": -1.7755240,
+  "tags": {
+    "amenity": "pharmacy",
+    "dispensing": "yes",
+    "name": "Lloyds"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749874,
+  "lat": 51.5832540,
+  "lon": -1.8003220,
+  "tags": {
+    "amenity": "veterinary",
+    "name": "Moredon Veterinary Surgery"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749879,
+  "lat": 51.5836537,
+  "lon": -1.7754450,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "chinese; thai",
+    "name": "Oriental Express"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749892,
+  "lat": 51.5815103,
+  "lon": -1.7804134,
+  "tags": {
+    "amenity": "library",
+    "name": "Pinehurst Library"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749895,
+  "lat": 51.5835722,
+  "lon": -1.7801557,
+  "tags": {
+    "amenity": "library",
+    "disused": "yes",
+    "name": "Pinehurst Library"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749896,
+  "lat": 51.5815596,
+  "lon": -1.7801095,
+  "tags": {
+    "amenity": "community_centre",
+    "name": "Pinetrees Community Centre"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749900,
+  "lat": 51.5838153,
+  "lon": -1.7754564,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "pizza",
+    "name": "Pizza Hut"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749926,
+  "lat": 51.5841968,
+  "lon": -1.7754955,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "kebab",
+    "name": "Sammis Kebab and Burger House"
+  }
+},
+{
+  "type": "node",
+  "id": 1585750112,
+  "lat": 51.5776817,
+  "lon": -1.7816869,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1585750215,
+  "lat": 51.5783493,
+  "lon": -1.7768545,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1585750293,
+  "lat": 51.5786689,
+  "lon": -1.7767044,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:00",
+    "ref": "SN2 8"
+  }
+},
+{
+  "type": "node",
+  "id": 1585750302,
+  "lat": 51.5787215,
+  "lon": -1.7766655,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 1585750399,
+  "lat": 51.5792628,
+  "lon": -1.7766738,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1585750576,
+  "lat": 51.5806189,
+  "lon": -1.7719891,
+  "tags": {
+    "amenity": "recycling",
+    "recycling:clothes": "yes",
+    "recycling_type": "container"
+  }
+},
+{
+  "type": "node",
+  "id": 1585750911,
+  "lat": 51.5823978,
+  "lon": -1.7824788,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1585750975,
+  "lat": 51.5826567,
+  "lon": -1.7751702,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1585751055,
+  "lat": 51.5830484,
+  "lon": -1.7743768,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1585751083,
+  "lat": 51.5831955,
+  "lon": -1.8007289,
+  "tags": {
+    "amenity": "dentist"
+  }
+},
+{
+  "type": "node",
+  "id": 1585751168,
+  "lat": 51.5838159,
+  "lon": -1.7753482,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1585751186,
+  "lat": 51.5839061,
+  "lon": -1.7754261,
+  "tags": {
+    "amenity": "atm",
+    "operator": "Barclays"
+  }
+},
+{
+  "type": "node",
+  "id": 1585751195,
+  "lat": 51.5839132,
+  "lon": -1.7753112,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 1585751248,
+  "lat": 51.5842248,
+  "lon": -1.7753443,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 18:30; Sa 12:15",
+    "ref": "SN2 58"
+  }
+},
+{
+  "type": "node",
+  "id": 1585751251,
+  "lat": 51.5842307,
+  "lon": -1.7752713,
+  "tags": {
+    "amenity": "recycling",
+    "recycling:cans": "yes",
+    "recycling:paper": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1585751274,
+  "lat": 51.5844210,
+  "lon": -1.7753481,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1585751284,
+  "lat": 51.5844900,
+  "lon": -1.7753841,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987296,
+  "lat": 51.5718556,
+  "lon": -1.7745396,
+  "tags": {
+    "amenity": "community_centre",
+    "name": "Al Habib Islmaic Centre"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987340,
+  "lat": 51.5735916,
+  "lon": -1.7816623,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "evangelical",
+    "name": "Bethesda Evangelical Church",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987423,
+  "lat": 51.5738983,
+  "lon": -1.7774226,
+  "tags": {
+    "amenity": "pub",
+    "name": "Duke of Edinburgh"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987512,
+  "lat": 51.5697477,
+  "lon": -1.7769460,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "baptist",
+    "name": "Gorse Hill Baptist Church",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987536,
+  "lat": 51.5721134,
+  "lon": -1.7742293,
+  "tags": {
+    "amenity": "community_centre",
+    "name": "Gorse Hill Commumity Centre"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987549,
+  "lat": 51.5714922,
+  "lon": -1.7772443,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "burger",
+    "name": "Gorse Hill Grill"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987588,
+  "lat": 51.5728151,
+  "lon": -1.7745750,
+  "tags": {
+    "amenity": "school",
+    "name": "Gorse Hill School"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987656,
+  "lat": 51.5698811,
+  "lon": -1.7765271,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "indian",
+    "name": "Gurkha Village"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987716,
+  "lat": 51.5716583,
+  "lon": -1.7768602,
+  "tags": {
+    "amenity": "bank",
+    "atm": "yes",
+    "name": "Lloyds TSB"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987779,
+  "lat": 51.5710670,
+  "lon": -1.7768404,
+  "tags": {
+    "amenity": "cafe",
+    "name": "O'Grady's Cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987805,
+  "lat": 51.5702331,
+  "lon": -1.7770628,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "fish_and_chips",
+    "name": "Pisces Aroma Fish Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987819,
+  "lat": 51.5700491,
+  "lon": -1.7766092,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "pizza",
+    "name": "Pizza Inn"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987821,
+  "lat": 51.5709173,
+  "lon": -1.7768163,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "pizza",
+    "name": "Pizza Tonight"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987828,
+  "lat": 51.5718748,
+  "lon": -1.7772810,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "indian",
+    "name": "Punjab Balti"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987857,
+  "lat": 51.5729094,
+  "lon": -1.7769469,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "indian",
+    "name": "Raka Poshi"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987864,
+  "lat": 51.5704025,
+  "lon": -1.7770920,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Real Brazil"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987904,
+  "lat": 51.5723499,
+  "lon": -1.7774989,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "St Barnabas",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987950,
+  "lat": 51.5724011,
+  "lon": -1.7769071,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Sunflowers"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987959,
+  "lat": 51.5729748,
+  "lon": -1.7773337,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "indian",
+    "name": "Swindon Balti"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987963,
+  "lat": 51.5717540,
+  "lon": -1.7768722,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "indian",
+    "name": "Tandori Nights"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987989,
+  "lat": 51.5717850,
+  "lon": -1.7754549,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Swiss Chalet"
+  }
+},
+{
+  "type": "node",
+  "id": 1590988028,
+  "lat": 51.5725262,
+  "lon": -1.7769034,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "chinese",
+    "name": "Won Kee"
+  }
+},
+{
+  "type": "node",
+  "id": 1590988098,
+  "lat": 51.5693937,
+  "lon": -1.7812678,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:00",
+    "ref": "SN2 7"
+  }
+},
+{
+  "type": "node",
+  "id": 1590988106,
+  "lat": 51.5694218,
+  "lon": -1.7765446,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1590988276,
+  "lat": 51.5703160,
+  "lon": -1.7767685,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1590988706,
+  "lat": 51.5721450,
+  "lon": -1.7759338,
+  "tags": {
+    "amenity": "recycling",
+    "recycling:books": "yes",
+    "recycling:cans": "yes",
+    "recycling:clothes": "yes",
+    "recycling:food_cartons": "yes",
+    "recycling:glass": "yes",
+    "recycling:paper": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1590988739,
+  "lat": 51.5722127,
+  "lon": -1.7761420,
+  "tags": {
+    "amenity": "toilets",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1590988751,
+  "lat": 51.5723538,
+  "lon": -1.7735383,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1590988775,
+  "lat": 51.5723541,
+  "lon": -1.7769777,
+  "tags": {
+    "amenity": "atm",
+    "operator": "Co-Operative"
+  }
+},
+{
+  "type": "node",
+  "id": 1590989572,
+  "lat": 51.5759384,
+  "lon": -1.7705745,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 18:30; Sa 11:30",
+    "ref": "SN2 611"
+  }
+},
+{
+  "type": "node",
+  "id": 1590989643,
+  "lat": 51.5762491,
+  "lon": -1.7858496,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1590989715,
+  "lat": 51.5766339,
+  "lon": -1.7853739,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1590990054,
+  "lat": 51.5776087,
+  "lon": -1.7959989,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1590990235,
+  "lat": 51.5778411,
+  "lon": -1.7964115,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1590990648,
+  "lat": 51.5786077,
+  "lon": -1.7979964,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1599040097,
+  "lat": 51.5612836,
+  "lon": -1.7848657,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands"
+  }
+},
+{
+  "type": "node",
+  "id": 1601133435,
+  "lat": 51.5686917,
+  "lon": -1.8460603,
+  "tags": {
+    "amenity": "post_box",
+    "operator": "Royal Mail"
+  }
+},
+{
+  "type": "node",
+  "id": 1601600920,
+  "lat": 51.5235558,
+  "lon": -1.7945665,
+  "tags": {
+    "amenity": "library",
+    "name": "Wroughton Library"
+  }
+},
+{
+  "type": "node",
+  "id": 1601615519,
+  "lat": 51.5229181,
+  "lon": -1.7908620,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Brown Jack"
+  }
+},
+{
+  "type": "node",
+  "id": 1601615520,
+  "lat": 51.5226105,
+  "lon": -1.7991243,
+  "tags": {
+    "amenity": "pub",
+    "name": "The Fox and Hounds"
+  }
+},
+{
+  "type": "node",
+  "id": 1601615521,
+  "lat": 51.5245192,
+  "lon": -1.7873829,
+  "tags": {
+    "amenity": "pub",
+    "name": "The three Tuns (closed)"
+  }
+},
+{
+  "type": "node",
+  "id": 1603960490,
+  "lat": 51.5600392,
+  "lon": -1.7876879,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "100",
+    "covered": "yes",
+    "name": "Brunel Cycle Park"
+  }
+},
+{
+  "type": "node",
+  "id": 1603960555,
+  "lat": 51.5587732,
+  "lon": -1.7820010,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "12"
+  }
+},
+{
+  "type": "node",
+  "id": 1604080217,
+  "lat": 51.5587098,
+  "lon": -1.7817629,
+  "tags": {
+    "amenity": "clock",
+    "display": "analog",
+    "support": "wall_mounted",
+    "visibility": "street"
+  }
+},
+{
+  "type": "node",
+  "id": 1605341821,
+  "lat": 51.5589252,
+  "lon": -1.7815394,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1609382776,
+  "lat": 51.5242516,
+  "lon": -1.7917485,
+  "tags": {
+    "amenity": "doctors",
+    "name": "Wroughton Health Centre"
+  }
+},
+{
+  "type": "node",
+  "id": 1609382787,
+  "lat": 51.5224458,
+  "lon": -1.7971657,
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "denomination": "methodist",
+    "name": "Wroughton Methodist Church",
+    "religion": "christian",
+    "source": "Bing;survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1618960720,
+  "lat": 51.5607231,
+  "lon": -1.8325115,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872312,
+  "lat": 51.5702266,
+  "lon": -1.7865216,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "pentecostal",
+    "name": "Elim Pentacostal Church",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872314,
+  "lat": 51.5722764,
+  "lon": -1.7911217,
+  "tags": {
+    "amenity": "school",
+    "name": "Ferndale Community Primary School"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872320,
+  "lat": 51.5718970,
+  "lon": -1.7896877,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "Parish Church of All Saints",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872324,
+  "lat": 51.5713296,
+  "lon": -1.7898909,
+  "tags": {
+    "amenity": "college",
+    "name": "School of Health and Social Care"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872343,
+  "lat": 51.5694057,
+  "lon": -1.7828449,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872352,
+  "lat": 51.5695717,
+  "lon": -1.7823346,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872354,
+  "lat": 51.5695969,
+  "lon": -1.7822400,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872357,
+  "lat": 51.5696237,
+  "lon": -1.7830406,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872359,
+  "lat": 51.5696520,
+  "lon": -1.7845675,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872361,
+  "lat": 51.5696579,
+  "lon": -1.7830717,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872383,
+  "lat": 51.5700708,
+  "lon": -1.7827084,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872384,
+  "lat": 51.5700886,
+  "lon": -1.7826391,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872409,
+  "lat": 51.5705295,
+  "lon": -1.7877158,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:30",
+    "ref": "SN2 113"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872513,
+  "lat": 51.5744767,
+  "lon": -1.7939646,
+  "tags": {
+    "amenity": "telephone"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872522,
+  "lat": 51.5751488,
+  "lon": -1.7939479,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:45; Sa 12:30",
+    "ref": "SN2 237"
+  }
+},
+{
+  "type": "node",
+  "id": 1706923232,
+  "lat": 51.5739246,
+  "lon": -1.8012349,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "chinese",
+    "name": "Far East Chinese Takeaway"
+  }
+},
+{
+  "type": "node",
+  "id": 1706923255,
+  "lat": 51.5711792,
+  "lon": -1.7980311,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "fish_and_chips",
+    "name": "Shaw Fry Fish and Chip Takeaway"
+  }
+},
+{
+  "type": "node",
+  "id": 1706923323,
+  "lat": 51.5697990,
+  "lon": -1.7978549,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1706923441,
+  "lat": 51.5705131,
+  "lon": -1.7941532,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1706923457,
+  "lat": 51.5705797,
+  "lon": -1.8009884,
+  "tags": {
+    "amenity": "fuel",
+    "brand": "Esso"
+  }
+},
+{
+  "type": "node",
+  "id": 1706923590,
+  "lat": 51.5731269,
+  "lon": -1.8014026,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:15",
+    "ref": "SN2 126"
+  }
+},
+{
+  "type": "node",
+  "id": 1706923592,
+  "lat": 51.5731311,
+  "lon": -1.8014165,
+  "tags": {
+    "amenity": "waste_basket"
+  }
+},
+{
+  "type": "node",
+  "id": 1706924134,
+  "lat": 51.5754751,
+  "lon": -1.8015258,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1706924212,
+  "lat": 51.5760078,
+  "lon": -1.7999805,
+  "tags": {
+    "amenity": "post_box",
+    "collection_times": "Mo-Fr 17:30; Sa 12:15",
+    "ref": "SN2 40"
+  }
+},
+{
+  "type": "node",
+  "id": 1706924422,
+  "lat": 51.5776067,
+  "lon": -1.8020052,
+  "tags": {
+    "amenity": "dog_waste_bin"
+  }
+},
+{
+  "type": "node",
+  "id": 1706925009,
+  "lat": 51.5902386,
+  "lon": -1.7877054,
+  "tags": {
+    "amenity": "bench"
+  }
+},
+{
+  "type": "node",
+  "id": 1706925282,
+  "lat": 51.5729791,
+  "lon": -1.8009223,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "7th Day Adventist Church",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 1707797763,
+  "lat": 51.5499928,
+  "lon": -1.7763684,
+  "tags": {
+    "addr:housenumber": "32",
+    "addr:postcode": "SN1 3DP",
+    "addr:street": "Newport Street",
+    "amenity": "pub",
+    "name": "The Wheatsheaf",
+    "website": "http://www.beerintheevening.com/pubs/s/78/7870/Wheatsheaf/Swindon"
+  }
+},
+{
+  "type": "node",
+  "id": 1707800403,
+  "lat": 51.5504431,
+  "lon": -1.7749723,
+  "tags": {
+    "addr:housenumber": "14",
+    "addr:postcode": "SN1 3DX",
+    "addr:street": "Newport street",
+    "amenity": "pub",
+    "name": "Steam Railway",
+    "outdoor_seating": "yes",
+    "real_ale": "yes",
+    "website": "http://www.beerintheevening.com/pubs/s/64/6478/Steam_Railway_Co/Swindon"
+  }
+},
+{
+  "type": "node",
+  "id": 1707806128,
+  "lat": 51.5548010,
+  "lon": -1.7825804,
+  "tags": {
+    "addr:housenumber": "30",
+    "addr:postcode": "SN1 3LR",
+    "addr:street": "Eastcott Road",
+    "amenity": "fast_food",
+    "cuisine": "chinese",
+    "name": "Terry’s Takeaway",
+    "website": "http://www.just-eat.co.uk/restaurants-terrys"
+  }
+},
+{
+  "type": "node",
+  "id": 1707808752,
+  "lat": 51.5525125,
+  "lon": -1.7752130,
+  "tags": {
+    "addr:housenumber": "12-14",
+    "addr:postcode": "SN1 4AB",
+    "addr:street": "Wood Street",
+    "amenity": "restaurant",
+    "cuisine": "indian",
+    "name": "Biplob  Tandoori",
+    "website": "http://www.biplob.co.uk/contact.php"
+  }
+},
+{
+  "type": "node",
+  "id": 418191592,
+  "lat": 51.5348596,
+  "lon": -1.8512967,
+  "tags": {
+    "historic": "bridge site"
+  }
+},
+{
+  "type": "node",
+  "id": 418191598,
+  "lat": 51.5376834,
+  "lon": -1.8380849,
+  "tags": {
+    "historic": "bridge site"
+  }
+},
+{
+  "type": "node",
+  "id": 502350190,
+  "lat": 51.5233473,
+  "lon": -1.7946741,
+  "tags": {
+    "historic": "memorial"
+  }
+},
+{
+  "type": "node",
+  "id": 1218309459,
+  "lat": 51.6041026,
+  "lon": -1.8001410,
+  "tags": {
+    "historic": "archaeological_site",
+    "name": "Groundwell Ridge Roman Site"
+  }
+},
+{
+  "type": "node",
+  "id": 1297044154,
+  "lat": 51.6063378,
+  "lon": -1.8031320,
+  "tags": {
+    "historic": "ruins",
+    "name": "Blunsdon Abbey"
+  }
+},
+{
+  "type": "node",
+  "id": 1465269971,
+  "lat": 51.5238929,
+  "lon": -1.7906019,
+  "tags": {
+    "highway": "milestone",
+    "historic": "yes",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1604080188,
+  "lat": 51.5589565,
+  "lon": -1.7818929,
+  "tags": {
+    "historic": "memorial",
+    "name": "War Memorial"
+  }
+},
+{
+  "type": "node",
+  "id": 88041696,
+  "lat": 51.5586873,
+  "lon": -1.8287261,
+  "tags": {
+    "shop": "West Swindon District Centre"
+  }
+},
+{
+  "type": "node",
+  "id": 94671420,
+  "lat": 51.5975750,
+  "lon": -1.8050177,
+  "tags": {
+    "name": "ASDA Wal-Mart",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 101034833,
+  "lat": 51.5773407,
+  "lon": -1.7459023,
+  "tags": {
+    "created_by": "Potlatch 0.4c",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 266749303,
+  "lat": 51.5630449,
+  "lon": -1.7977372,
+  "tags": {
+    "alt_name": "Great Western Outlet Mall",
+    "created_by": "JOSM",
+    "name": "Swindon Outlet Mall",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 365286129,
+  "lat": 51.5978219,
+  "lon": -1.8095830,
+  "tags": {
+    "name": "Homebase",
+    "shop": "doityourself"
+  }
+},
+{
+  "type": "node",
+  "id": 381940263,
+  "lat": 51.5772082,
+  "lon": -1.7283211,
+  "tags": {
+    "name": "Sainsbury's",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 442390607,
+  "lat": 51.5592755,
+  "lon": -1.7755609,
+  "tags": {
+    "name": "The Co-op",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 486641347,
+  "lat": 51.5885225,
+  "lon": -1.7556387,
+  "tags": {
+    "name": "Co-op",
+    "operator": "Co-operative",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 486666745,
+  "lat": 51.5715761,
+  "lon": -1.7718741,
+  "tags": {
+    "name": "Lidl",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 486667636,
+  "lat": 51.5721363,
+  "lon": -1.7769038,
+  "tags": {
+    "name": "Co-op",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 516260138,
+  "lat": 51.5576709,
+  "lon": -1.7918150,
+  "tags": {
+    "amenity": "shop",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 631874800,
+  "lat": 51.5589342,
+  "lon": -1.8280234,
+  "tags": {
+    "name": "Asda",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 638951675,
+  "lat": 51.5716120,
+  "lon": -1.7542840,
+  "tags": {
+    "name": "Mothercare",
+    "shop": "department_store"
+  }
+},
+{
+  "type": "node",
+  "id": 638951767,
+  "lat": 51.5714550,
+  "lon": -1.7544530,
+  "tags": {
+    "name": "Argos Extra",
+    "shop": "department_store"
+  }
+},
+{
+  "type": "node",
+  "id": 638951888,
+  "lat": 51.5711160,
+  "lon": -1.7544980,
+  "tags": {
+    "name": "Boots",
+    "shop": "chemist"
+  }
+},
+{
+  "type": "node",
+  "id": 678403461,
+  "lat": 51.5583932,
+  "lon": -1.7825049,
+  "tags": {
+    "name": "Sound and Vision",
+    "operator": "Sevenoaks",
+    "shop": "TV and HiFi"
+  }
+},
+{
+  "type": "node",
+  "id": 731947356,
+  "lat": 51.5887099,
+  "lon": -1.8195175,
+  "tags": {
+    "name": "Juniper Stores",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 732084717,
+  "lat": 51.5835942,
+  "lon": -1.8124066,
+  "tags": {
+    "name": "Moredon Stores",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 738295310,
+  "lat": 51.5547369,
+  "lon": -1.7353293,
+  "tags": {
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 738295312,
+  "lat": 51.5544100,
+  "lon": -1.7353443,
+  "tags": {
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 748878134,
+  "lat": 51.5600014,
+  "lon": -1.8177982,
+  "tags": {
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 748878961,
+  "lat": 51.5676007,
+  "lon": -1.8086567,
+  "tags": {
+    "name": "Lidl",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 748878962,
+  "lat": 51.5694336,
+  "lon": -1.8065592,
+  "tags": {
+    "name": "B&Q",
+    "operator": "B&Q",
+    "shop": "doityourself"
+  }
+},
+{
+  "type": "node",
+  "id": 756960024,
+  "lat": 51.5606672,
+  "lon": -1.7874135,
+  "tags": {
+    "name": "House of Fraser",
+    "shop": "department_store"
+  }
+},
+{
+  "type": "node",
+  "id": 756960103,
+  "lat": 51.5597601,
+  "lon": -1.7852892,
+  "tags": {
+    "shop": "butcher"
+  }
+},
+{
+  "type": "node",
+  "id": 756960124,
+  "lat": 51.5599090,
+  "lon": -1.7861857,
+  "tags": {
+    "name": "Sainsburys",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 756960156,
+  "lat": 51.5599885,
+  "lon": -1.7850961,
+  "tags": {
+    "name": "Iceland",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 756960173,
+  "lat": 51.5610073,
+  "lon": -1.7851819,
+  "tags": {
+    "name": "Marks and Spencer",
+    "shop": "department_store"
+  }
+},
+{
+  "type": "node",
+  "id": 767401214,
+  "lat": 51.5877224,
+  "lon": -1.7965704,
+  "tags": {
+    "name": "Greenmeadow Stores",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 869317539,
+  "lat": 51.5986002,
+  "lon": -1.7934445,
+  "tags": {
+    "name": "Tesco",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 869317826,
+  "lat": 51.5986233,
+  "lon": -1.7936289,
+  "tags": {
+    "name": "Flaunt",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 870108866,
+  "lat": 51.5830124,
+  "lon": -1.8002111,
+  "tags": {
+    "name": "Virgilios",
+    "opening_hours": "Mo-Fr 09:00-17:00; Sa 08:00-15:00",
+    "phone": "10793487689",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 870109044,
+  "lat": 51.5858378,
+  "lon": -1.7722577,
+  "tags": {
+    "name": "Swindon Cycles Superstore",
+    "opening_hours": "Mo-Fr 08:50-17:30; Sa 08:50-17:15",
+    "shop": "bicycle"
+  }
+},
+{
+  "type": "node",
+  "id": 870109667,
+  "lat": 51.5858310,
+  "lon": -1.7727811,
+  "tags": {
+    "name": "DGS Autos",
+    "phone": "01793700220",
+    "shop": "car_repair"
+  }
+},
+{
+  "type": "node",
+  "id": 870109809,
+  "lat": 51.5830063,
+  "lon": -1.8005318,
+  "tags": {
+    "name": "Shop N Save",
+    "phone": "01793522694",
+    "shop": "hardware"
+  }
+},
+{
+  "type": "node",
+  "id": 870110102,
+  "lat": 51.5828972,
+  "lon": -1.8006239,
+  "tags": {
+    "name": "Co-Operative",
+    "opening_hours": "Mo-Sa 07:00-22:00; Su 08:00-22:00",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 870110229,
+  "lat": 51.5829674,
+  "lon": -1.8003253,
+  "tags": {
+    "name": "A Cut Above",
+    "opening_hours": "Tu-We 09:00-17:30; Th 09:00-19:00; Fr 09:00-18:00; Sa 09:00-17:00",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 870110383,
+  "lat": 51.5831149,
+  "lon": -1.7998693,
+  "tags": {
+    "name": "Hair One",
+    "phone": "01793538013",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 873864845,
+  "lat": 51.5881854,
+  "lon": -1.7981879,
+  "tags": {
+    "name": "Greenmeadow Service Station",
+    "shop": "car_repair"
+  }
+},
+{
+  "type": "node",
+  "id": 894655904,
+  "lat": 51.5766876,
+  "lon": -1.8067298,
+  "tags": {
+    "name": "Camberley Auto Factors",
+    "opening_hours": "Mo-Fr 08:00-17:30; Sa 08:30-16:00",
+    "shop": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 912716971,
+  "lat": 51.5836692,
+  "lon": -1.8127735,
+  "tags": {
+    "name": "Perfection Unisex Salon",
+    "opening_hours": "Tu-We 09:00-18:00, Th 09:00-20:00, Fr 09:00-18:00, Sa 08:00-16:00",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 912717108,
+  "lat": 51.5876284,
+  "lon": -1.7962003,
+  "tags": {
+    "name": "Cre8 Hair Salon",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 912717505,
+  "lat": 51.5877707,
+  "lon": -1.7967309,
+  "tags": {
+    "name": "Greenabbey Estate Agents",
+    "shop": "estate_agent"
+  }
+},
+{
+  "type": "node",
+  "id": 912717727,
+  "lat": 51.5816392,
+  "lon": -1.8032031,
+  "tags": {
+    "name": "Bourne Stores",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 938503338,
+  "lat": 51.5650767,
+  "lon": -1.7689406,
+  "tags": {
+    "addr:city": "Swindon",
+    "addr:housenumber": "27",
+    "addr:postcode": "SN1 2QA",
+    "addr:street": "Shrivenham Road",
+    "name": "Mitchell Cycles",
+    "shop": "bicycle",
+    "url": "http://www.mitchellcycles.co.uk/"
+  }
+},
+{
+  "type": "node",
+  "id": 938519702,
+  "lat": 51.5587853,
+  "lon": -1.7838211,
+  "tags": {
+    "addr:city": "Swindon",
+    "addr:housenumber": "109-110",
+    "addr:postcode": "SN1 5PL",
+    "addr:street": "Commercial Road",
+    "name": "Total Bike",
+    "shop": "bicycle"
+  }
+},
+{
+  "type": "node",
+  "id": 965940295,
+  "lat": 51.5607473,
+  "lon": -1.7846016,
+  "tags": {
+    "shop": "jewelers"
+  }
+},
+{
+  "type": "node",
+  "id": 1077505185,
+  "lat": 51.5943164,
+  "lon": -1.8238818,
+  "tags": {
+    "name": "Dewhurst",
+    "shop": "estate_agent"
+  }
+},
+{
+  "type": "node",
+  "id": 1077506039,
+  "lat": 51.5943825,
+  "lon": -1.8240849,
+  "tags": {
+    "name": "121 Salon",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 1077507430,
+  "lat": 51.5943948,
+  "lon": -1.8243315,
+  "tags": {
+    "name": "Co-Operative",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 1101591885,
+  "lat": 51.5621418,
+  "lon": -1.7838178,
+  "tags": {
+    "name": "Tesco Metro",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 1200206692,
+  "lat": 51.6025827,
+  "lon": -1.8164461,
+  "tags": {
+    "name": "Tesco Express",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1218309545,
+  "lat": 51.6037574,
+  "lon": -1.8171018,
+  "tags": {
+    "name": "Charles Harding Estate Agents",
+    "shop": "estate_agent"
+  }
+},
+{
+  "type": "node",
+  "id": 1218311787,
+  "lat": 51.6024515,
+  "lon": -1.8159026,
+  "tags": {
+    "name": "The Works",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 1221377829,
+  "lat": 51.6047664,
+  "lon": -1.7946297,
+  "tags": {
+    "name": "Michael Tuck",
+    "shop": "estate agents"
+  }
+},
+{
+  "type": "node",
+  "id": 1221377923,
+  "lat": 51.6048307,
+  "lon": -1.7945886,
+  "tags": {
+    "name": "Serendipity",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 1221378089,
+  "lat": 51.6046511,
+  "lon": -1.7947586,
+  "tags": {
+    "name": "Costcutter",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 1297043532,
+  "lat": 51.5914425,
+  "lon": -1.7823416,
+  "tags": {
+    "name": "McColls",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1297043556,
+  "lat": 51.5973816,
+  "lon": -1.8077618,
+  "tags": {
+    "name": "Next",
+    "shop": "clothes"
+  }
+},
+{
+  "type": "node",
+  "id": 1297043695,
+  "lat": 51.5970435,
+  "lon": -1.8076032,
+  "tags": {
+    "name": "New Look",
+    "shop": "clothes"
+  }
+},
+{
+  "type": "node",
+  "id": 1297043767,
+  "lat": 51.5969352,
+  "lon": -1.8072440,
+  "tags": {
+    "name": "Boots",
+    "shop": "chemist"
+  }
+},
+{
+  "type": "node",
+  "id": 1297043775,
+  "lat": 51.5964285,
+  "lon": -1.7858438,
+  "tags": {
+    "name": "Bhav's Store and Off Licence",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1297044022,
+  "lat": 51.5917069,
+  "lon": -1.7827659,
+  "tags": {
+    "name": "The Den Unisex Hair Salon",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 1350810402,
+  "lat": 51.5942881,
+  "lon": -1.7800317,
+  "tags": {
+    "name": "Nisa Local",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726484,
+  "lat": 51.5899865,
+  "lon": -1.7647095,
+  "tags": {
+    "name": "Beechcroft Hardware",
+    "shop": "hardware"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726503,
+  "lat": 51.5898005,
+  "lon": -1.7649552,
+  "tags": {
+    "name": "Co-Operative",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726506,
+  "lat": 51.5972413,
+  "lon": -1.7675135,
+  "tags": {
+    "name": "Co-Operative",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726509,
+  "lat": 51.5932257,
+  "lon": -1.7736375,
+  "tags": {
+    "name": "Costcutter",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726533,
+  "lat": 51.5897157,
+  "lon": -1.7650643,
+  "tags": {
+    "name": "Glynn's Butchers",
+    "shop": "butcher"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726556,
+  "lat": 51.5918978,
+  "lon": -1.7740135,
+  "tags": {
+    "name": "Mace",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726615,
+  "lat": 51.5974483,
+  "lon": -1.7687631,
+  "tags": {
+    "name": "Swindon Garden Centre",
+    "shop": "garden_centre"
+  }
+},
+{
+  "type": "node",
+  "id": 1365364707,
+  "lat": 51.5596014,
+  "lon": -1.7853333,
+  "tags": {
+    "shop": "greengrocer"
+  }
+},
+{
+  "type": "node",
+  "id": 1396904787,
+  "lat": 51.5867973,
+  "lon": -1.7672043,
+  "tags": {
+    "name": "Auto Engine Tune",
+    "shop": "car_repair"
+  }
+},
+{
+  "type": "node",
+  "id": 1396904870,
+  "lat": 51.5850309,
+  "lon": -1.7616656,
+  "tags": {
+    "name": "Meadowcroft Convenience Store",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1396904900,
+  "lat": 51.5854807,
+  "lon": -1.7496941,
+  "tags": {
+    "name": "St Margaret's Garage",
+    "shop": "car_repair"
+  }
+},
+{
+  "type": "node",
+  "id": 1416633496,
+  "lat": 51.5824833,
+  "lon": -1.7825813,
+  "tags": {
+    "name": "One Stop",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1422789664,
+  "lat": 51.5770603,
+  "lon": -1.8355516,
+  "tags": {
+    "name": "CoOp",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1465730378,
+  "lat": 51.5643248,
+  "lon": -1.7804744,
+  "tags": {
+    "name": "Baraka Groceries",
+    "shop": "convenience",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1530841322,
+  "lat": 51.5790699,
+  "lon": -1.7853585,
+  "tags": {
+    "name": "Liquor World",
+    "shop": "alcohol"
+  }
+},
+{
+  "type": "node",
+  "id": 1530841413,
+  "lat": 51.5779357,
+  "lon": -1.7936293,
+  "tags": {
+    "name": "Wingate Stores",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1549038781,
+  "lat": 51.5678665,
+  "lon": -1.8373612,
+  "tags": {
+    "name": "Tesco Express",
+    "shop": "convenience",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1549043370,
+  "lat": 51.5676731,
+  "lon": -1.8373585,
+  "tags": {
+    "name": "Olga's Hair Studio",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 1563574055,
+  "lat": 51.5580932,
+  "lon": -1.8105931,
+  "tags": {
+    "name": "Sainsbury's",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 1563574056,
+  "lat": 51.5588070,
+  "lon": -1.8094773,
+  "tags": {
+    "name": "Homebase",
+    "shop": "doityourself"
+  }
+},
+{
+  "type": "node",
+  "id": 1582707922,
+  "lat": 51.5647609,
+  "lon": -1.7533534,
+  "tags": {
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1582707923,
+  "lat": 51.5649209,
+  "lon": -1.7536860,
+  "tags": {
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 1582707924,
+  "lat": 51.5596385,
+  "lon": -1.7467551,
+  "tags": {
+    "name": "Welcombe Stores",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1582707926,
+  "lat": 51.5666749,
+  "lon": -1.7520337,
+  "tags": {
+    "shop": "car_repair"
+  }
+},
+{
+  "type": "node",
+  "id": 1582731476,
+  "lat": 51.5532681,
+  "lon": -1.7507033,
+  "tags": {
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749675,
+  "lat": 51.5848625,
+  "lon": -1.7750739,
+  "tags": {
+    "name": "A's Hair Studio",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749678,
+  "lat": 51.5849698,
+  "lon": -1.7757529,
+  "tags": {
+    "name": "Bonnies Florist",
+    "shop": "florist"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749686,
+  "lat": 51.5849108,
+  "lon": -1.7758497,
+  "tags": {
+    "name": "Brett and Sons",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749690,
+  "lat": 51.5831911,
+  "lon": -1.7682263,
+  "tags": {
+    "name": "Buildbase",
+    "shop": "hardware"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749715,
+  "lat": 51.5809003,
+  "lon": -1.7764031,
+  "tags": {
+    "name": "Co-Operative Funeral Care",
+    "shop": "funeral_directors"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749718,
+  "lat": 51.5845036,
+  "lon": -1.7755291,
+  "tags": {
+    "name": "Co-Operative",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749720,
+  "lat": 51.5758866,
+  "lon": -1.7771640,
+  "tags": {
+    "name": "Complete Curtain Service",
+    "shop": "curtain"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749739,
+  "lat": 51.5789628,
+  "lon": -1.7769702,
+  "tags": {
+    "name": "E-Motion Electric Vehicle Company",
+    "shop": "bicycle"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749742,
+  "lat": 51.5791170,
+  "lon": -1.7768910,
+  "tags": {
+    "name": "ESS Security",
+    "shop": "locksmith"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749807,
+  "lat": 51.5834250,
+  "lon": -1.7990038,
+  "tags": {
+    "name": "Hillier Funeral Service",
+    "shop": "funeral_directors"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749923,
+  "lat": 51.5842479,
+  "lon": -1.7755046,
+  "tags": {
+    "name": "Prospect",
+    "shop": "charity"
+  }
+},
+{
+  "type": "node",
+  "id": 1585749929,
+  "lat": 51.5825921,
+  "lon": -1.7826171,
+  "tags": {
+    "name": "Simply Red",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 1585751162,
+  "lat": 51.5837292,
+  "lon": -1.7754488,
+  "tags": {
+    "shop": "dry_cleaning"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987267,
+  "lat": 51.5728364,
+  "lon": -1.7772979,
+  "tags": {
+    "name": "A&K News",
+    "shop": "kiosk"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987290,
+  "lat": 51.5733529,
+  "lon": -1.7770032,
+  "tags": {
+    "name": "Adult Exchange",
+    "shop": "erotic"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987303,
+  "lat": 51.5744442,
+  "lon": -1.7716683,
+  "tags": {
+    "name": "Argyle Garden Centre",
+    "shop": "garden_centre"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987306,
+  "lat": 51.5698838,
+  "lon": -1.7769363,
+  "tags": {
+    "name": "Astral Travel",
+    "shop": "travel_agency"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987309,
+  "lat": 51.5687137,
+  "lon": -1.7837940,
+  "tags": {
+    "name": "Beesleys",
+    "opening_hours": "Mo-Fr 08:00-17:00; Sa 08:30-12:00",
+    "shop": "hardware",
+    "website": "tool-shop.co.uk"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987383,
+  "lat": 51.5710089,
+  "lon": -1.7771633,
+  "tags": {
+    "name": "Charles Harding",
+    "shop": "estate_agent"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987396,
+  "lat": 51.5722723,
+  "lon": -1.7766823,
+  "tags": {
+    "name": "Co-Operative",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987410,
+  "lat": 51.5734602,
+  "lon": -1.7770020,
+  "tags": {
+    "name": "Crown Security",
+    "shop": "hardware"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987415,
+  "lat": 51.5690825,
+  "lon": -1.7825495,
+  "tags": {
+    "name": "Delmas Hair Salon",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987419,
+  "lat": 51.5712119,
+  "lon": -1.7768258,
+  "tags": {
+    "name": "Digital Photo Service",
+    "shop": "photography"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987427,
+  "lat": 51.5699730,
+  "lon": -1.7765794,
+  "tags": {
+    "name": "Eddies Barber",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987453,
+  "lat": 51.5696206,
+  "lon": -1.7768232,
+  "tags": {
+    "name": "Factory Carpets Direct",
+    "shop": "furniture"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987458,
+  "lat": 51.5718891,
+  "lon": -1.7768820,
+  "tags": {
+    "name": "Fireplace Solutions",
+    "shop": "hardware"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987463,
+  "lat": 51.5705685,
+  "lon": -1.7767551,
+  "tags": {
+    "name": "Flawless Hair and Beauty",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987466,
+  "lat": 51.5695766,
+  "lon": -1.7774547,
+  "tags": {
+    "name": "Franco and Anna Italian Food",
+    "shop": "deli"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987469,
+  "lat": 51.5726290,
+  "lon": -1.7772976,
+  "tags": {
+    "name": "Funbox",
+    "shop": "toys"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987497,
+  "lat": 51.5728276,
+  "lon": -1.7769417,
+  "tags": {
+    "name": "Furniture Trade Direct",
+    "shop": "furniture"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987503,
+  "lat": 51.5711285,
+  "lon": -1.7768180,
+  "tags": {
+    "name": "George Lesley Flowers",
+    "shop": "florist"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987508,
+  "lat": 51.5726978,
+  "lon": -1.7769428,
+  "tags": {
+    "name": "Glöden",
+    "shop": "beauty"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987544,
+  "lat": 51.5699458,
+  "lon": -1.7769996,
+  "tags": {
+    "name": "Gorse Hill Dry Cleaners",
+    "shop": "dry_cleaning"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987553,
+  "lat": 51.5721603,
+  "lon": -1.7748441,
+  "tags": {
+    "name": "Gorse Hill Motor Company",
+    "shop": "car"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987590,
+  "lat": 51.5718096,
+  "lon": -1.7768774,
+  "tags": {
+    "name": "Gorse Hill Shoe Repair",
+    "shop": "shoes"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987629,
+  "lat": 51.5730143,
+  "lon": -1.7769789,
+  "tags": {
+    "name": "Gowns of Distinction",
+    "shop": "clothes"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987662,
+  "lat": 51.5724444,
+  "lon": -1.7769050,
+  "tags": {
+    "name": "Hair By Design",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987665,
+  "lat": 51.5719663,
+  "lon": -1.7768869,
+  "tags": {
+    "name": "Halls Quality Bakers",
+    "shop": "bakery"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987666,
+  "lat": 51.5717814,
+  "lon": -1.7772723,
+  "tags": {
+    "name": "Hayne and Smith",
+    "shop": "optician"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987691,
+  "lat": 51.5703102,
+  "lon": -1.7770847,
+  "tags": {
+    "name": "Ipanema Beauty Salon",
+    "shop": "beauty"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987699,
+  "lat": 51.5724871,
+  "lon": -1.7769041,
+  "tags": {
+    "name": "Johnsons Tailors",
+    "shop": "tailor"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987709,
+  "lat": 51.5744046,
+  "lon": -1.7723461,
+  "tags": {
+    "name": "KDM Car Repair and MOT",
+    "shop": "car_repair"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987718,
+  "lat": 51.5724608,
+  "lon": -1.7750729,
+  "tags": {
+    "name": "MB Autos",
+    "shop": "car_repair"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987728,
+  "lat": 51.5697838,
+  "lon": -1.7764961,
+  "tags": {
+    "name": "Majestic Wine Warehouse",
+    "shop": "alcohol"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987734,
+  "lat": 51.5713558,
+  "lon": -1.7773428,
+  "tags": {
+    "name": "Mbros Discount Store",
+    "shop": "variety_store"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987739,
+  "lat": 51.5708585,
+  "lon": -1.7767897,
+  "tags": {
+    "name": "Michaels Workwear",
+    "shop": "clothes"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987782,
+  "lat": 51.5735729,
+  "lon": -1.7770069,
+  "tags": {
+    "name": "Pet and Garden Centre",
+    "shop": "garden_centre"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987852,
+  "lat": 51.5716672,
+  "lon": -1.7773072,
+  "tags": {
+    "name": "RSPCA",
+    "shop": "charity"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987869,
+  "lat": 51.5712814,
+  "lon": -1.7768413,
+  "tags": {
+    "name": "Salvation Army",
+    "shop": "charity"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987937,
+  "lat": 51.5735147,
+  "lon": -1.7770044,
+  "tags": {
+    "name": "Storehouse Clothing",
+    "shop": "clothes"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987966,
+  "lat": 51.5700789,
+  "lon": -1.7770215,
+  "tags": {
+    "name": "Terry's Pet Food and Accesories",
+    "shop": "pet_shop"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987969,
+  "lat": 51.5707221,
+  "lon": -1.7767879,
+  "tags": {
+    "name": "That Shop",
+    "shop": "furniture"
+  }
+},
+{
+  "type": "node",
+  "id": 1590987992,
+  "lat": 51.5732704,
+  "lon": -1.7769959,
+  "tags": {
+    "name": "This and That 2nd Hand Furniture",
+    "shop": "furniture"
+  }
+},
+{
+  "type": "node",
+  "id": 1590988001,
+  "lat": 51.5731078,
+  "lon": -1.7769983,
+  "tags": {
+    "name": "Turning Point Christian Prayer Centre",
+    "shop": "books"
+  }
+},
+{
+  "type": "node",
+  "id": 1598662245,
+  "lat": 51.5613147,
+  "lon": -1.7802636,
+  "tags": {
+    "name": "Recycles",
+    "shop": "bicycle"
+  }
+},
+{
+  "type": "node",
+  "id": 1605379122,
+  "lat": 51.5586609,
+  "lon": -1.7830039,
+  "tags": {
+    "name": "Barnets Barber Shop",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 1605405876,
+  "lat": 51.5588631,
+  "lon": -1.7843718,
+  "tags": {
+    "name": "American Fashion Nails",
+    "shop": "beauty"
+  }
+},
+{
+  "type": "node",
+  "id": 1605410689,
+  "lat": 51.5590771,
+  "lon": -1.7857366,
+  "tags": {
+    "name": "A-Plan Insurance",
+    "shop": "insurance"
+  }
+},
+{
+  "type": "node",
+  "id": 1642883564,
+  "lat": 51.5748030,
+  "lon": -1.7704650,
+  "tags": {
+    "name": "Greggs",
+    "shop": "fast_food"
+  }
+},
+{
+  "type": "node",
+  "id": 1668924396,
+  "lat": 51.5786224,
+  "lon": -1.7624418,
+  "tags": {
+    "name": "Cycleswarehouse",
+    "shop": "bicycle"
+  }
+},
+{
+  "type": "node",
+  "id": 1673246091,
+  "lat": 51.5719276,
+  "lon": -1.7768849,
+  "tags": {
+    "female": "no",
+    "male": "yes",
+    "name": "Becky's Barbers",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872308,
+  "lat": 51.5709988,
+  "lon": -1.7857412,
+  "tags": {
+    "name": "Brian Turner",
+    "shop": "butcher"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872309,
+  "lat": 51.5710056,
+  "lon": -1.7855968,
+  "tags": {
+    "name": "Champers Hair Studio",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872313,
+  "lat": 51.5830748,
+  "lon": -1.7989250,
+  "tags": {
+    "name": "Farm Foods",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872315,
+  "lat": 51.5710798,
+  "lon": -1.7923961,
+  "tags": {
+    "name": "Ferndale Newsagents",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872317,
+  "lat": 51.5706138,
+  "lon": -1.7854497,
+  "tags": {
+    "name": "Floral Design",
+    "shop": "florist"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872321,
+  "lat": 51.5710083,
+  "lon": -1.7860977,
+  "tags": {
+    "name": "Pop In Express",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872322,
+  "lat": 51.5710355,
+  "lon": -1.7891587,
+  "tags": {
+    "name": "QMS Stores",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 1684872327,
+  "lat": 51.5707777,
+  "lon": -1.7837936,
+  "tags": {
+    "name": "Star World Off Licence",
+    "shop": "alcohol"
+  }
+},
+{
+  "type": "node",
+  "id": 1706923205,
+  "lat": 51.5719230,
+  "lon": -1.8013101,
+  "tags": {
+    "name": "Blackwells",
+    "shop": "funeral_directors"
+  }
+},
+{
+  "type": "node",
+  "id": 1706923235,
+  "lat": 51.5708940,
+  "lon": -1.7942710,
+  "tags": {
+    "name": "House of Hair",
+    "shop": "hairdresser"
+  }
+},
+{
+  "type": "node",
+  "id": 1706923239,
+  "lat": 51.5773217,
+  "lon": -1.8054990,
+  "tags": {
+    "name": "Manor Garden Centre",
+    "shop": "garden_centre"
+  }
+},
+{
+  "type": "node",
+  "id": 1355726479,
+  "lat": 51.5923613,
+  "lon": -1.7627898,
+  "tags": {
+    "craft": "brewery",
+    "man_made": "works",
+    "name": "Arkells Brewery",
+    "website": "http://www.arkells.com/"
+  }
+}
+
+  ]
+}

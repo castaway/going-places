@@ -1,0 +1,65 @@
+http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide
+http://www.overpass-api.de/query_form.html
+http://openstreetmap.us/uixapi/xapi.html
+
+http://wiki.openstreetmap.org/wiki/Map_Features
+
+http://developers.facebook.com/docs/guides/web/
+
+http://hiking.lonvia.de/en/
+http://wiki.openstreetmap.org/wiki/Relation:route#Walking_routes_.28also_hiking_and_pilgrimage.29
+
+
+http://jxapi.openstreetmap.org/xapi/api/0.6/*[key=value][bbox=-1.85223,51.52242,-1.71730,51.61588]
+
+node
+  (51.52242,-1.85223,51.61588,-1.71730);
+out body;
+
+
+[out:json];
+node
+  ["amenity"]
+  (51.52242,-1.85223,51.61588,-1.71730);
+out body;
+node
+  ["historic"]
+  (51.52242,-1.85223,51.61588,-1.71730);
+out body;
+node
+  ["shop"]
+  (51.52242,-1.85223,51.61588,-1.71730);
+out body;
+node
+  ["craft"]
+  (51.52242,-1.85223,51.61588,-1.71730);
+out body;
+
+
+tables:
+- cards == locations?
+
+cards: id, name, photo, details, location, max_available
+- is_available, held_by
+card_instances: card_id, instance, location (nullable?)
+card_tags: card_id, key, value
+players: id, username, display_name, ...?
+ - achievements_in_progress, recent_actions
+achievements: id, name, details, difficulty
+ - completed_by, last_completed, 
+achievement_cards: achievement_id, card_id
+player_cards (hand): player_id, card_id, picked_up
+player_achievements: player_id, achievement_id, completed_on, duration
+
+announcements: id, time, player_id, action, visibility, card_id, location
+friends: player_one, player_two ?
+
+http://designlovr.com/use-css3-to-create-a-dynamic-stack-of-index-cards/
+http://demosthenes.info/blog/425/“Card-Fan”-CSS3-Gallery-Reveal-In-Four-Lines-of-Code
+https://github.com/selfthinker/CSS-Playing-Cards
+
+http://www.zenelements.com/blog/css3-border-radius-rounded-corners/
+https://learnable.com/courses/learn-css3-203
+
+enwp/Playing_card
+The most common sizes for playing cards are poker size (2½in × 3½in; 63 mm × 88 mm, or B8 size according to ISO 216) and bridge size (2¼in × 3½in, approx. 56 mm × 88 mm), the latter being narrower, and thus more suitable for games such as bridge in which a large number of cards must be held concealed in a player's hand. Other sizes are also available, such as a smaller size (usually 1¾in × 2⅝in, approx. 44 mm × 66 mm) for solitaire, tall narrow designs for travel and larger ones for card tricks. The weight of an average B8-sized playing card is 0.063 oz (1.8g), a deck 3.3 oz (94g).
