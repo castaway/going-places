@@ -17,7 +17,9 @@ var GP = (GP) ? GP : {
         tracking: true,
         // Update the users position on the map
         following: true
-    }
+    },
+    // collect currently visible features, set when update_location is called
+    visible_features: {}
 };
 
 
@@ -106,7 +108,8 @@ GP.highlight_close_features = function(my_loc) {
           GP.log("<p>Found " + features[i].geometry + '</p>');
 
           // See StyleMap for 'nearby' below
-          GP.places_layer.features[i].renderIntent = "nearby";
+     //     GP.places_layer.features[i].renderIntent = "nearby";
+          GP.places_layer.features[i].attributes.proximity = "near";
 
           // Need to hide all the other ones we showed previously?
           // Store by internal id so we can easily re-find them?
@@ -124,6 +127,12 @@ GP.highlight_close_features = function(my_loc) {
     }
 
 };
+
+GP.on_feature_added = function(obj) {
+    if(GP.visible_features[obj.feature.attributes.id]) {
+        obj.feature.attributes.proximity = "near";
+    }
+}
 
 // Popup a particular feature
 GP.show_card = function(card_feature) {
@@ -206,11 +215,16 @@ GP.setup_map = function() {
   GP.user_layer = new OpenLayers.Layer.Vector('vector');
   GP.map.addLayer(GP.user_layer);
 
+  var proximity_styles = {
+      "far": { fillColor: "#ffcc66" },
+      "near": { fillColor: "#00FF00" },
+  };
+
   var places_style_map = new OpenLayers.StyleMap({
       "default": new OpenLayers.Style({
           graphicName: 'x',
           pointRadius: 10,
-          fillColor: "#ffcc66",
+//          fillColor: "#ffcc66",
           strokeColor: "#ff9933",
           strokeWidth: 2,
           graphicZIndex: 1
@@ -221,14 +235,15 @@ GP.setup_map = function() {
           graphicZIndex: 2
       }),
       "nearby": new OpenLayers.Style({
-          fillColor: "#00FF00"
+//          fillColor: "#00FF00"
       })
   });
+  places_style_map.addUniqueValueRules("default", "proximity", proximity_styles);
     
   // I would like this eventually to only update if the user has moved N metres?
   GP.places_layer = new OpenLayers.Layer.Vector("GP Places", {
       projection: GP.map.displayProjection,
-      strategies: [new OpenLayers.Strategy.BBOX({resFactor: 1.1, })],
+      strategies: [new OpenLayers.Strategy.BBOX({resFactor: 1.3, })],
       protocol: new OpenLayers.Protocol.HTTP({
           url: "/cgi-bin/geotrader.cgi/places",
           format: new OpenLayers.Format.Text({
@@ -249,7 +264,8 @@ GP.setup_map = function() {
     GP.select_control.activate();
     GP.places_layer.events.on({
         'featureselected': GP.on_feature_select,
-        'featureunselected': GP.on_feature_unselect
+        'featureunselected': GP.on_feature_unselect,
+        'beforefeatureadded': GP.on_feature_added
     }); 
 
   GP.map.setCenter(GP.latlon_to_map(GP.default_loc), 15);

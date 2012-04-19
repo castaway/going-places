@@ -40,7 +40,7 @@ sub write_openlayers_text {
     my ($self, $card_rs) = @_;
 
     $card_rs->result_class('DBIx::Class::ResultClass::HashRefInflator');
-    my $ol_text = "lat\tlon\tid\ttitle\tdescription\n";
+    my $ol_text = "lat\tlon\tid\tproximity\ttitle\tdescription\n";
 
     while (my $card = $card_rs->next) {
 #        print STDERR Dumper($card);
@@ -48,6 +48,9 @@ sub write_openlayers_text {
         $ol_text .= $card->{location_lat}. "\t".
                $card->{location_lon}. "\t" .
                $card->{id} . "\t" .
+               ## default all features to be "not close" to the user, we change
+               ## this in the javascript when items are closeby
+               "far\t" . 
                $card->{name}. "\t" .
                '<span id="card-' . $card->{id} .
                '" class="card-link" style="display:none">' . 
