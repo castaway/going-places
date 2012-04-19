@@ -5,6 +5,7 @@ use warnings;
 
 use Data::Dumper;
 use GeoTrader::Schema;
+use URI::Escape;
 use Moo;
 
 has 'schema' => (is => 'ro', lazy => 1, builder => '_build_schema');
@@ -66,7 +67,7 @@ sub get_card_link {
     return '<a href="' 
         . $self->base_uri 
         . '/card/' 
-        . $card->{id} 
+        . $card->{id} . '-' . uri_escape($card->{name})
     . '">' 
         . $card->{name}. '</a>'
         ;

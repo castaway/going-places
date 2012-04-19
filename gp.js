@@ -1,18 +1,30 @@
-var GP = (GP) ? GP : {};
+var GP = (GP) ? GP : {
 
-GP.circle_style = {
-    fillColor: '#000',
-    fillOpacity: 0.1,
-    strokeWidth: 0
+// Default map centre
+    default_loc: {
+        latitude: 51.56,
+        longitude: -1.78
+    },
+
+// Style for Geo-accuracy circle arround current-point cross.
+    circle_style: {
+        fillColor: '#000',
+        fillOpacity: 0.1,
+        strokeWidth: 0
+    },
+    settings: {
+        // Keep track of the users actual position
+        tracking: true,
+        // Update the users position on the map
+        following: true
+    }
 };
 
-GP.default_loc = {
-    latitude: 51.56,
-    longitude: -1.78
-};
 
+// Features within this distance of user's current position are deemed to be "close by"
 GP.MAX_DIST = 50; // metres
 
+// Append log messages to on-screen div for mobile debugging
 GP.log = function(message) {
     if(0) {
         var log = jQuery('#log');
@@ -20,49 +32,59 @@ GP.log = function(message) {
     }
 }
 
+// Everytime the GPS reports a new location, redraw the users position on the 
+// map, and re-centre the map to that position.
+// If settings.following is false, only store the current position, don't update the map.
 if(!GP.update_location) {
     GP.update_location = function(event) {
         // Do/can we show other users later on this layer?
 
-        GP.user_layer.removeAllFeatures();
+        GP.current_position = {
+            point: event.point,
+            last_updated: Date.now()
+        };
 
-        var circle = new OpenLayers.Feature.Vector(
-            OpenLayers.Geometry.Polygon.createRegularPolygon(
-                new OpenLayers.Geometry.Point(event.point.x, event.point.y),
-                event.position.coords.accuracy ,
-//                event.position.coords.accuracy/2,
-                40,
-                0
-            ),
-            {},
-            GP.circle_style
-        );
-//        jQuery('#stats').innerHTML("Accuracy: " + event.position.coords.accuracy);
-        GP.log('<p>accuracy: ' + event.position.coords.accuracy + '</p>');
+        if(GP.settings.following) {
+            GP.user_layer.removeAllFeatures();
 
-        try {
-          GP.user_layer.addFeatures([
-                                      new OpenLayers.Feature.Vector(
-                                        event.point,
-                                        {},
-                                        {                    
-                                          graphicName: 'cross',
-                                          strokeColor: '#f00',
-                                          strokeWidth: 2,
-                                          fillOpacity: 0,
-                                          pointRadius: 10
-                                        }
-                                      ),
-                                      circle
-                                    ]);          
-        } catch (error) {
-          GP.log('<p>error doing addFeature: '+error+'</p>');
+            var circle = new OpenLayers.Feature.Vector(
+                OpenLayers.Geometry.Polygon.createRegularPolygon(
+                    new OpenLayers.Geometry.Point(event.point.x, event.point.y),
+                    event.position.coords.accuracy ,
+                    //                event.position.coords.accuracy/2,
+                    40,
+                    0
+                ),
+                {},
+                GP.circle_style
+            );
+            //        jQuery('#stats').innerHTML("Accuracy: " + event.position.coords.accuracy);
+            GP.log('<p>accuracy: ' + event.position.coords.accuracy + '</p>');
+
+            try {
+                GP.user_layer.addFeatures([
+                    new OpenLayers.Feature.Vector(
+                        event.point,
+                        {},
+                        {                    
+                            graphicName: 'cross',
+                            strokeColor: '#f00',
+                            strokeWidth: 2,
+                            fillOpacity: 0,
+                            pointRadius: 10
+                        }
+                    ),
+                    circle
+                ]);          
+            } catch (error) {
+                GP.log('<p>error doing addFeature: '+error+'</p>');
+            }
+            //        GP.map.zoomToExtent(GP.user_layer.getDataExtent());
+
+            GP.highlight_close_features(event.point);
+
+            this.bind = true;
         }
-//        GP.map.zoomToExtent(GP.user_layer.getDataExtent());
-
-        GP.highlight_close_features(event.point);
-
-        this.bind = true;
     };
 }
 
@@ -70,21 +92,28 @@ GP.highlight_close_features = function(my_loc) {
 //    GP.log("<p>Looking near: " + my_loc + '</p>');
 
     var my_point = new OpenLayers.Geometry.Point(my_loc.x, my_loc.y);
-    // my_point.distanceTo(otherpoint);
+
 //    GP.log("<p>Looking near: " + my_point + '</p>');
     var features = GP.places_layer.features; 
 //    GP.log("<p>Got features</p>");
     var is_changed = false;
+
+    // Empty / refresh current visible features array, if any
+    GP.visible_features = {};
     for (i=0; i<features.length; i++) {
       //  GP.log("Dist: " + my_point.distanceTo(features[i].geometry) + '<br/>');
       if(my_point.distanceTo(features[i].geometry) <= GP.MAX_DIST) {
           GP.log("<p>Found " + features[i].geometry + '</p>');
-          // See StyleMap nearby below
+
+          // See StyleMap for 'nearby' below
           GP.places_layer.features[i].renderIntent = "nearby";
-//          GP.places_layer.drawFeature(features[i], {renderIntent:"nearby" });
 
           // Need to hide all the other ones we showed previously?
-          GP.show_card(features[i]);
+          // Store by internal id so we can easily re-find them?
+          GP.visible_features[features[i].attributes.id] = features[i];
+
+// This doesn't work if there are more than one!
+//          GP.show_card(features[i]);
           is_changed = true;
         }
     }
@@ -96,11 +125,17 @@ GP.highlight_close_features = function(my_loc) {
 
 };
 
+// Popup a particular feature
 GP.show_card = function(card_feature) {
+    if(GP.popup && GP.popup.feature) {
+        GP.select_control.unselect(GP.popup.feature);
+    }
     GP.on_feature_select({ feature: card_feature });
     jQuery('#card-'+card_feature.attributes.id).show();
 }
 
+// Callback to the backend using ajax/post to store the users current location
+// Should only be called when there is something interesting happening
 GP.store_location = function(point) {
     var latlon = new OpenLayers.LonLat(point.x, point.y).transform(
         GP.map.getProjectionObject(),
@@ -113,6 +148,7 @@ GP.store_location = function(point) {
     );
 }
 
+// Convert a location from latlon to map projection coords
 if(!GP.latlon_to_map) {
     GP.latlon_to_map = function(latlon) {
         var lonlat = new OpenLayers.LonLat(latlon.longitude, latlon.latitude).transform(
@@ -140,6 +176,10 @@ GP.on_feature_select = function (event) {
     feature.popup = GP.popup;
     GP.popup.feature = feature;
     GP.map.addPopup(GP.popup);
+
+    if(GP.visible_features[feature.attributes.id]) {
+        jQuery('#card-'+feature.attributes.id).show();
+    }
 };
 
 GP.on_feature_unselect = function (event) {
@@ -152,8 +192,7 @@ GP.on_feature_unselect = function (event) {
     }
 };
 
-
-jQuery(document).ready(function() {
+GP.setup_map = function() {
   GP.map = new OpenLayers.Map('map');
   GP.log('Map units: ' + GP.map.units);
 
@@ -242,4 +281,19 @@ jQuery(document).ready(function() {
     });
 
     GP.geolocate.activate();
-} );
+};
+
+
+jQuery(document).ready(function() {
+    GP.setup_map();
+
+    jQuery('#toggle_tracking').change(function() {
+        GP.settings.tracking = !GP.settings.tracking;
+        GP.geolocate.bind = GP.settings.tracking;
+    }); 
+
+    jQuery('#toggle_following').change(function() {
+        GP.settings.following = !GP.settings.following;
+    });
+});
+
