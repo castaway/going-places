@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-package GeoTrader::Web;
+package GoingPlaces::Web;
 
 use Plack::Request;
 use Plack::Middleware::Session;
@@ -8,12 +8,12 @@ use Data::Dumper;
 use Web::Simple;
 # use Moo;
 use lib '/mnt/shared/projects/cardsapp/lib';
-use GeoTrader;
+use GoingPlaces::Model;
 
 has 'model' => (is => 'ro', lazy => 1, builder => '_build_model');
 
 sub _build_model {
-    return GeoTrader->new(
+    return GoingPlaces::Model->new(
         base_uri => '/cgi-bin/geotrader.cgi',
         app_cwd => 'mnt/shared/projects/cardsapp',
         );
@@ -36,13 +36,9 @@ sub dispatch_request {
     sub (POST + /login + %username=&password=) {
         my ($self, $usern, $passw) = @_;
         
-#        print STDERR "user check $usern\n";
         my $user = $self->model->get_check_user($usern, $passw);
 
-
         if($user) {
-#            print STDERR "Found user $usern\n";
-        
             # Turtles all the way down!
             return ($self->set_authenticated($user), 
                     [ 200, [ 'Content-type', 'text/html' ], [ 'Login succeeded' ]]);
@@ -158,4 +154,4 @@ sub ensure_session {
     Plack::Middleware::Session->new(store => 'File');
   }
 }
-GeoTrader::Web->run_if_script();
+GoingPlaces::Web->run_if_script();

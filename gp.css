@@ -1,0 +1,23 @@
+
+#minimenu 
+{
+    float: left;
+}
+
+#login {
+    float: right;
+}
+
+ul#minimenu, ul#login {
+    list-style: none;
+}
+
+#minimenu li, #login li {
+    list-style: none;
+    display: inline;
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}

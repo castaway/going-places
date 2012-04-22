@@ -1,4 +1,4 @@
-package GeoTrader;
+package GoingPlaces::Model;
 
 use strict;
 use warnings;
