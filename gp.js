@@ -1,5 +1,8 @@
 var GP = (GP) ? GP : {
 
+// Features within this distance of user's current position are deemed to be "close by"
+    MAX_DIST: 50, // metres
+
 // Default map centre
     default_loc: {
         latitude: 51.56,
@@ -18,13 +21,9 @@ var GP = (GP) ? GP : {
         // Update the users position on the map
         following: true
     },
-    // collect currently visible features, set when update_location is called
+// collect currently visible features, set when update_location is called
     visible_features: {}
 };
-
-
-// Features within this distance of user's current position are deemed to be "close by"
-GP.MAX_DIST = 50; // metres
 
 // Append log messages to on-screen div for mobile debugging
 GP.log = function(message) {
@@ -152,7 +151,7 @@ GP.store_location = function(point) {
     );
 
     jQuery.post(
-        '/cgi-bin/geotrader.cgi/set_user_location',
+        '/cgi-bin/geotrader.cgi/_update_location',
         { lat: latlon.latitude, lon: latlon.longitude }
     );
 }
@@ -233,9 +232,6 @@ GP.setup_map = function() {
           fillColor: "#66ccff",
           strokeColor: "#3399ff",
           graphicZIndex: 2
-      }),
-      "nearby": new OpenLayers.Style({
-//          fillColor: "#00FF00"
       })
   });
   places_style_map.addUniqueValueRules("default", "proximity", proximity_styles);
