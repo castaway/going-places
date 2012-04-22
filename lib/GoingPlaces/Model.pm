@@ -14,7 +14,6 @@ use Moo;
 has 'schema' => (is => 'ro', lazy => 1, builder => '_build_schema');
 has 'base_uri' => (is => 'ro', required => 1);
 has 'app_cwd' => (is => 'ro', required => 1);
-has 'tt' => (is => 'ro', lazy => 1, builder => '_build_tt');
 
 sub _build_schema {
     my ($self) = @_;
@@ -22,17 +21,9 @@ sub _build_schema {
     return GeoTrader::Schema->connect("dbi:SQLite:/mnt/shared/projects/cardsapp/trader.db");
 }
 
-sub _build_tt {
-    my ($self) = @_;
-
-    return Template->new({ INCLUDE_PATH => dir($self->app_cwd)->subdir('templates')});
-}
-
 sub find_place {
 }
 
-sub get_default_page {
-}
 
 # -1.8342449951171,51.543991149077,-1.7257550048829,51.576007442191
 sub get_places {

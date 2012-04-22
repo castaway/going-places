@@ -9,13 +9,23 @@ use Web::Simple;
 # use Moo;
 use lib '/mnt/shared/projects/cardsapp/lib';
 use GoingPlaces::Model;
+use GoingPlaces::View;
 
 has 'model' => (is => 'ro', lazy => 1, builder => '_build_model');
+has 'view' => (is => 'ro', lazy => 1, builder => '_build_view');
 
 sub _build_model {
     return GoingPlaces::Model->new(
         base_uri => '/cgi-bin/geotrader.cgi',
-        app_cwd => 'mnt/shared/projects/cardsapp',
+        app_cwd => '/mnt/shared/projects/cardsapp',
+        );
+}
+
+sub _build_view {
+    return GoingPlaces::View->new(
+        base_uri => '/cgi-bin/geotrader.cgi',
+        static_uri => '/~castaway/cardsapp',
+        app_cwd => '/mnt/shared/projects/cardsapp',
         );
 }
 
@@ -31,6 +41,12 @@ sub dispatch_request {
         ## default/home page, check location, if near known node, display location page, else display users cards + "no places nearby"
 
         return [ 200, [ 'Content-type', 'text/html' ], [ $self->default_page() ]];
+    },
+
+    sub (GET + /map) {
+        my ($self) = @_;
+
+        return [200, [ 'Content-type', 'text/html' ], [ $self->view->map_page($user) ] ];
     },
 
     sub (POST + /login + %username=&password=) {
