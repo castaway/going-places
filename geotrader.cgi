@@ -4,6 +4,7 @@ package GeoTrader::Web;
 use Plack::Request;
 use Plack::Middleware::Session;
 use JSON;
+use Data::Dumper;
 use Web::Simple;
 use lib '/mnt/shared/projects/cardsapp/lib';
 use GeoTrader;
@@ -12,9 +13,12 @@ sub dispatch_request {
     my ($self) = @_;
 
     my $user;
-    my $gt = GeoTrader->new(base_uri => '/cgi-bin/geotrader.cgi');
+    my $gt = GeoTrader->new(
+        base_uri => '/cgi-bin/geotrader.cgi',
+        app_cwd => 'mnt/shared/projects/cardsapp',
+        );
 
-    $self->check_authenticated($user),
+    $self->check_authenticated($user, $gt),
 
     sub (GET + /) {
         my ($self) = @_;
@@ -71,7 +75,21 @@ sub dispatch_request {
     },
 
     ## Store location of current user, ignore if no user?
-    sub (POST + /_update_location/ + ?lat=&lon=) {
+    sub (POST + /_update_location + %lat=&lon=) {
+        my ($self, $lat, $lon) = @_;
+
+        print STDERR Dumper($_[PSGI_ENV]);
+
+        if(!$user) {
+            ## Do nutting..
+            return [200, [], ['']];
+        }
+        
+        $user->latitude($lat);
+        $user->longitude($lon);
+        $user->update();
+        
+        return [200, [ 'Content-type', 'text/plain' ], [ 'Updated' ] ];
     },
 
     ## Place page for a specific card
@@ -116,13 +134,13 @@ sub set_authenticated {
 }
 
 sub check_authenticated {
-  my ($self) = @_;
+  my ($self, $gt) = @_;
   my $user_ref = \$_[1];
   return (
     $self->ensure_session,
     sub () {
       if (my $uc = $_[PSGI_ENV]->{'psgix.session'}{'user_info'}) {
-        ${$user_ref} = $self->users_rs->find($uc);
+        ${$user_ref} = $gt->schema->resultset('User')->find($uc);
       }
       return;
     }
@@ -133,7 +151,7 @@ sub ensure_session {
   my ($self) = @_;
   sub () {
     return if $_[PSGI_ENV]->{'psgix.session'};
-    Plack::Middleware::Session->new;
+    Plack::Middleware::Session->new(store => 'File');
   }
 }
 GeoTrader::Web->run_if_script();

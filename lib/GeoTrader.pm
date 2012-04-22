@@ -5,17 +5,27 @@ use warnings;
 
 use Data::Dumper;
 use GeoTrader::Schema;
+use Template;
+use Path::Class;
 use URI::Escape;
 use Authen::Passphrase::SaltedDigest;
 use Moo;
 
 has 'schema' => (is => 'ro', lazy => 1, builder => '_build_schema');
 has 'base_uri' => (is => 'ro', required => 1);
+has 'app_cwd' => (is => 'ro', required => 1);
+has 'tt' => (is => 'ro', lazy => 1, builder => '_build_tt');
 
 sub _build_schema {
     my ($self) = @_;
 
     return GeoTrader::Schema->connect("dbi:SQLite:/mnt/shared/projects/cardsapp/trader.db");
+}
+
+sub _build_tt {
+    my ($self) = @_;
+
+    return Template->new({ INCLUDE_PATH => dir($self->app_cwd)->subdir('templates')});
 }
 
 sub find_place {
