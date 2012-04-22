@@ -26,10 +26,16 @@ sub dispatch_request {
     sub (POST + /login + %username=&password=) {
         my ($self, $usern, $passw) = @_;
         
+#        print STDERR "user check $usern\n";
         my $user = $gt->get_check_user($usern, $passw);
 
+
         if($user) {
-            $self->set_authenticated($user);
+#            print STDERR "Found user $usern\n";
+        
+            # Turtles all the way down!
+            return ($self->set_authenticated($user), 
+                    [ 200, [ 'Content-type', 'text/html' ], [ 'Login succeeded' ]]);
         } else {
             return [ 200, [ 'Content-type', 'text/html' ], [ 'Login failed' ]];
         }
