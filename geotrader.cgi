@@ -8,24 +8,13 @@ use Web::Simple;
 use lib '/mnt/shared/projects/cardsapp/lib';
 use GeoTrader;
 
-# sub dispatch_request {
-#   sub (/admin/...) {
-#     Web::Simple::Thingy::Auth->new(
-#       users_rs => $schema->resultset('User'),
-#       make_authed_app => sub { my $user = shift; sub { [ 200, ...
-#       make_unauthed_app => sub {
-#         my $try_login = shift;
-#         ...
-#         if ($try_login->($user,$pass)) {
-#         ...
-
 sub dispatch_request {
     my ($self) = @_;
 
     my $user;
     my $gt = GeoTrader->new(base_uri => '/cgi-bin/geotrader.cgi');
 
-    $self->check_authenticated($user);
+    $self->check_authenticated($user),
 
     sub (GET + /) {
         my ($self) = @_;
@@ -34,7 +23,7 @@ sub dispatch_request {
         return [ 200, [ 'Content-type', 'text/html' ], [ $self->default_page($gt) ]];
     },
 
-    sub (GET|POST + /login + ?username=&password=) {
+    sub (POST + /login + %username=&password=) {
         my ($self, $usern, $passw) = @_;
         
         my $user = $gt->get_check_user($usern, $passw);
@@ -46,7 +35,7 @@ sub dispatch_request {
         }
     },
 
-    sub (POST + /create_user + ?username=&password=&display=) {
+    sub (POST + /create_user + %username=&password=&display=) {
         my ($self, $usern, $passw, $display) = @_;
 
         ## FIXME: Check length of inputs!
