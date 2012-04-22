@@ -122,7 +122,7 @@ GP.highlight_close_features = function(my_loc) {
 
     if(is_changed) {
         GP.places_layer.redraw();
-//        GP.store_location(my_loc);
+        GP.store_location(my_loc);
     }
 
 };
@@ -152,7 +152,7 @@ GP.store_location = function(point) {
 
     jQuery.post(
         '/cgi-bin/geotrader.cgi/_update_location',
-        { lat: latlon.latitude, lon: latlon.longitude }
+        { lat: latlon.lat, lon: latlon.lon }
     );
 }
 

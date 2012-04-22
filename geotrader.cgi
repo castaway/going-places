@@ -6,32 +6,38 @@ use Plack::Middleware::Session;
 use JSON;
 use Data::Dumper;
 use Web::Simple;
+# use Moo;
 use lib '/mnt/shared/projects/cardsapp/lib';
 use GeoTrader;
+
+has 'model' => (is => 'ro', lazy => 1, builder => '_build_model');
+
+sub _build_model {
+    return GeoTrader->new(
+        base_uri => '/cgi-bin/geotrader.cgi',
+        app_cwd => 'mnt/shared/projects/cardsapp',
+        );
+}
 
 sub dispatch_request {
     my ($self) = @_;
 
     my $user;
-    my $gt = GeoTrader->new(
-        base_uri => '/cgi-bin/geotrader.cgi',
-        app_cwd => 'mnt/shared/projects/cardsapp',
-        );
 
-    $self->check_authenticated($user, $gt),
+    $self->check_authenticated($user),
 
     sub (GET + /) {
         my ($self) = @_;
         ## default/home page, check location, if near known node, display location page, else display users cards + "no places nearby"
 
-        return [ 200, [ 'Content-type', 'text/html' ], [ $self->default_page($gt) ]];
+        return [ 200, [ 'Content-type', 'text/html' ], [ $self->default_page() ]];
     },
 
     sub (POST + /login + %username=&password=) {
         my ($self, $usern, $passw) = @_;
         
 #        print STDERR "user check $usern\n";
-        my $user = $gt->get_check_user($usern, $passw);
+        my $user = $self->model->get_check_user($usern, $passw);
 
 
         if($user) {
@@ -49,9 +55,9 @@ sub dispatch_request {
         my ($self, $usern, $passw, $display) = @_;
 
         ## FIXME: Check length of inputs!
-        $gt->create_user($usern, $passw, $display);
+        $self->model->create_user($usern, $passw, $display);
 
-        return [ 200, [ 'Content-type', 'text/html' ], [ $self->default_page($gt) ]];
+        return [ 200, [ 'Content-type', 'text/html' ], [ $self->default_page() ]];
     },
 
     sub (GET + /loc/*/*) {
@@ -60,7 +66,7 @@ sub dispatch_request {
         
         my $test_location = [$lat, $long];
 
-        return [ 200, [ 'Content-type', 'text/html' ], [ default_page($gt, $test_location) ]];
+        return [ 200, [ 'Content-type', 'text/html' ], [ default_page($test_location) ]];
     },
 
     sub (GET + /places + ?bbox=) {
@@ -69,7 +75,7 @@ sub dispatch_request {
         return [200, [ 'Content-type', 'text/plain' ], [''] ] if(!$bbox);
 
         my @bounds = split(/,/, $bbox);
-        my $places = $gt->get_places(@bounds);
+        my $places = $self->model->get_places(@bounds);
         
         return [200, [ 'Content-type', 'text/plain' ], [ $places || '' ] ];
     },
@@ -85,9 +91,7 @@ sub dispatch_request {
             return [200, [], ['']];
         }
         
-        $user->latitude($lat);
-        $user->longitude($lon);
-        $user->update();
+        $user->update_location($lat, $lon);
         
         return [200, [ 'Content-type', 'text/plain' ], [ 'Updated' ] ];
     },
@@ -101,15 +105,15 @@ sub dispatch_request {
 }
 
 sub default_page {
-    my ($self, $gt, $loc) = @_;
+    my ($self, $loc) = @_;
     my $user = $self->get_user();
     my $user_location = $loc || $self->get_location();
-    my $place = $gt->find_place($user_location);
+    my $place = $self->model->find_place($user_location);
     if($place) {
-        $gt->set_location($user, $place, $user_location);
+        $self->model->set_location($user, $place, $user_location);
     }
-    my $page = $gt->get_user_profile() if($user && !$place);
-    $page = $gt->get_default_page if(!$user);
+    my $page = $self->model->get_user_profile() if($user && !$place);
+    $page = $self->model->get_default_page if(!$user);
 
     return $place || $page;
 }
@@ -134,13 +138,13 @@ sub set_authenticated {
 }
 
 sub check_authenticated {
-  my ($self, $gt) = @_;
+  my ($self) = @_;
   my $user_ref = \$_[1];
   return (
     $self->ensure_session,
     sub () {
       if (my $uc = $_[PSGI_ENV]->{'psgix.session'}{'user_info'}) {
-        ${$user_ref} = $gt->schema->resultset('User')->find($uc);
+        ${$user_ref} = $self->model->schema->resultset('User')->find($uc);
       }
       return;
     }
