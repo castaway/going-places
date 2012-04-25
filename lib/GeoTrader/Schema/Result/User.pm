@@ -30,7 +30,7 @@ __PACKAGE__->add_columns(
 __PACKAGE__->set_primary_key('id');
 __PACKAGE__->add_unique_constraint('username' => ['username']);
 
-__PACKAGE__->has_many('cards', 'GeoTrader::Schema::Result::UserCards', 'user_id');
+__PACKAGE__->has_many('user_cards', 'GeoTrader::Schema::Result::UserCards', 'user_id');
 __PACKAGE__->might_have('current_latlon', 'GeoTrader::Schema::Result::UserLatLon', 'user_id',);
 
 

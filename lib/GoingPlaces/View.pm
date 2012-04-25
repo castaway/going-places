@@ -29,14 +29,26 @@ sub place_page {
     my ($self, $card_row, $user_row) = @_;
 
     # pre-template data mungings
-    my $has_card = $user_row && $user_row->user_cards_rs->find({ $card_row->id });
-    
+    my $has_card = $user_row && $user_row->user_cards_rs->search({ card_id => $card_row->id })->count;
+    my $is_here  = $user_row && 1; # check coords last updated against card coords!
+    my $cards_remaining = $card_row->max_available - $card_row->user_cards_rs->count;    
+
+    ## Will splodey if there is no "amenity" value
+    ## Ideally we display a "pub" image?
+    my $is_a = $card_row->tags_rs->find({ key => 'amenity'})->value();
+
+    ## Do we "reserve" the card while the user is looking at the page
+    ## in case of multiple people standing here?
     my $output = '';
     $self->tt->process('place_page.tt',
                        {
+                           static_uri => $self->static_uri,
+                           base_uri   => $self->base_uri,
                            user => $user_row,
                            card => $card_row,
                            has_card => $has_card,
+                           is_here  => $is_here,
+                           cards_remaining => $cards_remaining,
                        },
                        \$output )
         || die $self->tt->error;

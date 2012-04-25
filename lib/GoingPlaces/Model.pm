@@ -7,6 +7,7 @@ use Data::Dumper;
 use GeoTrader::Schema;
 use Template;
 use Path::Class;
+use Geo::Ellipsoid;
 use URI::Escape;
 use Authen::Passphrase::SaltedDigest;
 use Moo;
@@ -22,6 +23,37 @@ sub _build_schema {
 }
 
 sub find_place {
+    my ($self, $id) = @_;
+
+    return $self->schema->resultset('Card')->find({ id => $id });
+}
+
+sub take_card {
+    my ($self, $id, $user) = @_;
+
+    my $card = $self->schema->resultset('Card')->find({ id => $id });
+    return { error => 'No such card' } if(!$card);
+
+    my $earth = Geo::Ellipsoid->new(ell => 'WGS84',
+                                 units => 'degrees',
+                                 # 1 -- symmetric -- -180..180
+                                 longitude => 1,
+                                 bearing => 1,
+                                );
+    # How far is the (last-known-location) of the user from the cards loc?
+    ## This should account for last update time of loc too!
+    my $dist = $earth->range($card->location_lat, $card->location_lon,
+                             $user->current_latlon->latitude,
+                             $user->current_latlon->longitude);
+
+    ## Magic number!
+    if($dist > 35) {
+        return { error => "Too far away ($dist)"};
+    }
+
+    $user->user_cards->create({card_id => $card->id});
+
+    return { $card->get_columns };
 }
 
 

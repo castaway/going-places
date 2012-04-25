@@ -110,8 +110,23 @@ sub dispatch_request {
 
     ## Place page for a specific card
     ## Recheck user is logged in, that latest coords are near it, and latest coords were updated > XX min ago.
-    sub (GET + /cards/*) {
+    sub (GET + /card/*) {
         my ($self, $card_desc) = @_;
+
+        my ($id, $desc) = $card_desc =~ /^(\d+)-([\w\s])+/;
+        print STDERR "Looking for card: $id, $desc\n";
+        my $place = $self->model->find_place($id);
+
+        print STDERR "Found card: ", $place->id, "\n";
+        return [200, ['Content-type', 'text/html' ], [$self->view->place_page($place, $user) ]];
+    },
+
+    sub (POST + /_take_card + %card_id=) {
+        my ($self, $card_id) = @_;
+
+        my $result = $self->model->take_card($card_id, $user);
+
+        return [200, ['Content-type', 'application/json' ], [ encode_json($result) ]];
     }
 
 }

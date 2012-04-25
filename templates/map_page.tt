@@ -1,10 +1,11 @@
+[% SET page_name = 'Map' %]
+
     <div id="log" style="display:block; height: 50px; overflow: scroll"></div>
     <div id="stats" style="" ></div>
 <!--    <div class="table"> -->
       <ul id="minimenu">
        <li><input type="checkbox" id="toggle_tracking" checked="checked" /> Toggle tracking</li>
        <li><input type="checkbox" id="toggle_following" checked="checked" /> Toggle following</li>
-[% SET page_name = 'Map' %]
        <li><input type="button"   id="profile" value="View Profile"></li>
       </ul>
       <ul id="login">

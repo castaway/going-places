@@ -17,7 +17,7 @@ ul#minimenu, ul#login {
     display: inline;
 }
 
-.table {
-	display: table;   /* Allow the centering to work */
-	margin: 0 auto;
+#large_photo {
+    width: 600px;
+    height: 400px;
 }

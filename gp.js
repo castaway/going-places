@@ -33,6 +33,27 @@ GP.log = function(message) {
     }
 }
 
+if(!GP.update_take_button) {
+    GP.update_take_button = function(card_state) {
+        console.log(card_state);
+        alert(card_state);
+    };
+}
+
+if(!GP.take_card) {
+    GP.take_card = function() {
+        // animate card?
+
+        jQuery.post(
+            '/cgi-bin/geotrader.cgi/_take_card',
+            { card_id: GP.current_card.id },
+            GP.update_take_button
+        );
+        
+        // tiemout 
+    };
+}
+
 // Everytime the GPS reports a new location, redraw the users position on the 
 // map, and re-centre the map to that position.
 // If settings.following is false, only store the current position, don't update the map.
@@ -178,7 +199,9 @@ GP.on_feature_select = function (event) {
         "featurePopup",
         feature.geometry.getBounds().getCenterLonLat(),
         new OpenLayers.Size(100,100),
-        "<h2>"+feature.attributes.title + "</h2>"
+        "<h2>"+feature.attributes.title + 
+            " (" + feature.attributes.id + ")" +
+            "</h2>"
             + feature.attributes.description
         ,null, true, GP.on_popup_close);
     feature.popup = GP.popup;
@@ -306,6 +329,14 @@ jQuery(document).ready(function() {
 
     jQuery('#toggle_following').change(function() {
         GP.settings.following = !GP.settings.following;
+    });
+
+    // Do we "reserve" the card while the user is looking at the page
+    // in case of multiple people standing here?
+    jQuery('#take_card').click(function() {
+        // ajax, plus replace button, some sorta animation to "hand"?
+        GP.take_card();
+        return false;
     });
 });
 

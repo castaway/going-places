@@ -1,0 +1,35 @@
+[% SET page_name = 'Place ' _ card.name %]
+     <script>
+       // card.json?
+       GP.current_card = { id: [% card.id %], name: '[% card.name %]' };
+     </script>
+     <div>
+      <ul id="minimenu">
+       <li><a href="[% base_uri %]/map">Back to map</a></li>
+       <li><input type="checkbox" id="toggle_tracking" checked="checked" /> Toggle tracking</li>
+       <li><input type="button"   id="profile" value="View Profile"></li>
+      </ul>
+     </div>
+    <div style="clear: both;"></div>
+    <h3>[% card.name %]</h3>
+    <div id="large_photo"> <!-- make div photo size / fill space with $category default? -->
+      [% IF card.photo %]
+        <img src="[% static_uri %]/photos/[% card.photo %]" alt="[% card.name %]">
+      [% END %]
+    </div>
+    <div id="user_status">
+      [% IF !user %]
+        ## login form here ## Login to pick up this card
+      [% ELSIF has_card %]
+        You are carrying this card <input type="button" value="drop card" >
+      [% ELSIF cards_remaining  && is_here %]
+        <input id="take_card" type="button" value="take card ">
+      [% ELSIF is_here %]
+        Sorry, there are no more cards available. You can try and trade with ## list of people who have the card ##
+      [% ELSE %]
+        Visit this location to see if any cards are available.
+      [% END %] 
+    </div>
+    <div id="achievements">
+    </div>
+        
