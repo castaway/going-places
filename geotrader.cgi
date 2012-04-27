@@ -14,18 +14,25 @@ use GoingPlaces::View;
 has 'model' => (is => 'ro', lazy => 1, builder => '_build_model');
 has 'view' => (is => 'ro', lazy => 1, builder => '_build_view');
 
+has 'host' => (is  => 'ro', default => 'http://desert-island.me.uk');
+has 'base_uri' => (is  => 'ro', default => '/cgi-bin/geotrader.cgi');
+has 'app_cwd' => ( is => 'ro', default => '/mnt/shared/projects/cardsapp');
+has 'static_uri' => ( is => 'ro', default => '/~castaway/cardsapp');
+
 sub _build_model {
+    my ($self) = @_;
     return GoingPlaces::Model->new(
-        base_uri => '/cgi-bin/geotrader.cgi',
-        app_cwd => '/mnt/shared/projects/cardsapp',
+        base_uri => $self->base_uri,
+        app_cwd => $self->app_cwd,
         );
 }
 
 sub _build_view {
+    my ($self) = @_;
     return GoingPlaces::View->new(
-        base_uri => '/cgi-bin/geotrader.cgi',
-        static_uri => '/~castaway/cardsapp',
-        app_cwd => '/mnt/shared/projects/cardsapp',
+        base_uri => $self->base_uri,
+        static_uri => $self->static_uri,
+        app_cwd => $self->app_cwd,
         );
 }
 
@@ -57,10 +64,25 @@ sub dispatch_request {
         if($user) {
             # Turtles all the way down!
             return ($self->set_authenticated($user), 
-                    [ 200, [ 'Content-type', 'text/html' ], [ 'Login succeeded' ]]);
+                    [ 303, [ 'Content-type', 'text/html', 
+                             'Location', $self->host . $self->base_uri . '/map' ], 
+                      [ 'Login succeeded, back to <a href="' . $self->host . $self->base_uri . '/map' . '"></a>' ]]);
         } else {
             return [ 200, [ 'Content-type', 'text/html' ], [ 'Login failed' ]];
         }
+    },
+
+    sub (GET + /logout) {
+        my ($self) = @_;
+
+        if($user) {
+            $user = undef;
+        }
+
+        return ($self->logout,
+                [ 303, [ 'Content-type', 'text/html', 
+                         'Location', $self->host . $self->base_uri . '/map' ], 
+                      [ 'Login succeeded, back to <a href="' . $self->host . $self->base_uri . '/map' . '"></a>' ]]);
     },
 
     sub (POST + /create_user + %username=&password=&display=) {
@@ -162,6 +184,16 @@ sub set_authenticated {
     $self->ensure_session,
     sub () { $_[PSGI_ENV]->{'psgix.session'}{'user_info'} = $uc; }
   );
+}
+
+sub logout { 
+    my ($self) = @_;
+    return (
+        $self->ensure_session, 
+        sub { 
+            delete $_[PSGI_ENV]->{'psgix.session'}{user_info};
+        }
+    ); 
 }
 
 sub check_authenticated {
