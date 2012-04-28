@@ -22,7 +22,7 @@ sub _build_schema {
     return GeoTrader::Schema->connect("dbi:SQLite:/mnt/shared/projects/cardsapp/trader.db");
 }
 
-sub find_place {
+sub find_card {
     my ($self, $id) = @_;
 
     return $self->schema->resultset('Card')->find({ id => $id });
@@ -83,10 +83,10 @@ sub user_card_status {
 
 
 # -1.8342449951171,51.543991149077,-1.7257550048829,51.576007442191
-sub get_places {
+sub get_cards {
     my ($self, $west, $south, $east, $north) = @_;
 
-    my $places_rs = $self->schema->resultset('Card')->search({
+    my $cards_rs = $self->schema->resultset('Card')->search({
         location_lat => { '>=' => $south },
         location_lat => { '<=' => $north },
         location_lon => { '>=' => $west  },
@@ -97,7 +97,7 @@ sub get_places {
       }
         );
 
-    return $self->write_openlayers_text($places_rs);
+    return $self->write_openlayers_text($cards_rs);
 }
 
 ## Stolen from BGGUsers::Utils
@@ -171,7 +171,7 @@ sub create_user {
     return $user;
 }
 
-sub get_user_card_places {
+sub get_user_card_cards {
 }
 
 1;

@@ -25,7 +25,7 @@ sub _build_tt {
 sub get_default_page {
 }
 
-sub place_page {
+sub card_page {
     my ($self, $user_status, $card_row, $user_row) = @_;
 
     ## Will splodey if there is no "amenity" value
@@ -35,7 +35,7 @@ sub place_page {
 
     ## Do we "reserve" the card while the user is looking at the page
     ## in case of multiple people standing here?
-    return $self->_process_tt('place_page.tt',
+    return $self->_process_tt('card_page.tt',
                        {
                            user => $user_row,
                            card => $card_row,

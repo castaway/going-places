@@ -110,9 +110,9 @@ sub dispatch_request {
         return [200, [ 'Content-type', 'text/plain' ], [''] ] if(!$bbox);
 
         my @bounds = split(/,/, $bbox);
-        my $places = $self->model->get_places(@bounds);
+        my $cards = $self->model->get_cards(@bounds);
         
-        return [200, [ 'Content-type', 'text/plain' ], [ $places || '' ] ];
+        return [200, [ 'Content-type', 'text/plain' ], [ $cards || '' ] ];
     },
 
     ## Store location of current user, ignore if no user?
@@ -131,18 +131,18 @@ sub dispatch_request {
         return [200, [ 'Content-type', 'text/plain' ], [ 'Updated' ] ];
     },
 
-    ## Place page for a specific card
+    ## Card page for a specific card
     ## Recheck user is logged in, that latest coords are near it, and latest coords were updated < XX min ago.
     sub (GET + /card/*) {
         my ($self, $card_desc) = @_;
 
         my ($id, $desc) = $card_desc =~ /^(\d+)-([\w\s])+/;
         print STDERR "Looking for card: $id, $desc\n";
-        my $place = $self->model->find_place($id);
-        my $user_card_status = $self->model->user_card_status($place, $user);
+        my $card = $self->model->find_card($id);
+        my $user_card_status = $self->model->user_card_status($card, $user);
 
-        print STDERR "Found card: ", $place->id, "\n";
-        return [200, ['Content-type', 'text/html' ], [$self->view->place_page($user_card_status, $place, $user) ]];
+        print STDERR "Found card: ", $card->id, "\n";
+        return [200, ['Content-type', 'text/html' ], [$self->view->card_page($user_card_status, $card, $user) ]];
     },
 
     sub (POST + /_take_card + %card_id=) {
@@ -159,14 +159,14 @@ sub default_page {
     my ($self, $loc) = @_;
     my $user = $self->get_user();
     my $user_location = $loc || $self->get_location();
-    my $place = $self->model->find_place($user_location);
-    if($place) {
-        $self->model->set_location($user, $place, $user_location);
+    my $card = $self->model->find_card($user_location);
+    if($card) {
+        $self->model->set_location($user, $card, $user_location);
     }
-    my $page = $self->model->get_user_profile() if($user && !$place);
+    my $page = $self->model->get_user_profile() if($user && !$card);
     $page = $self->model->get_default_page if(!$user);
 
-    return $place || $page;
+    return $card || $page;
 }
 
 sub get_user {
