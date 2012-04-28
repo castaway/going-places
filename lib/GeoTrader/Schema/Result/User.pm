@@ -33,6 +33,11 @@ __PACKAGE__->add_unique_constraint('username' => ['username']);
 __PACKAGE__->has_many('user_cards', 'GeoTrader::Schema::Result::UserCards', 'user_id');
 __PACKAGE__->might_have('current_latlon', 'GeoTrader::Schema::Result::UserLatLon', 'user_id',);
 
+sub name {
+    my ($self) = @_;
+
+    return $self->display_name || $self->username;
+}
 
 sub update_location {
     my ($self, $lat, $lon) = @_;

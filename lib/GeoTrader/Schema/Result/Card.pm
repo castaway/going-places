@@ -46,6 +46,8 @@ __PACKAGE__->add_columns(
 );
 
 __PACKAGE__->set_primary_key('id');
+__PACKAGE__->add_unique_constraint('osmnode' => ['osm_id']);
+
 
 __PACKAGE__->has_many('tags', 'GeoTrader::Schema::Result::Tag', 'card_id');
 __PACKAGE__->has_many('user_cards', 'GeoTrader::Schema::Result::UserCards', 'card_id');

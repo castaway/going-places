@@ -28,11 +28,12 @@ sub find_card {
     return $self->schema->resultset('Card')->find({ id => $id });
 }
 
-sub take_card {
-    my ($self, $id, $user) = @_;
+sub _is_close {
+    my ($self, $user, $card, $accuracy) = @_;
+    ## Magic number!
+    $accuracy ||= 20;
 
-    my $card = $self->schema->resultset('Card')->find({ id => $id });
-    return { error => 'No such card' } if(!$card);
+    return 0 if(!$user->current_latlon);
 
     my $earth = Geo::Ellipsoid->new(ell => 'WGS84',
                                  units => 'degrees',
@@ -47,8 +48,20 @@ sub take_card {
                              $user->current_latlon->longitude);
 
     ## Magic number!
-    if($dist > 35) {
-        return { error => "Too far away ($dist)"};
+    return 0 if($dist > $accuracy);
+
+    return 1;    
+}
+
+sub take_card {
+    my ($self, $id, $user) = @_;
+
+    my $card = $self->schema->resultset('Card')->find({ id => $id });
+    return { error => 'No such card' } if(!$card);
+
+    my $is_close = $self->_is_close($user, $card);
+    if(!$is_close) {
+        return { error => "Too far away "};
     }
 
     $user->user_cards->create({card_id => $card->id});
@@ -61,7 +74,7 @@ sub user_card_status {
     
     # pre-template data mungings
     my $has_card = $user_row && $user_row->user_cards_rs->search({ card_id => $card_row->id })->count;
-    my $is_here  = $user_row && 1; # check coords last updated against card coords!
+    my $is_here  = $user_row && $self->_is_close($user_row, $card_row) && 1; # check coords last updated against card coords!
     my $cards_remaining = $card_row->max_available - $card_row->user_cards_rs->count;    
 
 
