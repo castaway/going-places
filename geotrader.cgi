@@ -86,13 +86,20 @@ sub dispatch_request {
                       [ 'Login succeeded, back to <a href="' . $self->host . $self->base_uri . '/map' . '"></a>' ]]);
     },
 
-    sub (POST + /create_user + %username=&password=&display=) {
-        my ($self, $usern, $passw, $display) = @_;
+    sub (POST + /register + %username=&password=&displayname~&from=) {
+        my ($self, $username, $password, $displayname, $from_page) = @_;
 
         ## FIXME: Check length of inputs!
-        $self->model->create_user($usern, $passw, $display);
+        my $newuser = $self->model->create_user($username, $password, $displayname);
 
-        return [ 200, [ 'Content-type', 'text/html' ], [ $self->default_page() ]];
+        if($newuser) {
+            return 
+                [ 303, [ 'Content-type', 'text/html', 
+                         'Location', $self->host . $self->base_uri . ($from_page || '/map') ], 
+                  [ 'Registration succeeded, back to <a href="' . $self->host . $self->base_uri . ($from_page || '/map') . '"></a>' ]];
+        } else {
+            return [ 200, [ 'Content-type', 'text/html' ], [ 'Registration failed' ]];
+        }
     },
 
     sub (GET + /loc/*/*) {

@@ -13,7 +13,7 @@
          [% IF !user %]
           [% INCLUDE login_form.tt  from = '/map'%]
          [% ELSE %]
-       Hello again, [% user.display_name %] ! | <a href="[% base_uri %]/logout">Logout</a>
+       Hello again, [% user.name %] ! | <a href="[% base_uri %]/logout">Logout</a>
          [% END %]
         </li>
       </ul>

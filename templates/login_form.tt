@@ -1,0 +1,19 @@
+       <span id="login_form" class="visible">
+        <form method="post" action="[% base_uri %]/login">
+       Username <input type="text"   name="username">
+       Password <input type="password"  name="password">
+       <input type="hidden" name="from" value="[% from %]">
+       <input type="submit" value="Login">
+         </form>
+         <span><input id="register_button" type="button" value="Register instead"></span>
+       </span>
+        <span id="register_form" class="hidden">
+        <form method="post" action="[% base_uri %]/register">
+       Username <input type="text"     name="username">
+       Password <input type="password" name="password">
+       Display name <input type="text" name="displayname">
+       <input type="hidden" name="from" value="[% from %]">
+       <input type="submit" value="Register">
+         </form>
+         <span><input id="login_button" type="button" value="Login instead"></span>
+        </span>

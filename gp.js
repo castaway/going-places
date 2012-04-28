@@ -338,5 +338,11 @@ jQuery(document).ready(function() {
         GP.take_card();
         return false;
     });
+
+
+    jQuery('#register_button,#login_button').click(function() {
+        jQuery('#register_form,#login_form').toggleClass('visible hidden');
+        return false;
+    });
 });
 
