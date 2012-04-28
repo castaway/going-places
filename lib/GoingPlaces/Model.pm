@@ -56,6 +56,31 @@ sub take_card {
     return { $card->get_columns };
 }
 
+sub user_card_status {
+    my ($self, $card_row, $user_row) = @_;
+    
+    # pre-template data mungings
+    my $has_card = $user_row && $user_row->user_cards_rs->search({ card_id => $card_row->id })->count;
+    my $is_here  = $user_row && 1; # check coords last updated against card coords!
+    my $cards_remaining = $card_row->max_available - $card_row->user_cards_rs->count;    
+
+
+    my $user_status = { map { $_ => 'hidden'} (qw/no_user has_card here_and_cards here_no_cards not_here/)};
+    if(!$user_row) {
+        $user_status->{no_user} = 'visible';
+    } elsif($has_card) {
+        $user_status->{has_card} = 'visible';
+    } elsif($cards_remaining && $is_here) {
+        $user_status->{here_and_cards} = 'visible';
+    } elsif($is_here) {
+        $user_status->{here_no_cards} = 'visible';
+    } else {
+        $user_status->{not_here} = 'visible';
+    }
+
+    return $user_status;
+}
+
 
 # -1.8342449951171,51.543991149077,-1.7257550048829,51.576007442191
 sub get_places {
@@ -93,7 +118,8 @@ sub write_openlayers_text {
                "far\t" . 
                $card->{name}. "\t" .
                '<span id="card-' . $card->{id} .
-               '" class="card-link" style="display:none">' . 
+               '" class="card-link">' . 
+#               '" class="card-link" style="display:none">' . 
                $self->get_card_link($card) . '</span><br>' .
                join('<br>', map { $_->{key} . ":" . $_->{value} } (@{ $card->{tags} })).
                ($card->{photo} ? '<img src="' . $card->{photo} . '">' : '');

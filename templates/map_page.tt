@@ -11,11 +11,7 @@
       <ul id="login">
        <li>
          [% IF !user %]
-        <form method="post" action="[% base_uri %]/login">
-       Username <input type="text"   id="profile" name="username">
-       Password <input type="password"   id="profile" name="password">
-       <input type="submit" value="Login">
-         </form>
+          [% INCLUDE login_form.tt  from = '/map'%]
          [% ELSE %]
        Hello again, [% user.display_name %] ! | <a href="[% base_uri %]/logout">Logout</a>
          [% END %]

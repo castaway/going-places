@@ -21,3 +21,7 @@ ul#minimenu, ul#login {
     width: 600px;
     height: 400px;
 }
+
+.hidden {
+    display: none;
+}

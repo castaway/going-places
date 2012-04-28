@@ -26,47 +26,44 @@ sub get_default_page {
 }
 
 sub place_page {
-    my ($self, $card_row, $user_row) = @_;
-
-    # pre-template data mungings
-    my $has_card = $user_row && $user_row->user_cards_rs->search({ card_id => $card_row->id })->count;
-    my $is_here  = $user_row && 1; # check coords last updated against card coords!
-    my $cards_remaining = $card_row->max_available - $card_row->user_cards_rs->count;    
+    my ($self, $user_status, $card_row, $user_row) = @_;
 
     ## Will splodey if there is no "amenity" value
     ## Ideally we display a "pub" image?
-    my $is_a = $card_row->tags_rs->find({ key => 'amenity'})->value();
+    my $amenity_tag = $card_row->tags_rs->find({ key => 'amenity'});
+    my $is_a = $amenity_tag ? $amenity_tag->value() : '';
 
     ## Do we "reserve" the card while the user is looking at the page
     ## in case of multiple people standing here?
-    my $output = '';
-    $self->tt->process('place_page.tt',
+    return $self->_process_tt('place_page.tt',
                        {
-                           static_uri => $self->static_uri,
-                           base_uri   => $self->base_uri,
                            user => $user_row,
                            card => $card_row,
-                           has_card => $has_card,
-                           is_here  => $is_here,
-                           cards_remaining => $cards_remaining,
-                       },
-                       \$output )
-        || die $self->tt->error;
-
-    return $output;
+                           user_status => $user_status,
+                       } );
 }
 
 sub map_page {
     my ($self, $user) = @_;
 
-    my $output = '';
-    $self->tt->process('map_page.tt', 
+    return $self->_process_tt('map_page.tt', 
                        { 
                            user => $user,
+                       });
+}
+
+sub _process_tt {
+    my ($self, $template, $vars) = @_;
+
+    my $output = '';
+    $self->tt->process($template,
+                       { 
                            static_uri => $self->static_uri,
+                           base_uri   => $self->base_uri,
+                           %$vars,
                        }, \$output)
         || die $self->tt->error;
 
     return $output;
+    
 }
-

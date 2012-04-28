@@ -14,10 +14,10 @@ use GoingPlaces::View;
 has 'model' => (is => 'ro', lazy => 1, builder => '_build_model');
 has 'view' => (is => 'ro', lazy => 1, builder => '_build_view');
 
-has 'host' => (is  => 'ro', default => 'http://desert-island.me.uk');
-has 'base_uri' => (is  => 'ro', default => '/cgi-bin/geotrader.cgi');
-has 'app_cwd' => ( is => 'ro', default => '/mnt/shared/projects/cardsapp');
-has 'static_uri' => ( is => 'ro', default => '/~castaway/cardsapp');
+has 'host' => (is  => 'ro', default => sub {'http://desert-island.me.uk' });
+has 'base_uri' => (is  => 'ro', default => sub {'/cgi-bin/geotrader.cgi'});
+has 'app_cwd' => ( is => 'ro', default => sub {'/mnt/shared/projects/cardsapp'});
+has 'static_uri' => ( is => 'ro', default => sub {'/~castaway/cardsapp'});
 
 sub _build_model {
     my ($self) = @_;
@@ -56,17 +56,18 @@ sub dispatch_request {
         return [200, [ 'Content-type', 'text/html' ], [ $self->view->map_page($user) ] ];
     },
 
-    sub (POST + /login + %username=&password=) {
-        my ($self, $usern, $passw) = @_;
+    sub (POST + /login + %username=&password=&from~) {
+        my ($self, $usern, $passw, $from_page) = @_;
         
         my $user = $self->model->get_check_user($usern, $passw);
-
+        
+        print STDERR "From page: $from_page\n";
         if($user) {
             # Turtles all the way down!
             return ($self->set_authenticated($user), 
                     [ 303, [ 'Content-type', 'text/html', 
-                             'Location', $self->host . $self->base_uri . '/map' ], 
-                      [ 'Login succeeded, back to <a href="' . $self->host . $self->base_uri . '/map' . '"></a>' ]]);
+                             'Location', $self->host . $self->base_uri . ($from_page || '/map') ], 
+                      [ 'Login succeeded, back to <a href="' . $self->host . $self->base_uri . ($from_page || '/map') . '"></a>' ]]);
         } else {
             return [ 200, [ 'Content-type', 'text/html' ], [ 'Login failed' ]];
         }
@@ -131,16 +132,17 @@ sub dispatch_request {
     },
 
     ## Place page for a specific card
-    ## Recheck user is logged in, that latest coords are near it, and latest coords were updated > XX min ago.
+    ## Recheck user is logged in, that latest coords are near it, and latest coords were updated < XX min ago.
     sub (GET + /card/*) {
         my ($self, $card_desc) = @_;
 
         my ($id, $desc) = $card_desc =~ /^(\d+)-([\w\s])+/;
         print STDERR "Looking for card: $id, $desc\n";
         my $place = $self->model->find_place($id);
+        my $user_card_status = $self->model->user_card_status($place, $user);
 
         print STDERR "Found card: ", $place->id, "\n";
-        return [200, ['Content-type', 'text/html' ], [$self->view->place_page($place, $user) ]];
+        return [200, ['Content-type', 'text/html' ], [$self->view->place_page($user_card_status, $place, $user) ]];
     },
 
     sub (POST + /_take_card + %card_id=) {
@@ -190,7 +192,8 @@ sub logout {
     my ($self) = @_;
     return (
         $self->ensure_session, 
-        sub { 
+        sub () { 
+            print STDERR ref($_[PSGI_ENV]->{'psgix.session'});
             delete $_[PSGI_ENV]->{'psgix.session'}{user_info};
         }
     ); 

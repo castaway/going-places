@@ -50,7 +50,7 @@ if(!GP.take_card) {
             GP.update_take_button
         );
         
-        // tiemout 
+        // timeout 
     };
 }
 
