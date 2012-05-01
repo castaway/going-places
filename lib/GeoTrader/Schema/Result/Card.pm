@@ -53,6 +53,12 @@ __PACKAGE__->has_many('tags', 'GeoTrader::Schema::Result::Tag', 'card_id');
 __PACKAGE__->has_many('user_cards', 'GeoTrader::Schema::Result::UserCards', 'card_id');
 __PACKAGE__->belongs_to('place', 'GeoTrader::Schema::Result::Place', 'place_id');
 
+sub remaining {
+    my ($self) = @_;
+
+    return $self->max_available - $self->user_cards_rs->count;
+}
+
 # has an osm / origin ID?
 'collected';
 

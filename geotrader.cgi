@@ -50,6 +50,18 @@ sub dispatch_request {
         return [ 200, [ 'Content-type', 'text/html' ], [ $self->default_page() ]];
     },
 
+    sub (GET + /user/*) {
+        my ($self, $user_id) = @_;
+        
+        my $this_user = $user_id && $self->model->find_user($user_id);
+        if(!$user_id || $user_id =~ /\D/ || !$this_user) {
+            return [ 404, [ 'Content-type', 'text/html' ], [ 'Not found' ] ];
+        }
+
+        return [ 200, [ 'Content-type', 'text/html' ], [ $self->view->user_profile($this_user, $user) ] ];
+
+    },
+
     sub (GET + /map) {
         my ($self) = @_;
 

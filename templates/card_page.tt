@@ -29,7 +29,7 @@
       </div>
 
       <div id="has_card" class="[% user_status.has_card %]">
-        You are carrying this card <input type="button" value="drop card" >
+        You are carrying this card <input id="drop_card" type="button" value="drop card" >
       </div>
 
       <div id="here_and_cards" class="[% user_status.here_and_cards %]">

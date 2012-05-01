@@ -1,6 +1,6 @@
 [% SET page_name = 'Map' %]
 
-    <div id="log" style="display:block; height: 50px; overflow: scroll"></div>
+    <div id="log" style="display:block; height: 50px></div>
     <div id="stats" style="" ></div>
 <!--    <div class="table"> -->
       <ul id="minimenu">
@@ -13,7 +13,7 @@
          [% IF !user %]
           [% INCLUDE login_form.tt  from = '/map'%]
          [% ELSE %]
-       Hello again, [% user.name %] ! | <a href="[% base_uri %]/logout">Logout</a>
+       Hello again, <a href="[% base_uri %]/user/[% user.id %]">[% user.name %]</a> ! | <a href="[% base_uri %]/logout">Logout</a>
          [% END %]
         </li>
       </ul>

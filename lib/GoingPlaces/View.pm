@@ -25,6 +25,17 @@ sub _build_tt {
 sub get_default_page {
 }
 
+sub user_profile {
+    my ($self, $user_row, $current_user) = @_;
+
+    return $self->_process_tt('user_profile.tt',
+                              {
+                                  this_user => $user_row,
+                                  current_user => $current_user,
+                              }
+        );
+}
+
 sub card_page {
     my ($self, $user_status, $card_row, $user_row) = @_;
 

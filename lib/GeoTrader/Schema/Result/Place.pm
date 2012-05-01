@@ -37,6 +37,15 @@ __PACKAGE__->set_primary_key('id');
 # __PACKAGE__->has_many('achievements', 'GeoTrader::Schema::Result::Acheivement', 'place_id');
 __PACKAGE__->has_many('cards', 'GeoTrader::Schema::Result::Card', 'place_id');
 
+sub location {
+    my ($self) = @_;
+
+    return $self->village ||
+        $self->town ||
+        $self->city ||
+        $self->county ||
+        '';
+}
 
 'collected';
 

@@ -1,0 +1,31 @@
+    <div>
+      [% this_user.name %] [% this_user.user_cards_rs.count %]
+    </div>
+      <div id="wrapper">
+        <ul id="index_cards">
+          [% SET uc_rs = this_user.user_cards_rs %]
+          [% WHILE (uc = uc_rs.next) %]
+             [% SET ind=loop.index(); SET card=uc.card; %]
+
+            <li id="card-[% ind %]">
+                <p>[% card.name %]</p>
+                [% IF card.photo %]
+                <img src="[% static_uri %]/photos/[% card.photo %]" height="74" width="130" alt="[% card.name %]" />
+                [% ELSE %]
+                <div style="height:74; width: 130;"></div>
+                [% END %]
+                <p>
+                Location: [% card.place.location %]<br />
+                Instances: [% card.remaining %]<br />
+                [% IF this_user.id == current_user.id %]
+                  <input id="drop_card" type="button" value="drop card" >
+                [% END %]
+            </li>
+
+          [% END %]
+        </ul>
+    </div>
+  <div id="location"></div>
+
+  <div>
+  </div>

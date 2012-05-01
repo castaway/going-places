@@ -28,6 +28,12 @@ sub find_card {
     return $self->schema->resultset('Card')->find({ id => $id });
 }
 
+sub find_user {
+    my ($self, $id) = @_;
+
+    return $self->schema->resultset('User')->find({ id => $id });
+}
+
 sub _is_close {
     my ($self, $user, $card, $accuracy) = @_;
     ## Magic number!
@@ -75,7 +81,7 @@ sub user_card_status {
     # pre-template data mungings
     my $has_card = $user_row && $user_row->user_cards_rs->search({ card_id => $card_row->id })->count;
     my $is_here  = $user_row && $self->_is_close($user_row, $card_row) && 1; # check coords last updated against card coords!
-    my $cards_remaining = $card_row->max_available - $card_row->user_cards_rs->count;    
+    my $cards_remaining = $card_row->remaining;
 
 
     my $user_status = { map { $_ => 'hidden'} (qw/no_user has_card here_and_cards here_no_cards not_here/)};
@@ -175,7 +181,7 @@ sub create_user {
         return;
     }
 
-    $self->schema->resultset('User')->create({
+    $user = $self->schema->resultset('User')->create({
         username => $username,
         password => Authen::Passphrase::SaltedDigest->new(algorithm => "SHA-1", salt_random => 20, passphrase=>$password),
         display_name => $displayn,
