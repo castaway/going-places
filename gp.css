@@ -72,50 +72,6 @@ ul#index_cards li {
   transition: all 0.5s ease-in-out;
 }
 
-#card-1 {
-  -webkit-transform: rotate(-20deg);
-  -moz-transform: rotate(-20deg);
-  -o-transform: rotate(-20deg);
-  transform: rotate(-20deg);
-  z-index:1;
-  left:150px;
-  top:40px;
-}
-  
-#card-2 {
-  -webkit-transform: rotate(-10deg);
-  -moz-transform: rotate(-10deg);
-  -o-transform: rotate(-10deg);
-  transform: rotate(-10deg);
-  z-index:2;
-  left:70px;
-  top:10px;
-}
-  
-#card-3 {
-  background-color:#69732B;
-  z-index:3;
-}
-  
-#card-4 {
-  -webkit-transform: rotate(10deg);
-  -moz-transform: rotate(10deg);
-  -o-transform: rotate(10deg);
-  transform: rotate(10deg);
-  z-index:4;
-  right:70px;
-  top:10px;
-}
-  
-#card-5 {
-  -webkit-transform: rotate(20deg);
-  -moz-transform: rotate(20deg);
-  -o-transform: rotate(20deg);
-  transform: rotate(20deg);
-  z-index:5;
-  right:150px;
-  top:40px;
-}
 
 /* Hover States */
   
@@ -127,45 +83,3 @@ ul#index_cards li:active {
   z-index:10;
 }
   
-#card-1:hover {
-  -moz-transform: scale(1.1) rotate(-18deg);
-  -webkit-transform: scale(1.1) rotate(-18deg); 
-  -o-transform: scale(1.1) rotate(-18deg); 
-  transform: scale(1.1) rotate(-18deg); 
-}
-    
-#card-1:active {
-  -moz-transform: scale(1.1) rotate(-18deg);
-  -webkit-transform: scale(1.1) rotate(-18deg); 
-  -o-transform: scale(1.1) rotate(-18deg); 
-  transform: scale(1.1) rotate(-18deg); 
-}
-
-#card-2:hover {
-  -moz-transform: scale(1.1) rotate(-8deg);
-  -webkit-transform: scale(1.1) rotate(-8deg); 
-  -o-transform: scale(1.1) rotate(-8deg); 
-  transform: scale(1.1) rotate(-8deg); 
-}
-  
-#card-3:hover {
-  -moz-transform: scale(1.1) rotate(2deg);
-  -webkit-transform: scale(1.1) rotate(2deg); 
-  -o-transform: scale(1.1) rotate(2deg); 
-  transform: scale(1.1) rotate(2deg); 
-}
-  
-#card-4:hover {
-  -moz-transform: scale(1.1) rotate(12deg);
-  -webkit-transform: scale(1.1) rotate(12deg); 
-  -o-transform: scale(1.1) rotate(12deg); 
-  transform: scale(1.1) rotate(12deg); 
-}
-  
-#card-5:hover {
-  -moz-transform: scale(1.1) rotate(22deg);
-  -webkit-transform: scale(1.1) rotate(22deg); 
-  -o-transform: scale(1.1) rotate(22deg); 
-  transform: scale(1.1) rotate(22deg); 
-}
-

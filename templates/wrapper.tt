@@ -8,6 +8,9 @@
 
    <script src="[% static_uri %]/gp.js"></script>
    <link rel="stylesheet" href="[% static_uri %]/gp.css"> 
+   [% FOREACH css_link = css %]
+   <link rel="stylesheet" href="[% static_uri %]/[% css_link %]">    
+   [% END %]
   </head>
   <body>
   [% content %]

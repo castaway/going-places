@@ -1,4 +1,6 @@
 [% SET page_name = this_user.name %]
+[% SET css = [] %]
+[% css.push('gp-cards-' _ this_user.user_cards_rs.count _ '.css') %]
 
     <div>
      [% INCLUDE top_menu.tt %]

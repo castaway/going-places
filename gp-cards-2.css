@@ -1,0 +1,34 @@
+#card-1 {
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  z-index:2;
+  left:70px;
+  top:10px;
+}
+  
+#card-2 {
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  transform: rotate(10deg);
+  z-index:4;
+  right:70px;
+  top:10px;
+}
+  
+#card-1:hover {
+  -moz-transform: scale(1.1) rotate(-8deg);
+  -webkit-transform: scale(1.1) rotate(-8deg); 
+  -o-transform: scale(1.1) rotate(-8deg); 
+  transform: scale(1.1) rotate(-8deg); 
+}
+  
+#card-2:hover {
+  -moz-transform: scale(1.1) rotate(12deg);
+  -webkit-transform: scale(1.1) rotate(12deg); 
+  -o-transform: scale(1.1) rotate(12deg); 
+  transform: scale(1.1) rotate(12deg); 
+}
+  

@@ -1,0 +1,12 @@
+#card-1 {
+  background-color:#69732B;
+  z-index:1;
+}
+  
+#card-1:hover {
+  -moz-transform: scale(1.1) rotate(2deg);
+  -webkit-transform: scale(1.1) rotate(2deg); 
+  -o-transform: scale(1.1) rotate(2deg); 
+  transform: scale(1.1) rotate(2deg); 
+}
+  
