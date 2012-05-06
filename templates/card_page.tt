@@ -4,11 +4,7 @@
        GP.current_card = { id: [% card.id %], name: '[% card.name %]' };
      </script>
      <div>
-      <ul id="minimenu">
-       <li><a href="[% base_uri %]/map">Back to map</a></li>
-       <li><input type="checkbox" id="toggle_tracking" checked="checked" /> Toggle tracking</li>
-       <li><input type="button"   id="profile" value="View Profile"></li>
-      </ul>
+      [% INCLUDE top_menu.tt %]
      </div>
     <div style="clear: both;"></div>
     <h3>[% card.name %]</h3>

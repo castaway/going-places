@@ -31,7 +31,7 @@ sub user_profile {
     return $self->_process_tt('user_profile.tt',
                               {
                                   this_user => $user_row,
-                                  current_user => $current_user,
+                                  user => $current_user,
                               }
         );
 }

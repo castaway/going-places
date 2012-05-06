@@ -34,6 +34,9 @@ ul#minimenu, ul#login {
   padding-top:50px;
 }
 
+span.card-text {
+    font-size:0.85em;
+}
 
 /* Index Card Styling */
   
