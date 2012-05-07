@@ -230,10 +230,6 @@ GP.setup_map = function() {
   GP.map.addControl(new OpenLayers.Control.LayerSwitcher());
   GP.map.addLayer(new OpenLayers.Layer.OSM("OSM (Standard)"));
 
-/*
-  GP.places_layer = new OpenLayers.Layer.Markers("Markers");
-  GP.map.addLayer(GP.places_layer);
-*/
   GP.user_layer = new OpenLayers.Layer.Vector('vector');
   GP.map.addLayer(GP.user_layer);
 

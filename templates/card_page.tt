@@ -42,5 +42,14 @@
 
     </div>
     <div id="achievements">
+      <ul>
+     [% FOREACH ac = current_card.achievement_cards_rs.all %]    
+       [% SET ach = ac.achievement %]
+       <li>
+         <h3>[% ach.name %]</h3>
+         <p>[% ach.details %]</p>
+       </li>
+     [% END %]
+      </ul>
     </div>
         
