@@ -34,6 +34,7 @@ sub find_user {
     return $self->schema->resultset('User')->find({ id => $id });
 }
 
+## currently using "cards" should be using new "points"!
 sub _is_close {
     my ($self, $user, $card, $accuracy) = @_;
     ## Magic number!
@@ -49,7 +50,8 @@ sub _is_close {
                                 );
     # How far is the (last-known-location) of the user from the cards loc?
     ## This should account for last update time of loc too!
-    my $dist = $earth->range($card->location_lat, $card->location_lon,
+    my $dist = $earth->range($card->origin_point->location_lat, 
+                             $card->origin_point->location_lon,
                              $user->current_latlon->latitude,
                              $user->current_latlon->longitude);
 
@@ -105,43 +107,44 @@ sub user_card_status {
 sub get_cards {
     my ($self, $west, $south, $east, $north) = @_;
 
-    my $cards_rs = $self->schema->resultset('Card')->search({
+    my $points_rs = $self->schema->resultset('Point')->search({
         location_lat => { '>=' => $south },
         location_lat => { '<=' => $north },
         location_lon => { '>=' => $west  },
         location_lon => { '<=' => $east  },
       },
       {
-          prefetch => 'tags',
+          prefetch => {'card' => 'tags'},
       }
         );
 
-    return $self->write_openlayers_text($cards_rs);
+    return $self->write_openlayers_text($points_rs);
 }
 
 ## Stolen from BGGUsers::Utils
+## Should use point ids soon, not card ids?
 sub write_openlayers_text {
-    my ($self, $card_rs) = @_;
+    my ($self, $points_rs) = @_;
 
-    $card_rs->result_class('DBIx::Class::ResultClass::HashRefInflator');
+    $points_rs->result_class('DBIx::Class::ResultClass::HashRefInflator');
     my $ol_text = "lat\tlon\tid\tproximity\ttitle\tdescription\n";
 
-    while (my $card = $card_rs->next) {
-#        print STDERR Dumper($card);
+    while (my $point = $points_rs->next) {
+#        print STDERR Dumper($point);
 
-        $ol_text .= $card->{location_lat}. "\t".
-               $card->{location_lon}. "\t" .
-               $card->{id} . "\t" .
+        $ol_text .= $point->{location_lat}. "\t".
+               $point->{location_lon}. "\t" .
+               $point->{card}{id} . "\t" .
                ## default all features to be "not close" to the user, we change
                ## this in the javascript when items are closeby
                "far\t" . 
-               $card->{name}. "\t" .
-               '<span id="card-' . $card->{id} .
+               $point->{card}{name}. "\t" .
+               '<span id="card-' . $point->{card}{id} .
                '" class="card-link">' . 
 #               '" class="card-link" style="display:none">' . 
-               $self->get_card_link($card) . '</span><br>' .
-               join('<br>', map { $_->{key} . ":" . $_->{value} } (@{ $card->{tags} })).
-               ($card->{photo} ? '<img src="' . $card->{photo} . '">' : '');
+               $self->get_card_link($point->{card}) . '</span><br>' .
+               join('<br>', map { $_->{key} . ":" . $_->{value} } (@{ $point->{card}{tags} })).
+               ($point->{card}{photo} ? '<img src="' . $point->{card}{photo} . '">' : '');
         
         $ol_text .= "\n";
     }

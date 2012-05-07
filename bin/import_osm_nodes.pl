@@ -44,16 +44,22 @@ foreach my $ele (@{ $osm->{elements} }) {
     #   die;
     # }
 
-    my $card = $schema->resultset('Card')->find_or_create(
+
+    my $point = $schema->resultset('Point')->find_or_create(
         {
-            name => $ele->{tags}{name},
             location_lat => $ele->{lat},
-            location_lon => $ele->{lon},
+            location_lon => $ele->{lon},            
             osm_id       => $ele->{id},
         }, 
         { key => 'osmnode' });
 
-    if(!$card->place_id) {
+    my $card = $point->find_or_create_related('card',
+        {
+            name => $ele->{tags}{name},
+        },
+        { key => 'namepoint' });
+
+    if(!$point->place_id) {
         ## Ask Nominatim where it is:
 
         my $nom_data < io->http("http://nominatim.openstreetmap.org/reverse?format=json&osm_id=" . $ele->{id} . "&osm_type=N&zoom=18&addressdetails=1");
@@ -69,8 +75,8 @@ foreach my $ele (@{ $osm->{elements} }) {
             }
         );
         if($place) {
-            $card->place($place);
-            $card->update();
+            $point->place($place);
+            $point->update();
         }
         sleep 1;
 #        sleep time()-$last_nominatim_time;

@@ -14,17 +14,6 @@ __PACKAGE__->add_columns(
     name => {
         data_type => 'TINYTEXT',
     },
-    ## Open streetmap original node id, for referring back to source
-    ## also Nominatim lookups
-    osm_id => {
-        data_type => 'integer',
-        is_nullable => 1,
-    },
-    ## UK at least, county + country?
-    place_id => {
-        data_type => 'integer',
-        is_nullable => 1,
-    },
     photo => {
         data_type => 'TINYTEXT',
         is_nullable => 1,
@@ -33,11 +22,9 @@ __PACKAGE__->add_columns(
         data_type => 'TEXT',
         is_nullable => 1,
     },
-    location_lat => {
-        data_type => 'float',
-    },
-    location_lon => {
-        data_type => 'float',
+    origin_point_id => {
+        data_type => 'integer',
+        is_nullable => 1,
     },
     max_available => {
         data_type => 'integer',
@@ -46,17 +33,22 @@ __PACKAGE__->add_columns(
 );
 
 __PACKAGE__->set_primary_key('id');
-__PACKAGE__->add_unique_constraint('osmnode' => ['osm_id']);
-
+__PACKAGE__->add_unique_constraint('namepoint' => ['name', 'origin_point_id']);
 
 __PACKAGE__->has_many('tags', 'GeoTrader::Schema::Result::Tag', 'card_id');
+__PACKAGE__->has_many('achievement_cards', 'GeoTrader::Schema::Result::AchievementCard', 'card_id');
+__PACKAGE__->belongs_to('origin_point', 'GeoTrader::Schema::Result::Point', 'origin_point_id', { join_type => 'LEFT' });
+
+## Instances: Users have some, some are dropped at other points what remains is "available" (see remaining)
 __PACKAGE__->has_many('user_cards', 'GeoTrader::Schema::Result::UserCards', 'card_id');
-__PACKAGE__->belongs_to('place', 'GeoTrader::Schema::Result::Place', 'place_id');
+__PACKAGE__->has_many('instances', 'GeoTrader::Schema::Result::CardInstance', 'card_id');
 
 sub remaining {
     my ($self) = @_;
 
-    return $self->max_available - $self->user_cards_rs->count;
+    return $self->max_available 
+        - $self->user_cards_rs->count
+        - $self->instances->count;
 }
 
 # has an osm / origin ID?

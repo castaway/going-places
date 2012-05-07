@@ -35,7 +35,7 @@ __PACKAGE__->add_columns(
 __PACKAGE__->set_primary_key('id');
 
 # __PACKAGE__->has_many('achievements', 'GeoTrader::Schema::Result::Acheivement', 'place_id');
-__PACKAGE__->has_many('cards', 'GeoTrader::Schema::Result::Card', 'place_id');
+__PACKAGE__->has_many('points', 'GeoTrader::Schema::Result::Point', 'place_id');
 
 sub location {
     my ($self) = @_;
