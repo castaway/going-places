@@ -1,4 +1,23 @@
 
+html,body {
+    height: 99%;
+    width: 99%;
+}
+
+#content {
+    height: 80%;
+}
+
+#footer {
+    clear: both;
+}
+
+/*
+#map-wrap {
+    margin: 2px;
+}
+*/
+
 #minimenu 
 {
     float: left;
