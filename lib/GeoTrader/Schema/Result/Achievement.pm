@@ -15,9 +15,14 @@ __PACKAGE__->add_columns(
         data_type => 'varchar',
         size => 255,
     },
+    category => {
+        data_type => 'varchar',
+        size => 255,
+    },
     details => {
         data_type => 'varchar',
         size => 1024,
+        is_nullable => 1,
     },
     difficulty => {
         data_type => 'integer',
@@ -25,6 +30,6 @@ __PACKAGE__->add_columns(
 
 __PACKAGE__->set_primary_key('id');
 
-__PACKAGE__->has_many('achievement_cards', 'GeoTrader::Schema::Result::AchievementCard', 'card_id');
+__PACKAGE__->has_many('achievement_cards', 'GeoTrader::Schema::Result::AchievementCard', 'achievement_id');
 
 1;

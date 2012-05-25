@@ -1,0 +1,19 @@
+[% SET page_name = 'Map' %]
+
+    <div id="log"></div>
+<!--    <div class="table"> -->
+      <ul id="minimenu">
+       <li><input type="checkbox" id="toggle_tracking" checked="checked" /> Toggle tracking</li>
+       <li><input type="checkbox" id="toggle_following" checked="checked" /> Toggle following</li>
+      </ul>
+      <ul id="login">
+       <li>
+         [% IF !user %]
+          [% INCLUDE login_form.tt  from = '/map'%]
+         [% ELSE %]
+       Hello again, <a href="[% base_uri %]/user/[% user.id %]">[% user.name %]</a> ! | <a href="[% base_uri %]/logout">Logout</a>
+         [% END %]
+        </li>
+      </ul>
+<!--    </div> -->
+      <div id="map" style="width:100%; height:450px"></div>

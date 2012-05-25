@@ -1,7 +1,7 @@
 [% SET page_name = 'Place ' _ card.name %]
      <script>
        // card.json?
-       GP.current_card = { id: [% card.id %], name: '[% card.name %]' };
+       GP.card = { id: [% card.id %], name: '[% card.name %]' };
      </script>
      <div>
       [% INCLUDE top_menu.tt %]
@@ -42,12 +42,21 @@
 
     </div>
     <div id="achievements">
+      <h4>This card belongs to:</h4>
       <ul>
-     [% FOREACH ac = current_card.achievement_cards_rs.all %]    
+     [% FOREACH ac = card.achievement_cards_rs.all %]
        [% SET ach = ac.achievement %]
        <li>
          <h3>[% ach.name %]</h3>
          <p>[% ach.details %]</p>
+         Other cards: 
+         [%- SET ach_ac = ach.achievement_cards_rs;
+            FOREACH ach_card = ach_ac.all;
+              UNLESS ach_card.card.id == card.id -%]
+               [%# USE Dumper; Dumper.dump(ach_card.card.get_columns) %]
+               <a href=[% PROCESS card_link.tt card = ach_card.card %]">[% ach_card.card.name %]</a>,
+              [%- END -%]
+         [% END %]
        </li>
      [% END %]
       </ul>

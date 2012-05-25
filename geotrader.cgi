@@ -68,6 +68,12 @@ sub dispatch_request {
         return [200, [ 'Content-type', 'text/html' ], [ $self->view->map_page($user) ] ];
     },
 
+    sub (GET + /achievements_map) {
+        my ($self) = @_;
+
+        return [200, [ 'Content-type', 'text/html' ], [ $self->view->achievements_page($user) ] ];
+    },
+
     sub (POST + /login + %username=&password=&from~) {
         my ($self, $usern, $passw, $from_page) = @_;
         
@@ -133,7 +139,20 @@ sub dispatch_request {
         
         return [200, [ 'Content-type', 'text/plain' ], [ $cards || '' ] ];
     },
-
+    
+    ## currently for testing/visualising achievements on a map
+    ## returns a list with colourised points
+    sub (GET + /achievements +?bbox=) {
+        my ($self, $bbox) = @_;
+        # west, south, east, north
+        return [200, [ 'Content-type', 'text/plain' ], [''] ] if(!$bbox);
+        
+        my @bounds = split(/,/, $bbox);
+        my $cards = $self->model->get_achievements_cards(@bounds);
+        
+        return [200, [ 'Content-type', 'text/plain' ], [ $cards || '' ] ];
+    },
+    
     ## Store location of current user, ignore if no user?
     sub (POST + /_update_location + %lat=&lon=) {
         my ($self, $lat, $lon) = @_;
@@ -157,7 +176,7 @@ sub dispatch_request {
 
         my ($id, $desc) = $card_desc =~ /^(\d+)-([\w\s])+/;
         print STDERR "Looking for card: $id, $desc\n";
-        my $card = $self->model->find_card($id);
+        my $card = $self->model->find_card($id, { 'achievement_cards'  => 'achievement' });
         my $user_card_status = $self->model->user_card_status($card, $user);
 
         print STDERR "Found card: ", $card->id, "\n";

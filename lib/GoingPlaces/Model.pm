@@ -10,6 +10,8 @@ use Path::Class;
 use Geo::Ellipsoid;
 use URI::Escape;
 use Authen::Passphrase::SaltedDigest;
+use Graphics::Color::HSV;
+#use List::Util 'min', 'max';
 use Moo;
 
 has 'schema' => (is => 'ro', lazy => 1, builder => '_build_schema');
@@ -23,9 +25,11 @@ sub _build_schema {
 }
 
 sub find_card {
-    my ($self, $id) = @_;
+    my ($self, $id, $prefetch) = @_;
 
-    return $self->schema->resultset('Card')->find({ id => $id });
+    return $self->schema->resultset('Card')->as_subselect_rs->search(
+        { 'me.id' => $id },
+        { prefetch => $prefetch })->first;
 }
 
 sub find_user {
@@ -79,7 +83,6 @@ sub take_card {
 
 sub user_card_status {
     my ($self, $card_row, $user_row) = @_;
-    
     # pre-template data mungings
     my $has_card = $user_row && $user_row->user_cards_rs->search({ card_id => $card_row->id })->count;
     my $is_here  = $user_row && $self->_is_close($user_row, $card_row) && 1; # check coords last updated against card coords!
@@ -108,33 +111,103 @@ sub get_cards {
     my ($self, $west, $south, $east, $north) = @_;
 
     my $points_rs = $self->schema->resultset('Point')->search({
-        location_lat => { '>=' => $south },
-        location_lat => { '<=' => $north },
-        location_lon => { '>=' => $west  },
-        location_lon => { '<=' => $east  },
+        #'location_lat' => { '-between' => [$south, $north] },
+        #'location_lon' => { '-between' => [$west, $east] },
+         location_lat => { '>=' => $south },
+         location_lat => { '<=' => $north },
+         location_lon => { '>=' => $west  },
+         location_lon => { '<=' => $east  },
       },
       {
           prefetch => {'card' => 'tags'},
       }
         );
 
-    return $self->write_openlayers_text($points_rs);
+    $points_rs->result_class('DBIx::Class::ResultClass::HashRefInflator');
+    return $self->write_openlayers_text([$points_rs->all]);
+}
+
+#->new({ value => 1, saturation => 1, hue => 360*($i/($n+1))  })->as_rgb->as_css_hex
+# DBIC_TRACE=1 perl -Ilib  geotrader.cgi /achievements?bbox=-1.7800429153441,51.559973319754,-1.7799570846559,51.560026680242
+
+# Inputs: -1.7800429153441, 51.559973319754, -1.7799570846559, 51.560026680242
+
+sub get_achievements_cards {
+    my ($self, $west, $south, $east, $north) = @_;
+
+#     print STDERR "Inputs: $west, $south, $east, $north\n";
+#     my $points_rs = $self->schema->resultset('Point')->search({
+#          location_lat => { '>=' => $south },
+#          location_lat => { '<=' => $north },
+#          location_lon => { '>=' => $west  },
+#          location_lon => { '<=' => $east  },
+# #        'location_lat' => { '-between' => [$south, $north] },
+# #        'location_lon' => { '-between' => [$east, $west] },
+#       },
+#       {
+#          prefetch => {'achievement_cards' => { 'card' => 'origin_point' }},
+#       }
+#         );
+
+#     print STDERR "Point count: ", $points_rs->count, "\n";
+
+#     my $achievements_rs = $points_rs->search_related('card')->
+#         search_related('achievement_cards')->search_related('achievement');
+
+    my $achievements_rs = $self->schema->resultset('Achievement')->search({
+        'origin_point.location_lat' => { '-between' => [sort { $a <=> $b } ($south, $north)] },
+        'origin_point.location_lon' => { '-between' => [sort { $a <=> $b } ($west, $east)] },
+      },
+      {
+          prefetch => {'achievement_cards' => { 'card' => 'origin_point' }},
+      }
+        );
+
+    $achievements_rs->result_class('DBIx::Class::ResultClass::HashRefInflator');
+    my @points;
+    my $total = $achievements_rs->count;
+    print STDERR "Total: $total\n";
+
+    my $loop = 0;
+    foreach my $ach ($achievements_rs->all) {
+
+        print  STDERR Dumper($ach);
+
+        my $colour = Graphics::Color::HSV->new({
+            value => 1, saturation => 0.5,
+            hue => ( 360 * ( $loop++ / ($total + 1) ) ),
+                                                })->to_rgb->as_css_hex;
+
+        foreach my $a_card (@{$ach->{achievement_cards}}) {
+            my $point = $a_card->{card}{origin_point};
+            $point->{card} = $a_card->{card};
+            delete $point->{card}{origin_point};
+            $point->{colour} = $colour;
+
+            push @points, $point; #  if $loop == 3;
+        }
+
+    }
+
+#    print STDERR Dumper(\@points);
+    return $self->write_openlayers_text(\@points);
 }
 
 ## Stolen from BGGUsers::Utils
 ## Should use point ids soon, not card ids?
 sub write_openlayers_text {
-    my ($self, $points_rs) = @_;
+    my ($self, $points) = @_;
 
-    $points_rs->result_class('DBIx::Class::ResultClass::HashRefInflator');
-    my $ol_text = "lat\tlon\tid\tproximity\ttitle\tdescription\n";
+    my $ol_text = "lat\tlon\tid\tfillColor\tproximity\ttitle\tdescription\n";
 
-    while (my $point = $points_rs->next) {
+    foreach my $point (@$points) {
 #        print STDERR Dumper($point);
 
+        my $colour = $point->{colour} || '#ee9900';
         $ol_text .= $point->{location_lat}. "\t".
                $point->{location_lon}. "\t" .
                $point->{card}{id} . "\t" .
+               $colour . "\t" . 
                ## default all features to be "not close" to the user, we change
                ## this in the javascript when items are closeby
                "far\t" . 

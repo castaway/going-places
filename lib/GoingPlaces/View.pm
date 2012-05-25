@@ -63,6 +63,15 @@ sub map_page {
                        });
 }
 
+sub achievements_page {
+    my ($self, $user) = @_;
+
+    return $self->_process_tt('achievements_page.tt', 
+                       { 
+                           user => $user,
+                       });
+}
+
 sub _process_tt {
     my ($self, $template, $vars) = @_;
 

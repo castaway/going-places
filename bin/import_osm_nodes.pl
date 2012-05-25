@@ -10,6 +10,8 @@ use lib 'lib';
 use GeoTrader::Schema;
 use Data::Dump::Streamer 'Dump', 'Dumper';
 
+my $PHOTO_DIR = '/mnt/shared/projects/cardsapp/photos/';
+
 my $osm_file = join('',<>);
 my $osm = decode_json($osm_file);
 
@@ -53,9 +55,12 @@ foreach my $ele (@{ $osm->{elements} }) {
         }, 
         { key => 'osmnode' });
 
+    my $photo = $ele->{id} . '_600x400.JPG';
+    
     my $card = $point->find_or_create_related('card',
         {
             name => $ele->{tags}{name},
+            ( -e "$PHOTO_DIR/$photo" ? ( photo => $photo) : () ),
         },
         { key => 'namepoint' });
 
@@ -68,19 +73,20 @@ foreach my $ele (@{ $osm->{elements} }) {
         print STDERR Dumper($ele);
         print STDERR Dumper($nom);
 
-        my $place = $schema->resultset('Place')->find_or_create(
-            {
-                map { $nom->{$_} ? ($_, $nom->{$_}) : () } (qw/village town city/),
-                'country_code', $nom->{country_code},
+        if($nom) {
+            my $place = $schema->resultset('Place')->find_or_create(
+                {
+                    map { $nom->{$_} ? ($_, $nom->{$_}) : () } (qw/village town city county country_code/),
+                }
+                );
+            if($place) {
+                $point->place($place);
+                $point->update();
             }
-        );
-        if($place) {
-            $point->place($place);
-            $point->update();
-        }
-        sleep 1;
+            sleep 1;
 #        sleep time()-$last_nominatim_time;
 #        $last_nominatim_time = time();
+        }
     }
 
     foreach my $tag (keys %{ $ele->{tags} }) {
