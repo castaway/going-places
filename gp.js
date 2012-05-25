@@ -321,10 +321,13 @@ jQuery(document).ready(function() {
     jQuery('#toggle_tracking').change(function() {
         GP.settings.tracking = !GP.settings.tracking;
         GP.geolocate.bind = GP.settings.tracking;
+        GP.geolocate.watch = GP.settings.tracking;
     }); 
 
     jQuery('#toggle_following').change(function() {
         GP.settings.following = !GP.settings.following;
+        GP.geolocate.bind = GP.settings.following;
+//        alert(" setting is now " + GP.settings.following);
     });
 
     // Do we "reserve" the card while the user is looking at the page
