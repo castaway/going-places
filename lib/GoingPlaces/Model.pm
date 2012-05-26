@@ -88,8 +88,19 @@ sub user_card_status {
     my $is_here  = $user_row && $self->_is_close($user_row, $card_row) && 1; # check coords last updated against card coords!
     my $cards_remaining = $card_row->remaining;
 
-
     my $user_status = { map { $_ => 'hidden'} (qw/no_user has_card here_and_cards here_no_cards not_here/)};
+
+    ## Verify if: 1)user has any of the achievements this card is in 2) whether user has all cards in achievement
+    if($user_row) {
+        my $achievements = $card_row->achievement_cards_rs->search({}, { prefetch => { achievement => 'user_achievements' } });
+        foreach my $ach ($achievements->search({
+            'user_achievements.user_id' => $user_row->id,
+                                               }) ) {
+            my $id = $ach->id;
+            $user_status->{"has_achievement_$id"} = 'visible';
+        }
+    }
+    
     if(!$user_row) {
         $user_status->{no_user} = 'visible';
     } elsif($has_card) {

@@ -42,20 +42,24 @@
 
     </div>
     <div id="achievements">
-      <h4>This card belongs to:</h4>
-      <ul>
+      <h4>Achievements this card belongs to:</h4>
+      <ul class="achievement">
      [% FOREACH ac = card.achievement_cards_rs.all %]
        [% SET ach = ac.achievement %]
        <li>
          <h3>[% ach.name %]</h3>
          <p>[% ach.details %]</p>
-         Other cards: 
-         [%- SET ach_ac = ach.achievement_cards_rs;
-            FOREACH ach_card = ach_ac.all;
-              UNLESS ach_card.card.id == card.id -%]
-               [%# USE Dumper; Dumper.dump(ach_card.card.get_columns) %]
-               <a href=[% PROCESS card_link.tt card = ach_card.card %]">[% ach_card.card.name %]</a>,
-              [%- END -%]
+         [% IF user.has_achievement(ach) %]
+           You already have this achievement!
+         [% ELSE %]
+           Other cards: 
+           [%- SET ach_ac = ach.achievement_cards_rs;
+              FOREACH ach_card = ach_ac.all;
+                UNLESS ach_card.card.id == card.id -%]
+                 [%# USE Dumper; Dumper.dump(ach_card.card.get_columns) %]
+                 <a href=[% PROCESS card_link.tt card = ach_card.card %]">[% ach_card.card.name %]</a>,
+                [%- END -%]
+           [% END %]
          [% END %]
        </li>
      [% END %]

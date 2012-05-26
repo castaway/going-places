@@ -31,5 +31,6 @@ __PACKAGE__->add_columns(
 __PACKAGE__->set_primary_key('id');
 
 __PACKAGE__->has_many('achievement_cards', 'GeoTrader::Schema::Result::AchievementCard', 'achievement_id');
+__PACKAGE__->has_many('user_achievements', 'GeoTrader::Schema::Result::UserAchievement', 'achievement_id');
 
 1;
