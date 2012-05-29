@@ -7,13 +7,17 @@
       [% INCLUDE top_menu.tt %]
      </div>
     <div style="clear: both;"></div>
-    <h3>[% card.name %]</h3>
-    <div id="large_photo"> <!-- make div photo size / fill space with $category default? -->
+    <div class="a_card" style="background-color:#[%card_style.area.colour.1%]">
+     <h3>
+       [%#    viewBox="0 0 580 580" - needed in svg file! %]
+       <object type="image/svg+xml" width="50" height="50" data="[% static_uri %]/icons/svg/[%card_style.icon.src %]"></object>
+       [% card.name %]</h3>
+     <div id="large_photo"> <!-- make div photo size / fill space with $category default? -->
       [% IF card.photo %]
         <img src="[% static_uri %]/photos/[% card.photo %]" alt="[% card.name %]">
       [% END %]
-    </div>
-    <div id="user_status" ]>
+     </div>
+     <div id="user_status" ]>
       <!-- Add all and hide, so that take/drop can manipulate -->
 
       <div id="no_user" class="[% user_status.no_user %]">
@@ -65,4 +69,5 @@
      [% END %]
       </ul>
     </div>
+   </div> <!-- a_card -->
         

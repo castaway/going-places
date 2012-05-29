@@ -177,10 +177,11 @@ sub dispatch_request {
         my ($id, $desc) = $card_desc =~ /^(\d+)-([\w\s])+/;
         print STDERR "Looking for card: $id, $desc\n";
         my $card = $self->model->find_card($id, { 'achievement_cards'  => 'achievement' });
+        my $styleinfo = $card->get_styleinfo($self->app_cwd);
         my $user_card_status = $self->model->user_card_status($card, $user);
 
         print STDERR "Found card: ", $card->id, "\n";
-        return [200, ['Content-type', 'text/html' ], [$self->view->card_page($user_card_status, $card, $user) ]];
+        return [200, ['Content-type', 'text/html' ], [$self->view->card_page($user_card_status, $card, $user, $styleinfo) ]];
     },
 
     sub (POST + /_take_card + %card_id=) {

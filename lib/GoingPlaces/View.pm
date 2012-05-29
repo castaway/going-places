@@ -37,7 +37,7 @@ sub user_profile {
 }
 
 sub card_page {
-    my ($self, $user_status, $card_row, $user_row) = @_;
+    my ($self, $user_status, $card_row, $user_row, $styleinfo) = @_;
 
     ## Will splodey if there is no "amenity" value
     ## Ideally we display a "pub" image?
@@ -50,6 +50,7 @@ sub card_page {
                        {
                            user => $user_row,
                            card => $card_row,
+                           card_style => $styleinfo,
                            user_status => $user_status,
                        } );
 }

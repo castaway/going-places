@@ -3,6 +3,8 @@ package GeoTrader::Schema::Result::Card;
 use strict;
 use warnings;
 
+use v5.10.0;
+
 use base 'DBIx::Class::Core';
 
 __PACKAGE__->table('cards');
@@ -50,6 +52,16 @@ sub remaining {
         - $self->user_cards_rs->count
         - $self->instances->count;
 }
+
+sub get_styleinfo {
+    my ($self, $app_cwd) = @_;
+
+    state $styler = OSM::Icons->new(rule_file => "$app_cwd/icons/elemstyles.xml");
+
+    my $tags = { map { ($_->key => $_->value) } $self->tags_rs->all };
+    return $styler->style($tags);
+}
+
 
 # has an osm / origin ID?
 'collected';

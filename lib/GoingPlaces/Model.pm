@@ -5,6 +5,7 @@ use warnings;
 
 use Data::Dumper;
 use GeoTrader::Schema;
+use OSM::Icons;
 use Template;
 use Path::Class;
 use Geo::Ellipsoid;
