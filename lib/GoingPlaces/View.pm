@@ -5,6 +5,7 @@ use warnings;
 
 use Template;
 use Path::Class;
+use URI::Escape;
 
 use Moo;
 
@@ -87,4 +88,66 @@ sub _process_tt {
 
     return $output;
     
+}
+
+## Stolen from BGGUsers::Utils
+## Should use point ids soon, not card ids?
+sub write_openlayers_text {
+    my ($self, $points) = @_;
+
+    my $ol_text = "lat\tlon\tid\tfillColor\tproximity\ttitle\tdescription\n";
+
+    foreach my $point (@$points) {
+#        print STDERR Dumper($point);
+
+        my $colour = $point->{colour} || '#ee9900';
+        $ol_text .= 
+
+            ## Location
+            $point->{location_lat}. "\t".
+            $point->{location_lon}. "\t" .
+
+            ## Card ID
+            $point->{card}{id} . "\t" .
+
+            ## Colour
+            $colour . "\t" . 
+
+            ## Distance from user right now:
+            ## default all features to be "not close" to the user, we change
+            ## this in the javascript when items are closeby
+            ($point->{proximity} || "far") . "\t" . 
+
+            ## Card Name (title) for popup
+            $point->{card}{name}. "\t" .
+
+            ## Popup content
+            '<span id="card-' . $point->{card}{id} .
+            '" class="card-link">' . 
+            $self->get_card_link($point->{card}) . '</span><br>' .
+            join('<br>', map { $_->{key} . ":" . $_->{value} } (@{ $point->{card}{tags} })). '<br>' .
+            ($point->{card}{photo} ? '<img src="' . $self->static_uri . '/photos/' . $point->{card}{photo} . '" height="200px" width="300px">' : '') .
+            '<div><img src="' . $self->static_uri . '/icons/' .
+            ($point->{proximity} || '' eq 'owned'
+             ? 'Farm-Fresh_delete.png'
+             : 'Farm-Fresh_add.png' ) .
+            '"/></div>' 
+            ;
+        
+        $ol_text .= "\n";
+    }
+
+    return $ol_text;
+}
+
+sub get_card_link {
+    my ($self, $card) = @_;
+
+    return '<a href="' 
+        . $self->base_uri 
+        . '/card/' 
+        . $card->{id} . '-' . uri_escape($card->{name})
+    . '">' 
+        . $card->{name}. '</a>'
+        ;
 }

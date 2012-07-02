@@ -99,6 +99,16 @@ sub user_card_status {
                                                }) ) {
             my $id = $ach->id;
             $user_status->{"has_achievement_$id"} = 'visible';
+
+            my $cards_all_rs = $ach->achievement_cards_rs->search_related('card',
+                                                                          {
+                                                                              'user.id' => $user_row->id,
+                                                                          },
+                                                                          { join => { 'user_cards' => 'user' }},
+                );
+
+            while (my $ach_card = $cards_all_rs->next) {
+            }
         }
     }
     
@@ -120,23 +130,33 @@ sub user_card_status {
 
 # -1.8342449951171,51.543991149077,-1.7257550048829,51.576007442191
 sub get_cards {
-    my ($self, $west, $south, $east, $north) = @_;
+    my ($self, $user, $west, $south, $east, $north) = @_;
 
     my $points_rs = $self->schema->resultset('Point')->search({
         #'location_lat' => { '-between' => [$south, $north] },
         #'location_lon' => { '-between' => [$west, $east] },
-         location_lat => { '>=' => $south },
-         location_lat => { '<=' => $north },
-         location_lon => { '>=' => $west  },
-         location_lon => { '<=' => $east  },
+        'location_lat' => { '-between' => [sort { $a <=> $b } ($south, $north)] },
+        'location_lon' => { '-between' => [sort { $a <=> $b } ($west, $east)] },
       },
       {
-          prefetch => {'card' => 'tags'},
+          prefetch => {'card' => [ 'tags', { user_cards => 'user' }] },
       }
         );
 
+    ## Should colour the cards the current user is already holding?
+
     $points_rs->result_class('DBIx::Class::ResultClass::HashRefInflator');
-    return $self->write_openlayers_text([$points_rs->all]);
+    my @points = $points_rs->all;
+    foreach my $point (@points) {
+#        print STDERR "Card, User: ", Dumper($point->{card}), " ", Dumper({$user->get_columns}). "\n";
+        if(exists $point->{card}{user_cards} && $user && grep { $_->{user_id} == $user->id } @{$point->{card}{user_cards} }) {
+            $point->{proximity} = 'owned';
+            print STDERR "Colour changed: ", Dumper($point), "\n";
+        }
+    }
+
+    return \@points;
+    return [$points_rs->all()];
 }
 
 #->new({ value => 1, saturation => 1, hue => 360*($i/($n+1))  })->as_rgb->as_css_hex
@@ -202,51 +222,8 @@ sub get_achievements_cards {
     }
 
 #    print STDERR Dumper(\@points);
-    return $self->write_openlayers_text(\@points);
-}
-
-## Stolen from BGGUsers::Utils
-## Should use point ids soon, not card ids?
-sub write_openlayers_text {
-    my ($self, $points) = @_;
-
-    my $ol_text = "lat\tlon\tid\tfillColor\tproximity\ttitle\tdescription\n";
-
-    foreach my $point (@$points) {
-#        print STDERR Dumper($point);
-
-        my $colour = $point->{colour} || '#ee9900';
-        $ol_text .= $point->{location_lat}. "\t".
-               $point->{location_lon}. "\t" .
-               $point->{card}{id} . "\t" .
-               $colour . "\t" . 
-               ## default all features to be "not close" to the user, we change
-               ## this in the javascript when items are closeby
-               "far\t" . 
-               $point->{card}{name}. "\t" .
-               '<span id="card-' . $point->{card}{id} .
-               '" class="card-link">' . 
-#               '" class="card-link" style="display:none">' . 
-               $self->get_card_link($point->{card}) . '</span><br>' .
-               join('<br>', map { $_->{key} . ":" . $_->{value} } (@{ $point->{card}{tags} })).
-               ($point->{card}{photo} ? '<img src="' . $point->{card}{photo} . '">' : '');
-        
-        $ol_text .= "\n";
-    }
-
-    return $ol_text;
-}
-
-sub get_card_link {
-    my ($self, $card) = @_;
-
-    return '<a href="' 
-        . $self->base_uri 
-        . '/card/' 
-        . $card->{id} . '-' . uri_escape($card->{name})
-    . '">' 
-        . $card->{name}. '</a>'
-        ;
+    return \@points;
+#    return $self->write_openlayers_text(\@points);
 }
 
 sub get_check_user {

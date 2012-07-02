@@ -236,6 +236,7 @@ GP.setup_map = function() {
   var proximity_styles = {
       "far": { fillColor: "#ffcc66" },
       "near": { fillColor: "#00FF00" },
+      "owned": { fillColor: "#888888" }
   };
 
   var places_style_map = new OpenLayers.StyleMap({

@@ -135,9 +135,9 @@ sub dispatch_request {
         return [200, [ 'Content-type', 'text/plain' ], [''] ] if(!$bbox);
 
         my @bounds = split(/,/, $bbox);
-        my $cards = $self->model->get_cards(@bounds);
+        my $cards = $self->model->get_cards($user, @bounds);
         
-        return [200, [ 'Content-type', 'text/plain' ], [ $cards || '' ] ];
+        return [200, [ 'Content-type', 'text/plain' ], [ $self->view->write_openlayers_text($cards) ] ];
     },
     
     ## currently for testing/visualising achievements on a map
@@ -150,7 +150,7 @@ sub dispatch_request {
         my @bounds = split(/,/, $bbox);
         my $cards = $self->model->get_achievements_cards(@bounds);
         
-        return [200, [ 'Content-type', 'text/plain' ], [ $cards || '' ] ];
+        return [200, [ 'Content-type', 'text/plain' ], [ $self->view->write_openlayers_cards($cards) ] ];
     },
     
     ## Store location of current user, ignore if no user?
@@ -178,6 +178,7 @@ sub dispatch_request {
         print STDERR "Looking for card: $id, $desc\n";
         my $card = $self->model->find_card($id, { 'achievement_cards'  => 'achievement' });
         my $styleinfo = $card->get_styleinfo($self->app_cwd);
+        $self->localise_styleinfo($styleinfo);
         my $user_card_status = $self->model->user_card_status($card, $user);
 
         print STDERR "Found card: ", $card->id, "\n";
@@ -192,6 +193,16 @@ sub dispatch_request {
         return [200, ['Content-type', 'application/json' ], [ encode_json($result) ]];
     }
 
+}
+
+## Rename icon path/names to match what we have:
+sub localise_styleinfo {
+    my ($self, $styleinfo) = @_;
+
+    if(exists $styleinfo->{icon}{src}) {
+        $styleinfo->{icon}{src} =~ s/\.png$/.n.16.png/;
+        $styleinfo->{icon}{src} =~ s{/}{_}g;
+    }
 }
 
 sub default_page {
