@@ -46,7 +46,7 @@ if(!GP.take_card) {
 
         jQuery.post(
             '/cgi-bin/geotrader.cgi/_take_card',
-            { card_id: GP.current_card.id },
+            { card_id: GP.card.id },
             GP.update_take_button
         );
         
