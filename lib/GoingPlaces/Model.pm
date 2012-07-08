@@ -83,6 +83,14 @@ sub take_card {
 }
 
 ## Should probably JSONify/session store this!
+## Given a User and a Card (user optional)
+## a) Check if user already has Card
+## b) Check if user is in home location of card
+##  - Need to add check for cards that are not in home loc?
+## c) Check how many instances of this card can be picked up
+## d) Check if User has achievements this card belongs to
+## e) Check if User has any of the others in achievements this card belongs to
+## f) Check which cards User has overall.
 sub user_card_status {
     my ($self, $card_row, $user_row) = @_;
     # pre-template data mungings
