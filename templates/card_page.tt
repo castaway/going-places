@@ -56,15 +56,17 @@
        <li>
          <h3>[% ach.name %]</h3>
          <p>[% ach.details %]</p>
-         [% IF user.has_achievement(ach) %]
+         [% SET ach_id = ach.id %]
+         <!-- [% USE Dumper; Dumper.dump(user_status) %] -->
+         [% IF user_status.achievements.$ach_id.visibility %]
            You already have this achievement!
          [% ELSE %]
            Other cards: 
            [%- SET ach_ac = ach.achievement_cards_rs;
               FOREACH ach_card = ach_ac.all;
+                SET ac_card_id = ach_card.card_id;
                 SET found = '';
-                SET found = '[X]' IF ach_card.card.id == card.id -%]
-                [%# USE Dumper; Dumper.dump(ach_card.card.get_columns) %]
+                SET found = '[X]' IF user_status.achievements.$ach_id.$ac_card_id == 'visible' -%]
                 <a href=[% PROCESS card_link.tt card = ach_card.card %]">[% ach_card.card.name %] [% found %] </a>,
            [% END %]
          [% END %]

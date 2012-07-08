@@ -82,6 +82,7 @@ sub take_card {
     return { $card->get_columns };
 }
 
+## Should probably JSONify/session store this!
 sub user_card_status {
     my ($self, $card_row, $user_row) = @_;
     # pre-template data mungings
@@ -91,24 +92,38 @@ sub user_card_status {
 
     my $user_status = { map { $_ => 'hidden'} (qw/no_user has_card here_and_cards here_no_cards not_here/)};
 
+
+ #   $user_row->result_source->schema->storage->debug(1);
     ## Verify if: 1)user has any of the achievements this card is in 2) whether user has all cards in achievement
     if($user_row) {
-        my $achievements = $card_row->achievement_cards_rs->search({}, { prefetch => { achievement => 'user_achievements' } });
-        foreach my $ach ($achievements->search({
-            'user_achievements.user_id' => $user_row->id,
-                                               }) ) {
-            my $id = $ach->id;
-            $user_status->{"has_achievement_$id"} = 'visible';
+        my $achievement_cards = $card_row->achievement_cards_rs->search({}, { prefetch => { achievement => 'user_achievements' } });
+        foreach my $ach_card ($achievement_cards->all) {
+            my $id = $ach_card->achievement_id;
 
-            my $cards_all_rs = $ach->achievement_cards_rs->search_related('card',
-                                                                          {
-                                                                              'user.id' => $user_row->id,
-                                                                          },
-                                                                          { join => { 'user_cards' => 'user' }},
-                );
-
-            while (my $ach_card = $cards_all_rs->next) {
+            ## Achievements user has completed
+            if($achievement_cards->search({
+                'user_achievements.user_id' => $user_row->id,
+                'me.achievement_id' => $id
+                                                   })
+                ) {
+                $user_status->{'achievements'}{$id}{visibilty} = 'visible';
+                
             }
+
+            print STDERR "Achievement: $id\n";
+            ## All the OTHER cards in this achievement that our user already has
+            my $cards_ach_rs = $ach_card->search_related('achievement')->search_related('achievement_cards')->search_related('card',
+                {
+                    'user.id' => $user_row->id,
+                },
+                { join => { 'user_cards' => 'user' }},
+                );
+            
+            while (my $my_card = $cards_ach_rs->next) {
+                $user_status->{'achievements'}{$id}{$my_card->id} = 'visible';
+            }
+
+#            print STDERR Data::Dumper::Dumper($user_status->{achievements}{$id});
         }
     }
     
@@ -124,6 +139,7 @@ sub user_card_status {
         $user_status->{not_here} = 'visible';
     }
 
+#    $user_row->result_source->schema->storage->debug(0);
     return $user_status;
 }
 
