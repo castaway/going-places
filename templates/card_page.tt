@@ -9,8 +9,11 @@
     <div style="clear: both;"></div>
     <div class="a_card" style="background-color:#[%card_style.area.colour.1%]">
      <h3>
+     <!--
        [%#    viewBox="0 0 580 580" - needed in svg file! %]
        <object type="image/svg+xml" width="50" height="50" data="[% static_uri %]/icons/svg/[%card_style.icon.src %]"></object>
+-->
+        <img src="[% static_uri %]/icons/png/[%card_style.icon.src %]"/>
        [% card.name %]</h3>
      <div id="large_photo"> <!-- make div photo size / fill space with $category default? -->
       [% IF card.photo %]
@@ -59,10 +62,10 @@
            Other cards: 
            [%- SET ach_ac = ach.achievement_cards_rs;
               FOREACH ach_card = ach_ac.all;
-                UNLESS ach_card.card.id == card.id -%]
-                 [%# USE Dumper; Dumper.dump(ach_card.card.get_columns) %]
-                 <a href=[% PROCESS card_link.tt card = ach_card.card %]">[% ach_card.card.name %]</a>,
-                [%- END -%]
+                SET found = '';
+                SET found = '[X]' IF ach_card.card.id == card.id -%]
+                [%# USE Dumper; Dumper.dump(ach_card.card.get_columns) %]
+                <a href=[% PROCESS card_link.tt card = ach_card.card %]">[% ach_card.card.name %] [% found %] </a>,
            [% END %]
          [% END %]
        </li>
