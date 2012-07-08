@@ -92,6 +92,8 @@ sub _process_tt {
 
 ## Stolen from BGGUsers::Utils
 ## Should use point ids soon, not card ids?
+
+## Card popup contents should be dynamic, or hold JSON in the page with all data which js can update and pull from there?
 sub write_openlayers_text {
     my ($self, $points) = @_;
 
@@ -127,11 +129,14 @@ sub write_openlayers_text {
             $self->get_card_link($point->{card}) . '</span><br>' .
             join('<br>', map { $_->{key} . ":" . $_->{value} } (@{ $point->{card}{tags} })). '<br>' .
             ($point->{card}{photo} ? '<img src="' . $self->static_uri . '/photos/' . $point->{card}{photo} . '" height="200px" width="300px">' : '') .
-            '<div><img src="' . $self->static_uri . '/icons/' .
+
+            '<div><button id="take_card"><img src="' . $self->static_uri . '/icons/' .
             ($point->{proximity} || '' eq 'owned'
              ? 'Farm-Fresh_delete.png'
              : 'Farm-Fresh_add.png' ) .
-            '"/></div>' 
+            '"/></button></div>' .
+            
+            '<script>GP.card = { id: '.$point->{card}{id}.'}</script>'
             ;
         
         $ol_text .= "\n";
