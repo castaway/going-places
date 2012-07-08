@@ -62,7 +62,12 @@ foreach my $ele (@{ $osm->{elements} }) {
             name => $ele->{tags}{name},
             ( -e "$PHOTO_DIR/$photo" ? ( photo => $photo) : () ),
         },
-        { key => 'namepoint' });
+        { key => 'namepoint' }
+        );
+
+    if(-e "$PHOTO_DIR/$photo" && !$card->photo) {
+        $card->update({ photo => $photo });
+    }
 
     if(!$point->place_id) {
         ## Ask Nominatim where it is:
