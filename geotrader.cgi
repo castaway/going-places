@@ -185,6 +185,7 @@ sub dispatch_request {
         return [200, ['Content-type', 'text/html' ], [$self->view->card_page($user_card_status, $card, $user, $styleinfo) ]];
     },
 
+    ## Add card to users hand, if allowed, post announcement?
     sub (POST + /_take_card + %card_id=) {
         my ($self, $card_id) = @_;
 
