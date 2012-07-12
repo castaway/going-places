@@ -82,6 +82,28 @@ sub take_card {
     return { $card->get_columns };
 }
 
+sub claim_achievement {
+    my ($self, $id, $user) = @_;
+
+    my $achievement = $self->schema->resultset('Achievement')->find({ id => $id });
+    return { error => 'No such achievement'} if(!$achievement);
+
+    my $cards_rs = $achievement->achievement_cards;
+
+    my $a_cards = $user->user_cards->search({
+        'me.card_id' => { '-in' => [ map { $_->id } $cards_rs->all] },
+                                 });
+
+    if($a_cards->count != $cards_rs->count) {
+        return { error => 'You do not have all the cards for that achievement!' };
+    }
+    
+    $user->achievement_cards->create({ achievement_id => $achievement->id });
+    $a_cards->delete;
+
+    return { $achievement->get_columns };
+}
+
 ## Should probably JSONify/session store this!
 ## Given a User and a Card (user optional)
 ## a) Check if user already has Card
@@ -90,6 +112,7 @@ sub take_card {
 ## c) Check how many instances of this card can be picked up
 ## d) Check if User has achievements this card belongs to
 ## e) Check if User has any of the others in achievements this card belongs to
+## f) Check if User has all achievement cards
 ## f) Check which cards User has overall.
 sub user_card_status {
     my ($self, $card_row, $user_row) = @_;
@@ -128,11 +151,16 @@ sub user_card_status {
                 );
             
             while (my $my_card = $cards_ach_rs->next) {
-                $user_status->{'achievements'}{$id}{$my_card->id} = 'visible';
+                $user_status->{'achievements'}{$id}{cards}{$my_card->id} = 'visible';
             }
 
 #            print STDERR Data::Dumper::Dumper($user_status->{achievements}{$id});
+            if(scalar keys %{ $user_status->{'achievements'}{$id}{cards} } == $ach_card->search_related('achievement')->search_related('achievement_cards')->count) {
+                $user_status->{'achievements'}{$id}{all_cards} = 1;
+            }
+
         }
+
     }
     
     if(!$user_row) {

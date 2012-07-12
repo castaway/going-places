@@ -66,9 +66,12 @@
               FOREACH ach_card = ach_ac.all;
                 SET ac_card_id = ach_card.card_id;
                 SET found = '';
-                SET found = '[X]' IF user_status.achievements.$ach_id.$ac_card_id == 'visible' -%]
+                SET found = '[X]' IF user_status.achievements.$ach_id.cards.$ac_card_id == 'visible' -%]
                 <a href=[% PROCESS card_link.tt card = ach_card.card %]">[% ach_card.card.name %] [% found %] </a>,
-           [% END %]
+              [% END %]
+              [% IF user_status.achievements.$ach_id.all_cards %]
+                <form ><input type="hidden" name="achievement_id" value="[% ach_id %]"/><input type="submit" name="claim_achievement" value="Get Achievement"/></form>
+              [% END %]
          [% END %]
        </li>
      [% END %]

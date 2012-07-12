@@ -192,6 +192,14 @@ sub dispatch_request {
         my $result = $self->model->take_card($card_id, $user);
 
         return [200, ['Content-type', 'application/json' ], [ encode_json($result) ]];
+    },
+
+    sub (POST + /_claim_achievement + %achievement_id=) {
+        my ($self, $achievement_id) = @_;
+
+        my $result = $self->model->claim_achievement($achievement_id, $user);
+        
+        return [200, ['Content-type', 'application/json' ], [ encode_json($result) ]];
     }
 
 }

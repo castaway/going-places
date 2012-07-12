@@ -54,6 +54,21 @@ if(!GP.take_card) {
     };
 }
 
+if(!GP.claim_achievement) {
+    GP.claim_achievement = function() {
+
+        jQuery.post(
+            '/cgi-bin/geotrader.cgi/_claim_achievement',
+            { achievement_id: jQuery(this).closest('[name=achievement_id]').val() },
+            GP.update_achievements
+        );
+    };
+}
+
+if(!GP.update_achievements) {
+    GP.update_achievements = function() {};
+}
+
 // Everytime the GPS reports a new location, redraw the users position on the 
 // map, and re-centre the map to that position.
 // If settings.following is false, only store the current position, don't update the map.
@@ -336,6 +351,12 @@ jQuery(document).ready(function() {
     jQuery('#take_card').click(function() {
         // ajax, plus replace button, some sorta animation to "hand"?
         GP.take_card();
+        return false;
+    });
+
+    jQuery('[name=claim_achievement]').click(function() {
+        // ajax, plus replace button, some sorta animation to "hand"?
+        GP.claim_achievement();
         return false;
     });
 
